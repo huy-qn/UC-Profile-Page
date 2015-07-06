@@ -42,23 +42,20 @@ $(document).ready( function() {
     pageDots: false,
     prevNextButtons: false
   });
-  // Flickity instance
   var flkty = $slide.data('flickity');
-  // elements
-  var $cellButtonGroup = $('.button-group--cells');
+  var $cellButtonGroup = $('.tabs');
   var $cellButtons = $cellButtonGroup.find('.tab');
-
-  // update selected cellButtons
-  $slide.on( 'cellSelect', function() {
-    $cellButtons.filter('.is-selected')
-      .removeClass('is-selected');
-    $cellButtons.eq( flkty.selectedIndex )
-      .addClass('is-selected');
-  });
-
-  // select cell on button click
-  $cellButtonGroup.on( 'click', '.tab', function() {
+  //select cell on tab click
+  $('.button-group').on( 'click', '.tab', function() {
     var index = $(this).index();
     $slide.flickity( 'select', index );
+  });
+
+  //update state for selected tab
+  $slide.on('cellSelect', function(){
+    $cellButtons.filter('.is-selected')
+          .removeClass('is-selected');
+        $cellButtons.eq( flkty.selectedIndex )
+          .addClass('is-selected');
   });
 });
