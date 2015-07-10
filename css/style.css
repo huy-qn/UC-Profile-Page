@@ -47,19 +47,12 @@ body {
 
 a {
   text-decoration: none;
-<<<<<<< HEAD
-  color: #1D2934; }
-
-.header-wrapper {
-  background: #1D2934; }
-=======
   color: #1A4A7D; }
 
 .header-wrapper {
   background: #1A4A7D;
   z-index: 999;
   opacity: 1; }
->>>>>>> light-theme-desktop
 
 header {
   height: 60px;
@@ -68,11 +61,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   border: 0;
-<<<<<<< HEAD
-  background: #1d2934; }
-=======
   background: #1a4a7d; }
->>>>>>> light-theme-desktop
   header h1.logo {
     font-size: 2rem;
     display: block;
@@ -138,13 +127,8 @@ img.profile-picture {
   margin-bottom: .6rem;
   display: inline-block; }
   .tag.more {
-<<<<<<< HEAD
-    background: #1D2934;
-    color: #fff;
-=======
     background: #1A4A7D !important;
     color: #fff !important;
->>>>>>> light-theme-desktop
     font-weight: bold; }
 
 .user-information {
@@ -195,11 +179,7 @@ img.profile-picture {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-<<<<<<< HEAD
-    background: #1D2934;
-=======
     background: #1A4A7D;
->>>>>>> light-theme-desktop
     padding: 0;
     margin: 0; }
     .user-information ul.tabs li {
@@ -237,11 +217,7 @@ img.profile-picture {
     /* full width */
     margin-right: 10px;
     padding: 1rem;
-<<<<<<< HEAD
-    background: #263644;
-=======
     background: #1e5692;
->>>>>>> light-theme-desktop
     color: #fff;
     font-size: 1.6rem; }
     .user-information .more-details .cell span {
@@ -359,21 +335,13 @@ img.profile-picture {
         width: 85%;
         font-weight: normal; }
         header .search input:focus {
-<<<<<<< HEAD
-          border: solid 1px #1D2934; }
-=======
           border: solid 1px #1A4A7D; }
->>>>>>> light-theme-desktop
     header nav ul li {
       padding: 0 30px; }
       header nav ul li a {
         color: gray; }
         header nav ul li a.active {
-<<<<<<< HEAD
-          color: #1D2934; }
-=======
           color: #fff; }
->>>>>>> light-theme-desktop
       header nav ul li i {
         position: relative;
         left: -30px; }
