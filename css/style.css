@@ -21,12 +21,45 @@ body {
   border-radius: 2px;
   border: solid 1px #ccc; }
 
+.actions {
+  position: relative;
+  float: right;
+  right: 0; }
+  .actions .small-btn {
+    margin-bottom: 1rem; }
+
+.small-btn {
+  padding: .3rem .7rem;
+  border: solid 1px rgba(204, 204, 204, 0);
+  border-radius: 2px;
+  display: table;
+  background: rgba(204, 204, 204, 0.2); }
+  .small-btn:hover {
+    border: solid 1px #cccccc;
+    cursor: pointer; }
+  .small-btn i, .small-btn span {
+    display: table-cell;
+    vertical-align: middle; }
+  .small-btn span {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-left: .4rem; }
+
 a {
   text-decoration: none;
+<<<<<<< HEAD
   color: #1D2934; }
 
 .header-wrapper {
   background: #1D2934; }
+=======
+  color: #1A4A7D; }
+
+.header-wrapper {
+  background: #1A4A7D;
+  z-index: 999;
+  opacity: 1; }
+>>>>>>> light-theme-desktop
 
 header {
   height: 60px;
@@ -35,14 +68,19 @@ header {
   display: -ms-flexbox;
   display: flex;
   border: 0;
+<<<<<<< HEAD
   background: #1d2934; }
+=======
+  background: #1a4a7d; }
+>>>>>>> light-theme-desktop
   header h1.logo {
     font-size: 2rem;
     display: block;
     height: 20px;
     margin: auto 2rem; }
   header .search {
-    display: none; }
+    display: none;
+    color: #212121; }
   header nav {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -92,15 +130,21 @@ img.profile-picture {
   background: #fff; }
 
 .tag {
-  border-radius: 2px;
+  border-radius: 20px;
   background: #ededed;
   color: black;
-  padding: .4rem 1rem;
+  font-size: 1.4rem;
+  padding: .2rem 1.4rem;
   margin-bottom: .6rem;
   display: inline-block; }
   .tag.more {
+<<<<<<< HEAD
     background: #1D2934;
     color: #fff;
+=======
+    background: #1A4A7D !important;
+    color: #fff !important;
+>>>>>>> light-theme-desktop
     font-weight: bold; }
 
 .user-information {
@@ -151,7 +195,11 @@ img.profile-picture {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+<<<<<<< HEAD
     background: #1D2934;
+=======
+    background: #1A4A7D;
+>>>>>>> light-theme-desktop
     padding: 0;
     margin: 0; }
     .user-information ul.tabs li {
@@ -189,7 +237,11 @@ img.profile-picture {
     /* full width */
     margin-right: 10px;
     padding: 1rem;
+<<<<<<< HEAD
     background: #263644;
+=======
+    background: #1e5692;
+>>>>>>> light-theme-desktop
     color: #fff;
     font-size: 1.6rem; }
     .user-information .more-details .cell span {
@@ -258,13 +310,19 @@ img.profile-picture {
 @media (min-width: 750px) {
   .header-wrapper {
     position: fixed;
+    top: 0;
+    left: 0;
     height: 61px;
     width: 100%; }
 
   header {
-    max-width: 1020px;
+    max-width: 1024px;
     margin: 0 auto;
     font-weight: bold; }
+    header h1.logo {
+      letter-spacing: .3px; }
+      header h1.logo strong {
+        font-weight: bold; }
     header .search {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -301,13 +359,21 @@ img.profile-picture {
         width: 85%;
         font-weight: normal; }
         header .search input:focus {
+<<<<<<< HEAD
           border: solid 1px #1D2934; }
+=======
+          border: solid 1px #1A4A7D; }
+>>>>>>> light-theme-desktop
     header nav ul li {
       padding: 0 30px; }
       header nav ul li a {
         color: gray; }
         header nav ul li a.active {
+<<<<<<< HEAD
           color: #1D2934; }
+=======
+          color: #fff; }
+>>>>>>> light-theme-desktop
       header nav ul li i {
         position: relative;
         left: -30px; }
@@ -324,4 +390,150 @@ img.profile-picture {
           height: 36px; }
         header nav ul li.user-profile-link i.fa-caret-down {
           display: block;
-          padding-left: 126px; } }
+          padding-left: 126px; }
+
+  .content-wrapper {
+    max-width: 1024px;
+    margin: 0 auto; }
+    .content-wrapper .card {
+      padding: 2rem;
+      border: solid 1px rgba(204, 204, 204, 0.3);
+      border-radius: 2px; }
+    .content-wrapper .main-information {
+      display: flex;
+      width: 70%;
+      margin-top: 8rem; }
+      .content-wrapper .main-information .user-main-details {
+        margin-left: 2rem; }
+        .content-wrapper .main-information .user-main-details h5 {
+          font-weight: 400;
+          margin: 0; }
+        .content-wrapper .main-information .user-main-details .current-work-place {
+          font-size: 1.8rem;
+          opacity: .5; }
+          .content-wrapper .main-information .user-main-details .current-work-place strong {
+            font-weight: 500; }
+      .content-wrapper .main-information .profile-picture img {
+        width: 160px;
+        height: 160px;
+        border-radius: 2px; }
+      .content-wrapper .main-information .skill-tags {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 85%; }
+        .content-wrapper .main-information .skill-tags span {
+          background: rgba(204, 204, 204, 0.3);
+          color: #212121; }
+          .content-wrapper .main-information .skill-tags span:hover {
+            background: #1A4A7D;
+            color: #fff;
+            cursor: pointer; }
+
+  .interest-tags {
+    width: 70%; }
+    .interest-tags h5 {
+      font-weight: bold; }
+    .interest-tags span {
+      background: #F27B80;
+      color: #fff; }
+      .interest-tags span:hover {
+        cursor: pointer;
+        background: #eb353d; }
+      .interest-tags span.more {
+        background: #F27B80 !important; }
+
+  .more-information {
+    padding-top: -2rem;
+    width: 70%;
+    font-size: 1.6rem; }
+    .more-information #tab1 .current-contacts {
+      width: 50%;
+      background: rgba(26, 74, 125, 0.02);
+      border: solid 1px rgba(26, 74, 125, 0.5);
+      padding: 2rem;
+      border-radius: 2px;
+      position: relative;
+      top: 5px;
+      right: 0;
+      float: right; }
+      .more-information #tab1 .current-contacts label {
+        margin-bottom: 1.5rem; }
+      .more-information #tab1 .current-contacts span {
+        display: block;
+        line-height: 3rem; }
+    .more-information span.work-name, .more-information span.education-name {
+      font-size: 1.8rem; }
+    .more-information #tab3 span.upload-media {
+      border: dashed 1px #36DFA5;
+      float: right;
+      height: 60px;
+      width: 120px;
+      text-align: center;
+      line-height: 48px;
+      color: #1cad7b; }
+      .more-information #tab3 span.upload-media:hover {
+        cursor: pointer; }
+    .more-information #tab3 .education-information span {
+      display: block; }
+    .more-information #tab3 .education-information .uploaded-media {
+      margin-top: 1.5rem; }
+      .more-information #tab3 .education-information .uploaded-media img {
+        width: 120px;
+        height: 60px;
+        border-radius: 2px;
+        padding: .2rem;
+        background: #ccc; }
+    .more-information #tab2 .item {
+      display: flex;
+      align-items: center;
+      padding-bottom: 2rem;
+      border-bottom: solid 1px #ccc; }
+      .more-information #tab2 .item:last-child {
+        border-bottom: 0; }
+      .more-information #tab2 .item img {
+        width: 120px;
+        height: 120px; }
+      .more-information #tab2 .item .work-information {
+        margin-right: auto; }
+        .more-information #tab2 .item .work-information span {
+          display: block; }
+    .more-information .tab-content {
+      padding: 0 2rem; }
+      .more-information .tab-content .item {
+        display: block;
+        margin-bottom: 1rem; }
+        .more-information .tab-content .item label {
+          margin-bottom: 0; }
+    .more-information ul.tabs {
+      position: relative;
+      width: 105%;
+      top: -2rem;
+      left: -2rem;
+      list-style: none;
+      display: flex;
+      margin: 0;
+      justify-content: space-between; }
+      .more-information ul.tabs li {
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        text-align: center;
+        padding: 1rem 0; }
+        .more-information ul.tabs li a {
+          border-bottom: solid 1px rgba(204, 204, 204, 0.3);
+          color: #ccc;
+          display: block;
+          width: 100%;
+          padding: 1rem; }
+          .more-information ul.tabs li a:hover {
+            color: #212121; }
+          .more-information ul.tabs li a.active {
+            font-weight: bold;
+            color: #1A4A7D;
+            border-bottom: solid 4px #1A4A7D; } }
+footer {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: rgba(204, 204, 204, 0.3);
+  padding: 1rem; }
