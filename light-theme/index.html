@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="light-theme/css/normalize.css">
+  <link rel="stylesheet" href="light-theme/css/skeleton.css">
+  <link rel="stylesheet" href="light-theme/css/style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.min.css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+  <div class="header-wrapper">
+  <header>
+    <h1 class="logo"><strong>URBANCARE</strong></h1>
+    <form class="search">
+      <input type="text" placeholder="Search">
+      <i class="fa fa-search"></i>
+    </form>
+    <nav>
+      <ul>
+        <li><a href="#"><i class="fa fa-users"></i><span> Community</span></a></li>
+        <li id="dd-nav" class="user-profile-link">
+            <img src="https://d13yacurqjgara.cloudfront.net/users/3460/avatars/normal/f6debbb5044f838dcf78bc3299172657.jpg?1421783568" alt="">
+            <a href="" class="active"><span>Huy Nguyễn</span><i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown-nav">
+              <li><span><i class="fa fa-inbox"></i> Inbox</span></li>
+              <li><span><i class="fa fa-cog"></i> Settings</span></li>
+              <li><span><i class="fa fa-sign-out"></i> Log Out</span></li>
+            </ul> 
+        </li>
+
+      </ul>
+    </nav>  
+  </header>
+  </div>
+  <div class="content-wrapper">
+    <div class="main-information card">
+      <div class="profile-picture">
+        <img src="https://scontent.fsan1-1.fna.fbcdn.net/hphotos-xfa1/v/t1.0-9/10991340_334947916696319_6294267932634345410_n.jpg?oh=113db6c19334d052fc3f7ba92c72800d&oe=5615277F" alt="">
+      </div>
+      <div class="user-main-details">
+        <div class="actions">
+          <div class="mail small-btn">
+            <i class="fa fa-envelope"></i>
+            <span>Message</span>
+          </div>
+          <div class="more small-btn">
+            <div id="dd" class="wrapper-dropdown">
+            <span>More <i class="fa fa-angle-down"></i>
+              <ul class="dropdown">
+                <li><i class="fa fa-flag"></i> Report this user</li>
+                <li><i class="fa fa-ban"></i> Block user</li>
+              </ul> 
+            </span>          
+            </div>
+          </div>
+        </div> 
+        <h5 class="user-name"><a href="#" id="realname" data-type="text" data-placement="right" data-title="Enter your real name">Huy Nguyễn</a></h5>
+        <span class="current-work-place">
+          <strong><a href="#" id="current-work" data-type="text" data-placement="right" data-title="Enter your work title">Designer</a></strong> at <strong><a href="#" id="current-workplace" data-type="text" data-placement="right" data-title="Enter your current work place">Urban Care</a></strong>
+        </span>
+        <div class="skill-tags">
+          <span class="tag">Web Designer</span>
+          <span class="tag">UI Designer</span>
+          <span class="tag">Photography</span>
+          <span class="tag">Typography</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag more">6+</span>
+        </div>       
+      </div>
+    </div>
+    <div class="more-information card">
+      <ul class='tabs'>
+        <li><a href='#tab1'><i class="fa fa-user"></i>
+ Overview</a></li>
+        <li><a href='#tab2'><i class="fa fa-briefcase"></i>
+ Work</a></li>
+        <li><a href='#tab3'><i class="fa fa-graduation-cap"></i>
+ Education</a></li>
+      </ul>
+
+      <div id='tab1' class="tab-content">
+        <div class="current-contacts">
+          <label for="contacts">Current Contacts</label>
+          <span><i class="fa fa-map-marker fa-fw"></i>
+ 4406 48th Street, San Diego, CA</span>
+          <span><i class="fa fa-envelope fa-fw"></i>
+ huynguyen.me@gmail.com</span>
+           <span><i class="fa fa-mobile fa-fw"></i>
+ +1 (760) 877 5650</span>
+        </div>
+        <div class="item">
+          <label for="birthday">Birthday</label>
+          <span>July 10th (22)</span>
+        </div>
+        <div class="item">
+          <label for="gender">Gender</label>
+          <span>Male</span>
+        </div>
+        <div class="item">
+          <label for="Hometown">Hometown</label>
+          <span>Quy Nhon, Viet Nam</span>
+        </div>
+        <div class="item">
+          <label for="languages">Languages</label>
+          <span>English, Vietnamese</span>
+        </div>
+      </div>
+      <div id='tab2' class="tab-content">
+        <div class="item">
+          <div class="work-information">
+            <span class="work-name"><strong>Designer</strong> at <strong>Zalora Viet Nam</strong></span>
+            <span>Ho Chi Minh, Viet Nam</span>
+            <span>2012</span>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Zalora_logo.jpg" alt="" class="work-thumb">
+        </div>
+        <div class="item">
+          <div class="work-information">
+            <span class="work-name"><strong>Intern</strong> at <strong>Google</strong></span>
+            <span>Silicon Valley, CA</span>
+            <span>2017</span>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Google_favicon_2012.jpg" alt="" class="work-thumb">
+        </div>
+      </div>
+      <div id='tab3' class="tab-content"> 
+        <div class="item">
+          <div class="education-information">
+            <span class="education-name"><strong>Bachelor of Business Administrator</strong></span>
+            <span>University of Economics & Law, Viet Nam</span>
+            <span>2011 - 2014</span>
+            <div class="uploaded-media">
+              <img src="http://cheaper-than-tuition.com/wp-content/uploads/2014/02/Fake-Diploma-Sample-03-1200x900.jpg?53533f" alt="">
+              <img src="http://diplomaclassics.com/images/products/full/123415.jpg" alt="">
+              <span class="upload-media btn"><i class="fa fa-upload"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interest-tags card">
+      <h5>18 Interests</h5>
+      <span class="tag">Soccer</span>
+      <span class="tag">Manga</span>
+      <span class="tag">Movies</span>
+      <span class="tag">Anime</span>
+      <span class="tag">Pho</span>
+      <span class="tag">Attack on Titan</span>
+      <span class="tag more">11+</span>
+    </div>
+  </div>
+  <footer>
+    <strong>Urban Care 2015</strong>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.pkgd.min.js"></script>  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/js/jquery-editable-poshytip.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
