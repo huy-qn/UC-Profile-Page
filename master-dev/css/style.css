@@ -7,6 +7,9 @@ body {
   letter-spacing: .03rem;
   line-height: 1.4rem; }
 
+.hide {
+  display: none !important; }
+
 [data-tip] {
   position: relative; }
 
@@ -110,16 +113,21 @@ span.tag {
     .alert.alert-error strong {
       color: #FF3D4C; }
 
+.right {
+  float: right; }
+
 .small-btn {
-  background: rgba(204, 204, 204, 0.2) none repeat scroll 0 0;
-  border: 1px solid rgba(204, 204, 204, 0);
+  background: #EDEDED;
   border-radius: 2px;
   display: table;
   padding: 0.3rem 0.7rem; }
+  .small-btn:hover {
+    background: #e0e0e0; }
 
 .btn {
   border-radius: 2px;
-  font-weight: 500; }
+  font-weight: 500;
+  padding: .5rem 1rem; }
 
 .big-btn {
   font-size: 1.2rem;
@@ -136,6 +144,52 @@ span.tag {
   color: #FFFFFF; }
   .cta:hover {
     background: #6BBD2E; }
+
+ul.tabs {
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between; }
+  ul.tabs li {
+    background: #FFFFFF;
+    width: 100%;
+    margin: 0;
+    text-align: center; }
+    ul.tabs li a {
+      border-bottom: solid 1px rgba(237, 237, 237, 0.8);
+      color: #adadad;
+      display: block;
+      padding: .3rem; }
+      ul.tabs li a i {
+        font-size: 1.5rem;
+        display: inline-block;
+        padding: .7rem; }
+      ul.tabs li a:hover {
+        color: #172633; }
+      ul.tabs li a.active {
+        font-weight: 600;
+        color: #172633;
+        border-bottom: solid 2px #172633; }
+        ul.tabs li a.active i {
+          color: #3997C8; }
+
+.tab-content {
+  padding: 2rem;
+  color: #444; }
+  .tab-content .item {
+    display: block;
+    margin-bottom: 1.5rem; }
+    .tab-content .item label {
+      margin-bottom: 0;
+      color: #999;
+      font-weight: 400;
+      text-transform: uppercase;
+      display: block;
+      font-size: .6rem; }
+    .tab-content .item span {
+      font-weight: 500; }
 
 header {
   position: fixed;
@@ -267,6 +321,8 @@ main {
     margin-left: 2rem; }
   main .main-information {
     display: flex; }
+    main .main-information .user-profile-picture {
+      width: 17rem; }
     main .main-information .user-profile-picture img {
       display: block;
       width: 160px;
@@ -275,7 +331,7 @@ main {
       border: solid 1px #EDEDED;
       border-radius: 2px; }
     main .main-information .user-main-details {
-      margin-left: 1.5rem; }
+      margin-top: .5rem; }
       main .main-information .user-main-details .actions {
         position: relative;
         float: right;
@@ -284,6 +340,8 @@ main {
         main .main-information .user-main-details .actions .small-btn {
           margin-bottom: .5rem;
           font-size: .8rem; }
+          main .main-information .user-main-details .actions .small-btn i {
+            margin-right: .2rem; }
           main .main-information .user-main-details .actions .small-btn:hover {
             background: #3997C8;
             color: #FFFFFF;
@@ -302,12 +360,12 @@ main {
             list-style: none;
             position: absolute;
             top: 50%;
-            left: -144.5%; }
+            left: -185%; }
             main .main-information .user-main-details .actions .more ul.dropdown li {
               color: rgba(68, 68, 68, 0.8);
               background: #EDEDED;
-              width: 120px;
-              padding: .3rem; }
+              width: 140px;
+              padding: .3rem .7rem; }
               main .main-information .user-main-details .actions .more ul.dropdown li:first-child {
                 border-radius: 2px 0 0 0; }
               main .main-information .user-main-details .actions .more ul.dropdown li:last-child {
@@ -321,50 +379,6 @@ main {
         color: #c7c7c7;
         margin-top: .5rem;
         font-weight: 400; }
-  main .more-information ul.tabs {
-    position: relative;
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: space-between; }
-    main .more-information ul.tabs li {
-      background: #FFFFFF;
-      width: 100%;
-      margin: 0;
-      text-align: center; }
-      main .more-information ul.tabs li a {
-        border-bottom: solid 1px rgba(237, 237, 237, 0.8);
-        color: #adadad;
-        display: block;
-        padding: .3rem; }
-        main .more-information ul.tabs li a i {
-          font-size: 1.5rem;
-          display: inline-block;
-          padding: .7rem; }
-        main .more-information ul.tabs li a:hover {
-          color: #172633; }
-        main .more-information ul.tabs li a.active {
-          font-weight: 600;
-          color: #172633;
-          border-bottom: solid 2px #172633; }
-          main .more-information ul.tabs li a.active i {
-            color: #3997C8; }
-  main .more-information .tab-content {
-    padding: 2rem;
-    color: #444; }
-    main .more-information .tab-content .item {
-      display: block;
-      margin-bottom: 1.5rem; }
-      main .more-information .tab-content .item label {
-        margin-bottom: 0;
-        color: #999;
-        font-weight: 400;
-        text-transform: uppercase;
-        display: block;
-        font-size: .6rem; }
-      main .more-information .tab-content .item span {
-        font-weight: 500; }
   main .more-information #overview .current-contacts {
     width: 50%;
     background: rgba(57, 151, 200, 0.1);
@@ -430,6 +444,44 @@ main {
         background: #6BBD2E;
         color: #FFFFFF;
         cursor: pointer; }
+  main #register-form, main #login-form {
+    padding: 0 5rem; }
+  main #account-settings .form .item {
+    display: flex;
+    margin-bottom: .6rem;
+    padding: 1rem 0; }
+    main #account-settings .form .item:hover {
+      cursor: pointer; }
+    main #account-settings .form .item .edit-input {
+      width: 55%; }
+      main #account-settings .form .item .edit-input span.hint {
+        margin-top: -.5rem; }
+    main #account-settings .form .item .edit-actions {
+      display: flex;
+      height: 2.4rem;
+      align-items: center;
+      font-size: .8rem; }
+      main #account-settings .form .item .edit-actions a {
+        margin: 0 .5rem;
+        margin-top: .4rem; }
+  main #account-settings .form input, main #account-settings .form label {
+    display: inline-block; }
+  main #account-settings .form label {
+    width: 10%;
+    text-align: right;
+    margin-right: .7rem;
+    color: #444; }
+  main #account-settings .form input {
+    height: 1.5rem;
+    background: #EDEDED;
+    font-weight: 500;
+    border: solid 1px #c7c7c7; }
+    main #account-settings .form input:focus {
+      background: #FFFFFF; }
+  main #account-settings .form input:focus > .edit-actions {
+    display: none !important; }
+  main #account-settings .form span.hint {
+    display: block; }
   main .form-heading {
     text-align: center;
     padding: 1rem 0; }
@@ -438,33 +490,36 @@ main {
       font-weight: 500; }
       main .form-heading a:hover {
         border-bottom: solid 1px #3997C8; }
-  main .form {
-    padding: 0 5rem; }
-    main .form:last-of-type {
-      margin-bottom: 3rem; }
-    main .form label {
-      display: block;
-      margin: .5rem 0;
-      font-weight: 500; }
-      main .form label a {
-        color: #a1a1a1;
-        font-size: .7rem; }
-      main .form label.checkbox {
-        display: flex;
-        justify-content: center; }
-        main .form label.checkbox input {
-          padding: 0;
-          margin: 0;
-          height: 1.5rem;
-          margin-right: .3rem; }
-    main .form input {
-      display: block;
-      border: solid 1px #EDEDED;
-      height: 2rem;
-      padding: .3rem .7rem;
-      margin-top: .3rem;
-      margin-bottom: 1rem; }
-      main .form input:focus {
-        border: solid 1px #3997C8; }
-    main .form a.big-btn {
-      margin-top: 2rem; }
+  main .form:last-of-type {
+    margin-bottom: 3rem; }
+  main .form label {
+    padding-left: .3rem;
+    display: block;
+    margin: .5rem 0;
+    font-weight: 500; }
+    main .form label a {
+      color: #a1a1a1;
+      font-size: .7rem; }
+    main .form label.checkbox {
+      display: flex;
+      justify-content: center; }
+      main .form label.checkbox input {
+        padding: 0;
+        margin: 0;
+        height: 1.5rem;
+        margin-right: .3rem; }
+  main .form input {
+    display: block;
+    border: solid 1px #EDEDED;
+    height: 2rem;
+    padding: .3rem .7rem;
+    margin-top: .3rem;
+    margin-bottom: 1rem; }
+    main .form input:focus {
+      border: solid 1px #3997C8; }
+  main .form a.big-btn {
+    margin-top: 2rem; }
+  main .form span.hint {
+    font-size: .8rem;
+    letter-spacing: -.005rem;
+    color: #adadad; }
