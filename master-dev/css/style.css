@@ -8,10 +8,12 @@ html {
 body {
   background: #EDEDED;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: .9rem;
   letter-spacing: .03rem;
-  line-height: 1.4rem; }
+  line-height: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .hide {
   display: none !important; }
@@ -155,6 +157,12 @@ span.tag {
   color: #FFFFFF; }
   .cta:hover {
     background: #6BBD2E; }
+
+.submit {
+  background: rgba(57, 151, 200, 0.9);
+  color: #FFFFFF; }
+  .submit:hover {
+    background: #3997C8; }
 
 ul.tabs {
   position: relative;
@@ -583,7 +591,8 @@ main {
       @media screen and (max-width: 420px) {
         main #account-settings a.update-settings {
           display: block;
-          text-align: center; } }
+          text-align: center;
+          margin: 1rem 0 2rem 0; } }
     @media screen and (max-width: 420px) {
       main #account-settings {
         width: 100%; } }
@@ -663,6 +672,8 @@ main {
       main #account-settings .form .edit-current-contacts .item {
         padding: 0;
         margin: 0; }
+        main #account-settings .form .edit-current-contacts .item .edit-input {
+          width: 50%; }
     main #account-settings .form .edit-profile-picture {
       display: flex; }
       @media screen and (max-width: 420px) {
@@ -703,6 +714,10 @@ main {
       padding: .2rem 0; }
       main #account-settings .form .item:hover {
         cursor: pointer; }
+      @media screen and (max-width: 420px) {
+        main #account-settings .form .item {
+          display: block;
+          padding: 0; } }
       main #account-settings .form .item .edit-input {
         width: 55%; }
         @media screen and (max-width: 420px) {
@@ -729,12 +744,16 @@ main {
       text-align: right;
       margin-top: .7rem;
       margin-right: .7rem;
-      font-size: .4rem;
+      font-size: .6rem;
       color: #444;
       font-weight: 500; }
       @media screen and (max-width: 420px) {
         main #account-settings .form label {
-          display: none; } }
+          display: block;
+          font-weight: bold;
+          font-size: 8px;
+          text-align: left;
+          margin: 0; } }
     main #account-settings .form input {
       background: #EDEDED;
       font-weight: 500;
@@ -742,7 +761,9 @@ main {
       @media screen and (max-width: 420px) {
         main #account-settings .form input {
           padding-top: 0;
-          padding-bottom: 0; } }
+          padding-bottom: 0;
+          margin-top: 0;
+          margin-bottom: .7rem; } }
       main #account-settings .form input:focus {
         background: #FFFFFF; }
       main #account-settings .form input[type="file"] {

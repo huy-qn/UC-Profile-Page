@@ -20,10 +20,12 @@ $mobile: new-breakpoint(max-width 420px 4);
 body {
   background: $grey;
   font-family: 'Open Sans', sans-serif; 
-  font-weight: 300;
+  font-weight: 400;
   font-size: .9rem;
   letter-spacing: .03rem;
   line-height: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // MISC
@@ -209,6 +211,14 @@ span.tag {
   color: $white;
   &:hover {
     background: $green;
+  }
+}
+
+.submit {
+  background: rgba($light-blue,.9);
+  color: $white;
+  &:hover {
+    background: $light-blue;
   }
 }
 
@@ -730,6 +740,7 @@ main {
       @include media($mobile) {
         display: block;
         text-align: center;
+        margin: 1rem 0 2rem 0;
       }
     }
 
@@ -805,6 +816,10 @@ main {
         .item {
           padding: 0;
           margin: 0;
+
+          .edit-input {
+            width: 50%;
+          }
         }
       }
 
@@ -860,6 +875,10 @@ main {
         &:hover {
           cursor: pointer;
         }
+        @include media($mobile) {
+          display: block;
+          padding: 0;
+        }
 
         .edit-input {
           width: 55%;
@@ -897,11 +916,15 @@ main {
         text-align: right;
         margin-top: .7rem;
         margin-right: .7rem;
-        font-size: .4rem;
+        font-size: .6rem;
         color: $black;
         font-weight: 500;
         @include media($mobile) {
-          display: none;
+          display: block;
+          font-weight: bold;
+          font-size: 8px;
+          text-align: left;
+          margin: 0;
         }
       }
 
@@ -912,6 +935,8 @@ main {
         @include media($mobile) {
           padding-top: 0;
           padding-bottom: 0;
+          margin-top: 0;
+          margin-bottom: .7rem;
         }
         &:focus {
           background: $white;

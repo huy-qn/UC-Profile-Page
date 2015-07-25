@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/fastclick.js"></script>
         <script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
     </head>
     <body>
@@ -72,7 +73,7 @@
                     <span>Make sure to upload a file with at least 160px in width and height</span>
                     <span class="actions">
                       <a href="" class="small-btn">Delete</a>
-                      <a href="" class="small-btn cta">Upload</a>                        
+                      <a href="" class="small-btn submit">Upload</a>                        
                     </span>
                   </p>
                 </div>
@@ -87,7 +88,7 @@
                   </div>
                   <div class="edit-actions hide">
                     <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="small-btn cta">Saves</a>
+                    <a href="" class="small-btn submit">Saves</a>
                   </div>
                 </div>
                 <div class="item">
@@ -97,7 +98,7 @@
                   </div>
                   <div class="edit-actions hide">
                     <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="small-btn cta">Saves</a>
+                    <a href="" class="small-btn submit">Saves</a>
                   </div>
                 </div>
                 <div class="edit-current-contacts">
@@ -109,7 +110,7 @@
                     </div>
                     <div class="edit-actions hide">
                       <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
-                      <a href="" class="small-btn cta">Saves</a>
+                      <a href="" class="small-btn submit">Saves</a>
                     </div>
                   </div>
                   <div class="item">
@@ -119,7 +120,7 @@
                     </div>
                     <div class="edit-actions hide">
                       <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
-                      <a href="" class="small-btn cta">Saves</a>
+                      <a href="" class="small-btn submit">Saves</a>
                     </div>
                   </div>
                   <div class="item">
@@ -129,7 +130,7 @@
                     </div>
                     <div class="edit-actions hide">
                       <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
-                      <a href="" class="small-btn cta">Saves</a>
+                      <a href="" class="small-btn submit">Saves</a>
                     </div>
                   </div>
                 </div>
@@ -141,7 +142,7 @@
                   </div>
                   <div class="edit-actions hide">
                     <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="small-btn cta">Saves</a>
+                    <a href="" class="small-btn submit">Saves</a>
                   </div>
                 </div>
                 <div class="item">
@@ -151,7 +152,7 @@
                   </div>
                   <div class="edit-actions hide">
                     <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="small-btn cta">Saves</a>
+                    <a href="" class="small-btn submit">Saves</a>
                   </div>
                 </div>
                 <div class="item">
@@ -161,7 +162,7 @@
                   </div>
                   <div class="edit-actions hide">
                     <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="small-btn cta">Saves</a>
+                    <a href="" class="small-btn submit">Saves</a>
                   </div>
                 </div>
                 <div class="item">
@@ -171,10 +172,10 @@
                   </div>
                   <div class="edit-actions hide">
                     <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="small-btn cta">Saves</a>
+                    <a href="" class="small-btn submit">Saves</a>
                   </div>
                 </div>
-                <a href="" class="btn cta update-settings">Update Settings</a>
+                <a href="" class="btn submit update-settings">Update Settings</a>
               </div>
               <div class="edit-tags">
                 <h3>Your Skills</h3>
@@ -189,7 +190,7 @@
                   </ul>
                   <div class="actions">
                     <input type="text">
-                    <a href="" class="small-btn cta">Add</a>                    
+                    <a href="" class="small-btn submit">Add</a>                    
                   </div>
                 </form>
                 <hr>
@@ -205,7 +206,7 @@
                   </ul>
                   <div class="actions">
                     <input type="text">
-                    <a href="" class="small-btn cta">Add</a>                    
+                    <a href="" class="small-btn submit">Add</a>                    
                   </div>
                 </form>
               </div>
@@ -233,6 +234,11 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+        <script>
+          window.addEventListener('load', function() {
+            new FastClick(document.body);
+          }, false);
         </script>
     </body>
 </html>
