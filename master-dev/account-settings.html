@@ -52,87 +52,172 @@
         </header>
 
         <main>
-          <div class="left-bar">
-            <div id="account-settings" class="card">
-              <ul class='tabs'>
-                <li><a href='#overview'><i class="fa fa-user"></i>Overview</a></li>
-                <li><a href='#work'><i class="fa fa-briefcase"></i>Work</a></li>
-                <li><a href='#education'><i class="fa fa-graduation-cap"></i>Education</a></li>
-              </ul>
+          <div id="account-settings" class="card">
+            <ul class='tabs'>
+              <li><a href='#overview'><i class="fa fa-user"></i>Overview</a></li>
+              <li><a href='#work'><i class="fa fa-briefcase"></i>Work</a></li>
+              <li><a href='#education'><i class="fa fa-graduation-cap"></i>Education</a></li>
+            </ul>
 
-              <div id='overview' class="tab-content form">
-                <div class="item">
-                  <label for="name">Name</label>
-                  <div class="edit-input">
-                    <input type="text" size="35" placeholder="Tài Trần">
-                    <span class="hint">It is important to use your real name</span>
-                  </div>
-                  <div class="edit-actions hide">
-                    <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="btn cta">Saves</a>
-                  </div>
+            <div id='overview' class="tab-content form">
+              <div class="edit-profile-picture">
+                <div class="user-profile-picture">
+                    <img src="https://scontent.fsan1-2.fna.fbcdn.net/hphotos-xtp1/v/t1.0-9/11693948_382070035317440_780357150578891507_n.jpg?oh=2ae4c6ceec0e55ce7a3bdc4c487bec56&amp;oe=564BEA6A" alt="">
                 </div>
+                <div class="edit-actions">
+                  <h3>Change Avatar</h3>
+                  <p>
+                    <strong>Select a file to upload</strong>
+                    <input type="file">
+                    <span>Make sure to upload a file with at least 160px in width and height</span>
+                    <span class="actions">
+                      <a href="" class="small-btn">Delete</a>
+                      <a href="" class="small-btn cta">Upload</a>                        
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="edit-main-informations">
                 <div class="item">
                   <label for="username">Username</label>
                   <div class="edit-input">
-                    <input type="text" size="35" placeholder="taitran11">
+                    <input type="text" size="25" placeholder="taitran11">
                     <span class="hint">Your profile URL: https://urbancare.io/<strong>taitran11</strong></span>
                   </div>
                   <div class="edit-actions hide">
                     <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="btn cta">Saves</a>
-                  </div>
-                </div>
-                <div class="item">
-                  <label for="birthday">Birthday</label>
-                  <div class="edit-input">
-                    <input type="text" size="35" placeholder="July 10, 1993">
-                  </div>
-                  <div class="edit-actions hide">
-                    <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="btn cta">Saves</a>
-                  </div>
-                </div>
-                <div class="item">
-                  <label for="gender">Gender</label>
-                  <div class="edit-input">
-                    <input type="text" size="35" placeholder="Male">
-                  </div>
-                  <div class="edit-actions hide">
-                    <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="btn cta">Saves</a>
-                  </div>
-                </div>
-                <div class="item">
-                  <label for="hometown">Hometown</label>
-                  <div class="edit-input">
-                    <input type="text" size="35" placeholder="Quy Nhon, Viet Nam">
-                  </div>
-                  <div class="edit-actions hide">
-                    <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="btn cta">Saves</a>
+                    <a href="" class="small-btn cta">Saves</a>
                   </div>
                 </div>
                 <div class="item">
                   <label for="languages">Languages</label>
                   <div class="edit-input">
-                    <input type="text" size="35" placeholder="English, Vietnamese">
+                    <input type="text" size="25" placeholder="English, Vietnamese">
                   </div>
                   <div class="edit-actions hide">
                     <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="btn cta">Saves</a>
+                    <a href="" class="small-btn cta">Saves</a>
                   </div>
                 </div>
+                <div class="edit-current-contacts">
+                  <h3>Current Contacts</h3>
+                  <div class="item">
+                    <label for="location">Location</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="215th Street, San Diego, CA">
+                    </div>
+                    <div class="edit-actions hide">
+                      <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
+                      <a href="" class="small-btn cta">Saves</a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="email">email</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="huynguyen.me@gmail.com">
+                    </div>
+                    <div class="edit-actions hide">
+                      <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
+                      <a href="" class="small-btn cta">Saves</a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="mobile">mobile</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="+1 (762) 877 5650">
+                    </div>
+                    <div class="edit-actions hide">
+                      <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
+                      <a href="" class="small-btn cta">Saves</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <label for="name">Name</label>
+                  <div class="edit-input">
+                    <input type="text" size="25" placeholder="Tài Trần">
+                    <span class="hint">It is important to use your real name</span>
+                  </div>
+                  <div class="edit-actions hide">
+                    <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
+                    <a href="" class="small-btn cta">Saves</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <label for="birthday">Birthday</label>
+                  <div class="edit-input">
+                    <input type="text" size="25" placeholder="July 10, 1993">
+                  </div>
+                  <div class="edit-actions hide">
+                    <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
+                    <a href="" class="small-btn cta">Saves</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <label for="gender">Gender</label>
+                  <div class="edit-input">
+                    <input type="text" size="25" placeholder="Male">
+                  </div>
+                  <div class="edit-actions hide">
+                    <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
+                    <a href="" class="small-btn cta">Saves</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <label for="hometown">Hometown</label>
+                  <div class="edit-input">
+                    <input type="text" size="25" placeholder="Quy Nhon, Viet Nam">
+                  </div>
+                  <div class="edit-actions hide">
+                    <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
+                    <a href="" class="small-btn cta">Saves</a>
+                  </div>
+                </div>
+                <a href="" class="btn cta update-settings">Update Settings</a>
               </div>
-              <div id='work' class="tab-content">
-                test 2
+              <div class="edit-tags">
+                <h3>Your Skills</h3>
+                <form action="" id="add-skill-form">
+                  <ul class="added-tags">
+                    <li><a href="">UI Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Web Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Photography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Typography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">HTML</a><i class="fa fa-times"></i></li>
+                    <li><a href="">CSS</a><i class="fa fa-times"></i></li>
+                  </ul>
+                  <div class="actions">
+                    <input type="text">
+                    <a href="" class="small-btn cta">Add</a>                    
+                  </div>
+                </form>
+                <hr>
+                <h3>Your Interests</h3>
+                <form action="" id="add-skill-form">
+                  <ul class="added-tags">
+                    <li><a href="">UI Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Web Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Photography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Typography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">HTML</a><i class="fa fa-times"></i></li>
+                    <li><a href="">CSS</a><i class="fa fa-times"></i></li>
+                  </ul>
+                  <div class="actions">
+                    <input type="text">
+                    <a href="" class="small-btn cta">Add</a>                    
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id='work' class="tab-content">
+              test 2
 
-              </div>
-              <div id='education' class="tab-content"> 
-               test 3
-              </div>
-            </div>   
-          </div>
+            </div>
+            <div id='education' class="tab-content"> 
+             test 3
+            </div>
+          </div>   
         </main>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

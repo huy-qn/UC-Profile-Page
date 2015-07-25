@@ -383,6 +383,28 @@ main {
         margin-right: 0; }
         main .right-bar:last-child {
           margin-right: 0; } }
+  main .user-profile-picture {
+    width: 15rem; }
+    @media screen and (max-width: 420px) {
+      main .user-profile-picture {
+        float: left;
+        display: block;
+        margin-right: 7.4229703521%;
+        width: 100%;
+        margin: 0; }
+        main .user-profile-picture:last-child {
+          margin-right: 0; } }
+  main .user-profile-picture img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    padding: 4px;
+    border: solid 1px #EDEDED;
+    border-radius: 2px; }
+    @media screen and (max-width: 420px) {
+      main .user-profile-picture img {
+        margin: 0 auto;
+        margin-bottom: 1rem; } }
   main .main-information {
     display: flex;
     max-width: 68em;
@@ -395,28 +417,6 @@ main {
     @media screen and (max-width: 420px) {
       main .main-information {
         display: block; } }
-    main .main-information .user-profile-picture {
-      width: 15rem; }
-      @media screen and (max-width: 420px) {
-        main .main-information .user-profile-picture {
-          float: left;
-          display: block;
-          margin-right: 7.4229703521%;
-          width: 100%;
-          margin: 0; }
-          main .main-information .user-profile-picture:last-child {
-            margin-right: 0; } }
-    main .main-information .user-profile-picture img {
-      display: block;
-      width: 160px;
-      height: 160px;
-      padding: 4px;
-      border: solid 1px #EDEDED;
-      border-radius: 2px; }
-      @media screen and (max-width: 420px) {
-        main .main-information .user-profile-picture img {
-          margin: 0 auto;
-          margin-bottom: 1rem; } }
     main .main-information .user-main-details {
       margin-top: .5rem; }
       @media screen and (max-width: 420px) {
@@ -573,41 +573,191 @@ main {
     @media screen and (max-width: 420px) {
       main #register-form, main #login-form {
         padding: 0 1.1rem; } }
-  main #account-settings .form .item {
-    display: flex;
-    margin-bottom: .4rem;
-    padding: .2rem 0; }
-    main #account-settings .form .item:hover {
-      cursor: pointer; }
-    main #account-settings .form .item .edit-input {
-      width: 55%; }
-      main #account-settings .form .item .edit-input span.hint {
-        margin-top: -.5rem; }
-    main #account-settings .form .item .edit-actions {
+  main #account-settings {
+    width: 1020px;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    main #account-settings a.update-settings {
+      display: none; }
+      @media screen and (max-width: 420px) {
+        main #account-settings a.update-settings {
+          display: block;
+          text-align: center; } }
+    @media screen and (max-width: 420px) {
+      main #account-settings {
+        width: 100%; } }
+    main #account-settings::after {
+      clear: both;
+      content: "";
+      display: table; }
+    main #account-settings .form .edit-main-informations {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 65.8807828007%;
+      border-right: solid 1px #EDEDED;
+      padding-right: 1rem; }
+      main #account-settings .form .edit-main-informations:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 420px) {
+        main #account-settings .form .edit-main-informations {
+          float: left;
+          display: block;
+          margin-right: 7.4229703521%;
+          width: 100%;
+          border-right: 0;
+          padding-right: 0; }
+          main #account-settings .form .edit-main-informations:last-child {
+            margin-right: 0; } }
+    main #account-settings .form .edit-tags {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 31.7615656014%; }
+      main #account-settings .form .edit-tags:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 420px) {
+        main #account-settings .form .edit-tags {
+          float: left;
+          display: block;
+          margin-right: 7.4229703521%;
+          width: 100%; }
+          main #account-settings .form .edit-tags:last-child {
+            margin-right: 0; } }
+      main #account-settings .form .edit-tags hr {
+        margin: 2rem 0; }
+      main #account-settings .form .edit-tags .actions {
+        display: flex;
+        align-items: center; }
+        main #account-settings .form .edit-tags .actions input {
+          background: #FFFFFF;
+          padding: 0;
+          margin: 0;
+          margin-right: .7rem; }
+      main #account-settings .form .edit-tags ul.added-tags {
+        list-style: none;
+        padding: 0; }
+        main #account-settings .form .edit-tags ul.added-tags li {
+          display: inline-block;
+          border-radius: 2px;
+          background: #EDEDED;
+          padding: .2rem 1rem;
+          margin: .4rem .2rem; }
+          main #account-settings .form .edit-tags ul.added-tags li:hover {
+            background: #e0e0e0; }
+          main #account-settings .form .edit-tags ul.added-tags li a {
+            font-size: .8rem; }
+          main #account-settings .form .edit-tags ul.added-tags li i {
+            color: #c7c7c7;
+            position: relative;
+            right: -7px; }
+            main #account-settings .form .edit-tags ul.added-tags li i:hover {
+              color: #FF3D4C;
+              cursor: pointer; }
+    main #account-settings .form .edit-current-contacts {
+      border: solid 1px #EDEDED;
+      border-radius: 2px;
+      margin-bottom: 2rem;
+      padding: 0 1rem; }
+      main #account-settings .form .edit-current-contacts .item {
+        padding: 0;
+        margin: 0; }
+    main #account-settings .form .edit-profile-picture {
+      display: flex; }
+      @media screen and (max-width: 420px) {
+        main #account-settings .form .edit-profile-picture {
+          display: block; } }
+      main #account-settings .form .edit-profile-picture .user-profile-picture {
+        width: 12rem; }
+        @media screen and (max-width: 420px) {
+          main #account-settings .form .edit-profile-picture .user-profile-picture {
+            width: 100%; } }
+      @media screen and (max-width: 420px) {
+        main #account-settings .form .edit-profile-picture .edit-actions {
+          text-align: center; } }
+      main #account-settings .form .edit-profile-picture .edit-actions .actions {
+        position: relative;
+        right: 0;
+        top: -4.5rem;
+        float: right; }
+        @media screen and (max-width: 420px) {
+          main #account-settings .form .edit-profile-picture .edit-actions .actions {
+            float: none;
+            display: block;
+            top: 0; } }
+      main #account-settings .form .edit-profile-picture .edit-actions p a {
+        display: inline-block; }
+      main #account-settings .form .edit-profile-picture .edit-actions span {
+        font-size: .7rem;
+        display: block; }
+        @media screen and (max-width: 420px) {
+          main #account-settings .form .edit-profile-picture .edit-actions span {
+            padding: .5rem 3rem; } }
+      main #account-settings .form .edit-profile-picture .edit-actions strong {
+        display: block;
+        font-weight: 500; }
+    main #account-settings .form .item {
       display: flex;
-      height: 2.4rem;
-      align-items: center;
-      font-size: .8rem; }
-      main #account-settings .form .item .edit-actions a {
-        margin: 0 .5rem;
-        margin-top: .4rem; }
-  main #account-settings .form input, main #account-settings .form label {
-    display: inline-block; }
-  main #account-settings .form label {
-    width: 10%;
-    text-align: right;
-    margin-top: .7rem;
-    margin-right: .7rem;
-    color: #444;
-    font-weight: 500; }
-  main #account-settings .form input {
-    background: #EDEDED;
-    font-weight: 500;
-    border: solid 1px #c7c7c7; }
-    main #account-settings .form input:focus {
-      background: #FFFFFF; }
-  main #account-settings .form span.hint {
-    display: block; }
+      margin-bottom: .4rem;
+      padding: .2rem 0; }
+      main #account-settings .form .item:hover {
+        cursor: pointer; }
+      main #account-settings .form .item .edit-input {
+        width: 55%; }
+        @media screen and (max-width: 420px) {
+          main #account-settings .form .item .edit-input {
+            width: 90%; } }
+        main #account-settings .form .item .edit-input span.hint {
+          margin-top: -.5rem; }
+      main #account-settings .form .item .edit-actions {
+        display: flex;
+        height: 2.4rem;
+        align-items: center;
+        font-size: .8rem;
+        justify-content: flex-end; }
+        main #account-settings .form .item .edit-actions a {
+          margin: 0 .2rem;
+          margin-top: .4rem; }
+        @media screen and (max-width: 420px) {
+          main #account-settings .form .item .edit-actions {
+            display: none; } }
+    main #account-settings .form input, main #account-settings .form label {
+      display: inline-block; }
+    main #account-settings .form label {
+      width: 12%;
+      text-align: right;
+      margin-top: .7rem;
+      margin-right: .7rem;
+      font-size: .4rem;
+      color: #444;
+      font-weight: 500; }
+      @media screen and (max-width: 420px) {
+        main #account-settings .form label {
+          display: none; } }
+    main #account-settings .form input {
+      background: #EDEDED;
+      font-weight: 500;
+      border: solid 1px #c7c7c7; }
+      @media screen and (max-width: 420px) {
+        main #account-settings .form input {
+          padding-top: 0;
+          padding-bottom: 0; } }
+      main #account-settings .form input:focus {
+        background: #FFFFFF; }
+      main #account-settings .form input[type="file"] {
+        border: 0;
+        padding: 0;
+        background: 0;
+        display: block;
+        margin-bottom: 0;
+        font-size: .7rem;
+        font-weight: 300; }
+        @media screen and (max-width: 420px) {
+          main #account-settings .form input[type="file"] {
+            margin: 1rem auto; } }
+    main #account-settings .form span.hint {
+      display: block; }
   main .form-heading {
     text-align: center;
     padding: 1rem 0; }

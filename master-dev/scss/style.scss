@@ -475,33 +475,32 @@ main {
   }
 
   // PROFILE PAGE
+.user-profile-picture {
+  width: 15rem;
+  @include media($mobile) {
+    @include span-columns(4);
+    margin: 0;
+  }
+}
+
+.user-profile-picture img{
+  display: block;
+  width: 160px;
+  height: 160px;
+  padding: 4px;
+  border: solid 1px $grey;
+  border-radius: $radius;
+  @include media($mobile) {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
   .main-information {
     // width: 100%;
     display: flex;
     @include outer-container;
     @include media($mobile) {
       display: block;
-    }
-
-    .user-profile-picture {
-      width: 15rem;
-      @include media($mobile) {
-        @include span-columns(4);
-        margin: 0;
-      }
-    }
-
-    .user-profile-picture img{
-      display: block;
-      width: 160px;
-      height: 160px;
-      padding: 4px;
-      border: solid 1px $grey;
-      border-radius: $radius;
-      @include media($mobile) {
-        margin: 0 auto;
-        margin-bottom: 1rem;
-      }
     }
 
     .user-main-details {
@@ -725,7 +724,134 @@ main {
   }
 
   #account-settings {
+
+    a.update-settings {
+      display: none;
+      @include media($mobile) {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    width: 1020px;
+    @include media($mobile) {
+      width: 100%;
+    }
+
+    @include outer-container;
     .form {
+
+      .edit-main-informations {
+        @include span-columns(8);
+        @include media($mobile) {
+          @include span-columns(4);
+          border-right: 0;
+          padding-right: 0;
+        }
+        border-right: solid 1px $grey;
+        padding-right: 1rem;
+      }
+      .edit-tags {
+        @include span-columns(4);
+        @include media($mobile) {
+          @include span-columns(4);
+        }
+        hr {
+          margin: 2rem 0;
+        }
+        .actions {
+          display: flex;
+          align-items: center;
+          input {
+            background: $white;
+            padding: 0;
+            margin: 0;
+            margin-right: .7rem;
+          }
+        }
+        ul.added-tags {
+          list-style: none;
+          padding: 0;
+          li {
+            display: inline-block;
+            border-radius: $radius;
+            background: $grey;
+            padding: .2rem 1rem;
+            margin: .4rem .2rem;
+            &:hover {
+              background: darken($grey, 5%);
+            }
+            a {
+              font-size: .8rem;
+            }
+            i {
+              color: darken($grey,15%);
+              position: relative;
+              right: -7px;
+              &:hover {
+                color: $red;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      .edit-current-contacts {
+        border: solid 1px $grey;
+        border-radius: $radius;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+        .item {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .edit-profile-picture {
+        display: flex;
+        @include media($mobile) {
+          display: block;
+        }
+        .user-profile-picture {
+          width: 12rem;
+          @include media($mobile) {
+            width: 100%;
+          }
+        }
+        .edit-actions {
+          @include media($mobile) {
+            text-align: center;
+          }
+          .actions {
+            position: relative;
+            right: 0;
+            top: -4.5rem;
+            float: right;
+            @include media($mobile) {
+              float: none;
+              display: block;
+              top: 0;
+            }
+          }
+          p {
+            a {
+              display: inline-block;
+            }
+          }
+          span {
+            font-size: .7rem;
+            display: block;
+            @include media($mobile) {
+              padding: .5rem 3rem;
+            }
+          }
+          strong {
+            display: block;
+            font-weight: 500;
+          }
+        }
+      }
 
       .item {
         display: flex;
@@ -737,6 +863,9 @@ main {
 
         .edit-input {
           width: 55%;
+          @include media($mobile) {
+            width: 90%;
+          }
 
           span.hint {
             margin-top: -.5rem;
@@ -748,9 +877,13 @@ main {
           height: 2.4rem;
           align-items: center;
           font-size: .8rem;
+          justify-content: flex-end;
           a {
-            margin: 0 .5rem;
+            margin: 0 .2rem;
             margin-top: .4rem;
+          }
+          @include media($mobile) {
+            display: none;
           }
         }
       }
@@ -760,20 +893,40 @@ main {
       }
 
       label {
-        width: 10%;
+        width: 12%;
         text-align: right;
         margin-top: .7rem;
         margin-right: .7rem;
+        font-size: .4rem;
         color: $black;
         font-weight: 500;
+        @include media($mobile) {
+          display: none;
+        }
       }
 
       input {
         background: $grey;
         font-weight: 500;
         border: solid 1px darken($grey,15%);
+        @include media($mobile) {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
         &:focus {
           background: $white;
+        }
+        &[type="file"] {
+          border: 0;
+          padding: 0;
+          background: 0;
+          display: block;
+          margin-bottom: 0;
+          font-size: .7rem;
+          font-weight: 300;
+          @include media($mobile) {
+            margin: 1rem auto;
+          }
         }
       }
 
