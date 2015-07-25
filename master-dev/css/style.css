@@ -41,13 +41,12 @@ body {
   content: attr(data-tip);
   position: absolute;
   top: 0;
-  left: -96%;
-  padding: 5px 8px;
+  left: -105%;
+  padding: .3rem .8rem;
   background: #FF3D4C;
   color: #FFFFFF;
   z-index: 9;
   font-size: 0.75em;
-  height: 18px;
   line-height: 18px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -83,7 +82,7 @@ span.tag {
 .skill-tags {
   margin-top: 1.5rem;
   width: 80%; }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     .skill-tags {
       width: 100%; } }
   .skill-tags span {
@@ -100,7 +99,7 @@ span.tag {
 .interest-tags {
   margin-top: 3rem;
   width: 60%; }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     .interest-tags {
       width: 100%; } }
   .interest-tags span {
@@ -178,7 +177,7 @@ ul.tabs {
         font-size: 1.5rem;
         display: inline-block;
         padding: .7rem; }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 420px) {
           ul.tabs li a i {
             display: none; } }
       ul.tabs li a:hover {
@@ -186,14 +185,14 @@ ul.tabs {
       ul.tabs li a.active {
         font-weight: 600;
         color: #172633;
-        border-bottom: solid 2px #172633; }
+        border-bottom: solid 3px #172633; }
         ul.tabs li a.active i {
           color: #3997C8; }
 
 .tab-content {
   padding: 2rem;
   color: #444; }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     .tab-content {
       padding: 1rem; } }
   .tab-content .item {
@@ -229,7 +228,7 @@ header {
       text-transform: uppercase;
       font-size: 1.2rem;
       font-weight: 700; }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         header .header-wrapper h1.logo {
           margin: auto auto;
           margin-left: 1rem; } }
@@ -238,7 +237,7 @@ header {
       margin-right: 20%;
       height: 30px;
       min-width: 320px; }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         header .header-wrapper .search {
           display: none; } }
       header .header-wrapper .search input {
@@ -282,7 +281,7 @@ header {
               color: #FFFFFF; }
         header .header-wrapper nav ul.main-navigation li.user-profile-links {
           padding: .8rem; }
-          @media screen and (max-width: 400px) {
+          @media screen and (max-width: 420px) {
             header .header-wrapper nav ul.main-navigation li.user-profile-links span.user-name {
               display: none; } }
           header .header-wrapper nav ul.main-navigation li.user-profile-links img.menu-profile-picture {
@@ -311,7 +310,7 @@ header {
           header .header-wrapper nav ul.main-navigation ul.drop-down-list li {
             font-size: .8rem;
             display: block;
-            min-width: 140px;
+            width: 170px;
             padding: .5rem 1rem; }
             header .header-wrapper nav ul.main-navigation ul.drop-down-list li:first-child {
               margin-top: .3rem; }
@@ -319,7 +318,7 @@ header {
               margin-bottom: .3rem; }
             header .header-wrapper nav ul.main-navigation ul.drop-down-list li:hover {
               background: rgba(255, 255, 255, 0.1); }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 420px) {
           header .header-wrapper nav ul.main-navigation li.community {
             display: none; } }
         header .header-wrapper nav ul.main-navigation li.community span, header .header-wrapper nav ul.main-navigation li.community i {
@@ -341,7 +340,7 @@ main {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     main {
       display: block; } }
   main .card {
@@ -359,7 +358,7 @@ main {
     justify-content: flex-start; }
     main .left-bar:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
       main .left-bar {
         float: left;
         display: block;
@@ -375,7 +374,7 @@ main {
     width: 23.2317613015%; }
     main .right-bar:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
       main .right-bar {
         float: left;
         display: block;
@@ -393,12 +392,12 @@ main {
       clear: both;
       content: "";
       display: table; }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
       main .main-information {
         display: block; } }
     main .main-information .user-profile-picture {
       width: 15rem; }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         main .main-information .user-profile-picture {
           float: left;
           display: block;
@@ -414,13 +413,13 @@ main {
       padding: 4px;
       border: solid 1px #EDEDED;
       border-radius: 2px; }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         main .main-information .user-profile-picture img {
           margin: 0 auto;
           margin-bottom: 1rem; } }
     main .main-information .user-main-details {
       margin-top: .5rem; }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         main .main-information .user-main-details {
           display: block;
           text-align: center; } }
@@ -428,7 +427,7 @@ main {
         float: right;
         display: flex;
         justify-content: flex-end; }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 420px) {
           main .main-information .user-main-details .actions {
             display: block;
             width: 100%;
@@ -480,7 +479,7 @@ main {
         color: #c7c7c7;
         width: 60%;
         font-weight: 400; }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 420px) {
           main .main-information .user-main-details .current-work-place {
             width: 100%; } }
   main .more-information #overview .current-contacts {
@@ -494,7 +493,7 @@ main {
     right: 0;
     float: right;
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.32); }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
       main .more-information #overview .current-contacts {
         display: block;
         width: 100%;
@@ -520,7 +519,7 @@ main {
     main .more-information #work .item img {
       width: 128px;
       height: 128px; }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         main .more-information #work .item img {
           width: 48px;
           height: 48px; } }
@@ -537,7 +536,7 @@ main {
       width: 128px;
       height: 70px;
       padding: .3rem; }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         main .more-information #education .education-information .uploaded-media span, main .more-information #education .education-information .uploaded-media img {
           width: 90px;
           height: 60px;
@@ -553,15 +552,15 @@ main {
       line-height: 0;
       text-align: center;
       height: 66px; }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         main .more-information #education .education-information .uploaded-media span.upload-media {
           height: 60px; } }
       main .more-information #education .education-information .uploaded-media span.upload-media i {
         display: block;
         font-size: 1.8rem;
-        padding-top: 5%;
-        line-height: 3rem; }
-        @media screen and (max-width: 400px) {
+        padding-top: 2%;
+        line-height: 2.7rem; }
+        @media screen and (max-width: 420px) {
           main .more-information #education .education-information .uploaded-media span.upload-media i {
             font-size: 1.2rem;
             line-height: 2.4rem; } }
@@ -571,10 +570,13 @@ main {
         cursor: pointer; }
   main #register-form, main #login-form {
     padding: 0 5rem; }
+    @media screen and (max-width: 420px) {
+      main #register-form, main #login-form {
+        padding: 0 1.1rem; } }
   main #account-settings .form .item {
     display: flex;
-    margin-bottom: .6rem;
-    padding: 1rem 0; }
+    margin-bottom: .4rem;
+    padding: .2rem 0; }
     main #account-settings .form .item:hover {
       cursor: pointer; }
     main #account-settings .form .item .edit-input {
@@ -594,22 +596,24 @@ main {
   main #account-settings .form label {
     width: 10%;
     text-align: right;
+    margin-top: .7rem;
     margin-right: .7rem;
-    color: #444; }
+    color: #444;
+    font-weight: 500; }
   main #account-settings .form input {
-    height: 1.5rem;
     background: #EDEDED;
     font-weight: 500;
     border: solid 1px #c7c7c7; }
     main #account-settings .form input:focus {
       background: #FFFFFF; }
-  main #account-settings .form input:focus > .edit-actions {
-    display: none !important; }
   main #account-settings .form span.hint {
     display: block; }
   main .form-heading {
     text-align: center;
     padding: 1rem 0; }
+    @media screen and (max-width: 420px) {
+      main .form-heading h1 {
+        font-size: 1.6rem; } }
     main .form-heading a {
       color: #3997C8;
       font-weight: 500; }
@@ -637,7 +641,7 @@ main {
     display: block;
     border: solid 1px #EDEDED;
     height: 2rem;
-    padding: .3rem .7rem;
+    padding: 1.2rem .7rem;
     margin-top: .3rem;
     margin-bottom: 1rem; }
     main .form input:focus {
