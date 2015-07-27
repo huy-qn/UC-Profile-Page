@@ -178,22 +178,7 @@
                 <a href="" class="btn submit update-settings">Update Settings</a>
               </div>
               <div class="edit-tags">
-                <h3>Your Skills</h3>
-                <form action="" id="add-skill-form">
-                  <ul class="added-tags">
-                    <li><a href="">UI Designer</a><i class="fa fa-times"></i></li>
-                    <li><a href="">Web Designer</a><i class="fa fa-times"></i></li>
-                    <li><a href="">Photography</a><i class="fa fa-times"></i></li>
-                    <li><a href="">Typography</a><i class="fa fa-times"></i></li>
-                    <li><a href="">HTML</a><i class="fa fa-times"></i></li>
-                    <li><a href="">CSS</a><i class="fa fa-times"></i></li>
-                  </ul>
-                  <div class="actions">
-                    <input type="text">
-                    <a href="" class="small-btn submit">Add</a>                    
-                  </div>
-                </form>
-                <hr>
+
                 <h3>Your Interests</h3>
                 <form action="" id="add-skill-form">
                   <ul class="added-tags">
@@ -211,12 +196,177 @@
                 </form>
               </div>
             </div>
-            <div id='work' class="tab-content">
-              test 2
+            <div id='work' class="tab-content form">
+              <div class="edit-main-informations">
+                <h3>Current Work Place</h3>
+                  <div class="item">
+                    <label for="work-title">Work Title</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="taitran11">
+                    </div>
+                    <div class="edit-actions hide">
+                      <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
+                      <a href="" class="small-btn submit">Saves</a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="work-place">Place</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="taitran11">
+                    </div>
+                    <div class="edit-actions hide">
+                      <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
+                      <a href="" class="small-btn submit">Saves</a>
+                    </div>
+                  </div>
+                <hr>
+                <h3>Add Worked Place</h3>
+                <div class="add-worked-place">
+                  <div class="item">
+                    <label for="work-place">Company</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="Where have you worked?">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="position">Position</label>
+                    <div class="edit-input">
+                      <input type="text" size="25">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="period">Period</label>
+                    <div class="edit-input">
+                      <input type="text" size="10" placeholder="From year">
+                      <input type="text" size="10" placeholder="To year">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="description">Description</label>
+                    <div class="edit-input">
+                    <textarea name="description" id="" cols="40" rows="3"></textarea>
+                    </div>
+                  </div> 
+                  <div class="add-actions">
+                    <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
+                    <a href="" class="btn submit">Save Changes</a>
+                  </div>                 
+                </div>
+                <hr>
+                <h3>In The Past</h3>
+                <div class="worked-places">
+                  <div class="item">
+                    <div class="edit-input">
+                      <div class="work-information">
+                        <span class="work-name"><strong>Designer</strong> at <strong>Zalora Viet Nam</strong></span>
+                        <span>Ho Chi Minh, Viet Nam</span>
+                        <span>2012</span>
+                      </div>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Zalora_logo.jpg" alt="" class="work-thumb">
+                    </div>
+                    <div class="edit-actions hide">
+                      <a href="" class="btn">Edit</a>
+                      <a href="" class="btn destroy">Remove</a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="edit-input">
+                      <div class="work-information">
+                        <span class="work-name"><strong>Intern</strong> at <strong>Google</strong></span>
+                        <span>Silicon Valley, CA</span>
+                        <span>2017</span>
+                      </div>
+                      <div class="fileUpload add-work-logo">
+                        <span title="Add Work Logo"> Add Logo </span>
+                        <input type="file" class="upload">
+                      </div>
+                    </div>
+                    <div class="edit-actions hide">
+                      <a href="" class="btn">Edit</a>
+                      <a href="" class="btn destroy">Remove</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="edit-tags">
+                <h3>Your Skills</h3>
+                <form action="" id="add-skill-form">
+                  <ul class="added-tags">
+                    <li><a href="">UI Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Web Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Photography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Typography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">HTML</a><i class="fa fa-times"></i></li>
+                    <li><a href="">CSS</a><i class="fa fa-times"></i></li>
+                  </ul>
+                  <div class="actions">
+                    <input type="text">
+                    <a href="" class="small-btn submit">Add</a>                    
+                  </div>
+                </form>                
+              </div>
 
             </div>
-            <div id='education' class="tab-content"> 
-             test 3
+            <div id='education' class="tab-content form">
+            <h3>Add School</h3>
+            <div class="add-school">
+              <div class="item">
+                <label for="school">School</label>
+                <div class="edit-input">
+                  <input type="text" size="25" placeholder="What school did you attend?">
+                </div>
+              </div>
+              <div class="item">
+                <label for="period">Period</label>
+                <div class="edit-input">
+                  <input type="text" size="10" placeholder="From year">
+                  <input type="text" size="10" placeholder="To year">
+                </div>
+              </div>
+              <div class="item">
+                <label for="field">Field</label>
+                <div class="edit-input">
+                  <input type="text" size="25" placeholder="What did you study here?">
+                </div>
+              </div>
+              <div class="item">
+                <label for="description">Description</label>
+                <div class="edit-input">
+                <textarea name="description" id="" cols="40" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="item">
+                <label for="diploma">Diploma</label>
+                <div class="edit-input education-information">
+                    <div class="uploaded-media">
+                      <img src="http://cheaper-than-tuition.com/wp-content/uploads/2014/02/Fake-Diploma-Sample-03-1200x900.jpg?53533f" alt="">
+                      <img src="http://diplomaclassics.com/images/products/full/123415.jpg" alt="">
+                      <span class="upload-media btn"><i class="fa fa-cloud-upload"></i> add more</span>
+                    </div>
+                </div>
+              </div>
+              <div class="add-actions">
+                <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
+                <a href="" class="btn submit">Save Changes</a>
+              </div>
+            </div> 
+            <hr>
+            <h3>Added School</h3>
+            <div class="item">
+              <div class="edit-input education-information">
+                <span class="education-name"><strong>Bachelor of Business Administrator</strong></span>
+                <span>University of Economics & Law, Viet Nam</span>
+                <span>2011 - 2014</span>
+                <div class="uploaded-media">
+                  <img src="http://cheaper-than-tuition.com/wp-content/uploads/2014/02/Fake-Diploma-Sample-03-1200x900.jpg?53533f" alt="">
+                  <img src="http://diplomaclassics.com/images/products/full/123415.jpg" alt="">
+                </div>
+              </div>
+              <div class="edit-actions hide">
+                <a href="" class="btn">Edit</a>
+                <a href="" class="btn destroy">Remove</a>
+              </div>
+            </div>
             </div>
           </div>   
         </main>

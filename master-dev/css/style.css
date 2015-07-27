@@ -69,7 +69,7 @@ a {
   text-decoration: none;
   color: #172633; }
 
-input {
+input, textarea {
   border: 0;
   border-radius: 2px; }
 
@@ -138,6 +138,7 @@ span.tag {
     background: #e0e0e0; }
 
 .btn {
+  background: #EDEDED;
   border-radius: 2px;
   font-weight: 500;
   padding: .5rem 1rem; }
@@ -163,6 +164,10 @@ span.tag {
   color: #FFFFFF; }
   .submit:hover {
     background: #3997C8; }
+
+.destroy {
+  background: #FF3D4C;
+  color: #FFFFFF; }
 
 ul.tabs {
   position: relative;
@@ -535,25 +540,25 @@ main {
       margin-right: auto; }
       main .more-information #work .item .work-information span {
         display: block; }
-  main .more-information #education .education-information span {
+  main #education .education-information span {
     display: block; }
-  main .more-information #education .education-information .uploaded-media {
+  main #education .education-information .uploaded-media {
     display: flex;
     margin-top: 1.5rem; }
-    main .more-information #education .education-information .uploaded-media span, main .more-information #education .education-information .uploaded-media img {
+    main #education .education-information .uploaded-media span, main #education .education-information .uploaded-media img {
       width: 128px;
       height: 70px;
       padding: .3rem; }
       @media screen and (max-width: 420px) {
-        main .more-information #education .education-information .uploaded-media span, main .more-information #education .education-information .uploaded-media img {
+        main #education .education-information .uploaded-media span, main #education .education-information .uploaded-media img {
           width: 90px;
           height: 60px;
           padding: .1rem; } }
-    main .more-information #education .education-information .uploaded-media img {
+    main #education .education-information .uploaded-media img {
       border-radius: 2px;
       background: #EDEDED;
       margin-right: .7rem; }
-    main .more-information #education .education-information .uploaded-media span.upload-media {
+    main #education .education-information .uploaded-media span.upload-media {
       border: 1px dashed #6BBD2E;
       border-radius: 2px;
       color: #6BBD2E;
@@ -561,18 +566,18 @@ main {
       text-align: center;
       height: 66px; }
       @media screen and (max-width: 420px) {
-        main .more-information #education .education-information .uploaded-media span.upload-media {
+        main #education .education-information .uploaded-media span.upload-media {
           height: 60px; } }
-      main .more-information #education .education-information .uploaded-media span.upload-media i {
+      main #education .education-information .uploaded-media span.upload-media i {
         display: block;
         font-size: 1.8rem;
         padding-top: 2%;
         line-height: 2.7rem; }
         @media screen and (max-width: 420px) {
-          main .more-information #education .education-information .uploaded-media span.upload-media i {
+          main #education .education-information .uploaded-media span.upload-media i {
             font-size: 1.2rem;
             line-height: 2.4rem; } }
-      main .more-information #education .education-information .uploaded-media span.upload-media:hover {
+      main #education .education-information .uploaded-media span.upload-media:hover {
         background: #6BBD2E;
         color: #FFFFFF;
         cursor: pointer; }
@@ -586,6 +591,53 @@ main {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto; }
+    main #account-settings .add-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 12%;
+      margin-top: 1rem;
+      margin-bottom: 2rem; }
+      main #account-settings .add-actions a {
+        margin-left: 1rem; }
+    main #account-settings .add-school {
+      margin-bottom: 2rem;
+      width: 85%; }
+    main #account-settings .worked-places {
+      width: 100%; }
+      main #account-settings .worked-places .item {
+        border-bottom: solid 1px #EDEDED;
+        padding-bottom: 2rem !important; }
+        main #account-settings .worked-places .item .edit-input {
+          display: flex;
+          margin-right: auto; }
+        main #account-settings .worked-places .item .fileUpload {
+          position: relative;
+          overflow: hidden;
+          padding: .8rem;
+          padding-right: .1rem; }
+          main #account-settings .worked-places .item .fileUpload span {
+            color: #3997C8;
+            border: dashed 1px #3997C8;
+            padding: .7rem 1rem;
+            border-radius: 2px; }
+          main #account-settings .worked-places .item .fileUpload input.upload {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0); }
+      main #account-settings .worked-places img {
+        width: 60px;
+        height: 60px; }
+    main #account-settings #work .work-information {
+      margin-right: auto; }
+      main #account-settings #work .work-information span {
+        display: block; }
     main #account-settings a.update-settings {
       display: none; }
       @media screen and (max-width: 420px) {
@@ -754,19 +806,19 @@ main {
           font-size: 8px;
           text-align: left;
           margin: 0; } }
-    main #account-settings .form input {
+    main #account-settings .form input, main #account-settings .form textarea {
       background: #EDEDED;
       font-weight: 500;
       border: solid 1px #c7c7c7; }
       @media screen and (max-width: 420px) {
-        main #account-settings .form input {
+        main #account-settings .form input, main #account-settings .form textarea {
           padding-top: 0;
           padding-bottom: 0;
           margin-top: 0;
           margin-bottom: .7rem; } }
-      main #account-settings .form input:focus {
+      main #account-settings .form input:focus, main #account-settings .form textarea:focus {
         background: #FFFFFF; }
-      main #account-settings .form input[type="file"] {
+      main #account-settings .form input[type="file"], main #account-settings .form textarea[type="file"] {
         border: 0;
         padding: 0;
         background: 0;
@@ -775,7 +827,7 @@ main {
         font-size: .7rem;
         font-weight: 300; }
         @media screen and (max-width: 420px) {
-          main #account-settings .form input[type="file"] {
+          main #account-settings .form input[type="file"], main #account-settings .form textarea[type="file"] {
             margin: 1rem auto; } }
     main #account-settings .form span.hint {
       display: block; }

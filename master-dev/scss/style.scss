@@ -98,7 +98,7 @@ a {
   // }
 }
 
-input {
+input, textarea {
   border: 0;
   border-radius: $radius;
 }
@@ -189,6 +189,7 @@ span.tag {
 }
 
 .btn {
+  background: $grey;
   border-radius: $radius;
   font-weight: 500;
   padding: .5rem 1rem;
@@ -220,6 +221,11 @@ span.tag {
   &:hover {
     background: $light-blue;
   }
+}
+
+.destroy {
+  background: $red;
+  color: $white;
 }
 
 //TABS
@@ -670,60 +676,60 @@ main {
           }
         }
       }
+  }
 
-      #education {
-        .education-information{
-          span {
-            display: block;
+  #education {
+    .education-information{
+      span {
+        display: block;
+      }
+      .uploaded-media {
+        display: flex;
+        margin-top: 1.5rem;
+
+        span, img {
+          width: 128px;
+          height: 70px;
+          padding: .3rem;
+          @include media($mobile) {
+            width: 90px;
+            height: 60px;
+            padding: .1rem;
           }
-          .uploaded-media {
-            display: flex;
-            margin-top: 1.5rem;
-
-            span, img {
-              width: 128px;
-              height: 70px;
-              padding: .3rem;
-              @include media($mobile) {
-                width: 90px;
-                height: 60px;
-                padding: .1rem;
-              }
+        }
+        img {
+          border-radius: $radius;
+          background: $grey;
+          margin-right: .7rem;
+        }
+        span.upload-media {
+          border: 1px dashed $green;
+          border-radius: 2px;
+          color: $green;
+          line-height: 0;
+          text-align: center;
+          height: 66px;
+          @include media($mobile) {
+            height: 60px;
+          }
+          i {
+            display: block;
+            font-size: 1.8rem;
+            padding-top: 2%;
+            line-height: 2.7rem;
+            @include media($mobile) {
+              font-size: 1.2rem;
+              line-height: 2.4rem;
             }
-            img {
-              border-radius: $radius;
-              background: $grey;
-              margin-right: .7rem;
-            }
-            span.upload-media {
-              border: 1px dashed $green;
-              border-radius: 2px;
-              color: $green;
-              line-height: 0;
-              text-align: center;
-              height: 66px;
-              @include media($mobile) {
-                height: 60px;
-              }
-              i {
-                display: block;
-                font-size: 1.8rem;
-                padding-top: 2%;
-                line-height: 2.7rem;
-                @include media($mobile) {
-                  font-size: 1.2rem;
-                  line-height: 2.4rem;
-                }
-              }
-              &:hover {
-                background: $green;
-                color: $white;
-                cursor:pointer;
-              }
-            }
+          }
+          &:hover {
+            background: $green;
+            color: $white;
+            cursor:pointer;
           }
         }
       }
+    }
   }
   
   #register-form, #login-form {
@@ -734,6 +740,68 @@ main {
   }
 
   #account-settings {
+    .add-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 12%;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      a {
+        margin-left: 1rem;
+      }
+    }
+    .add-school {
+      margin-bottom: 2rem;
+      width: 85%;
+    }
+    .worked-places {
+      width: 100%;
+      .item {
+        border-bottom: solid 1px $grey;
+        padding-bottom: 2rem !important;
+
+        .edit-input {
+          display: flex;
+          margin-right: auto;
+        }
+
+        .fileUpload {
+          position: relative;
+          overflow: hidden;
+          padding: .8rem;
+          padding-right: .1rem;
+          span {
+            color: $light-blue;
+            border: dashed 1px $light-blue;
+            padding: .7rem 1rem;
+            border-radius: $radius;
+          }
+          input.upload {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+          }
+        }
+
+      }
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    #work .work-information {
+      margin-right: auto;
+      span {
+        display: block;       
+      } 
+    }
 
     a.update-settings {
       display: none;
@@ -928,7 +996,7 @@ main {
         }
       }
 
-      input {
+      input, textarea {
         background: $grey;
         font-weight: 500;
         border: solid 1px darken($grey,15%);
