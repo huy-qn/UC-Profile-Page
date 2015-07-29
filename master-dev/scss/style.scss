@@ -245,6 +245,7 @@ ul.tabs {
     margin: 0;
     padding: 0;
     justify-content: space-between;
+    box-shadow: $box-shadow;
 
     li {
         background: $white;
@@ -260,7 +261,7 @@ ul.tabs {
                     display: none;
                 }
             }
-            border-bottom: solid 1px rgba($grey,.8);
+            // border-bottom: solid 1px rgba($grey,.8);
             color: darken($grey,25%);
             display: block;
             padding: .3rem;
@@ -273,7 +274,7 @@ ul.tabs {
                 }
                 font-weight: 600;
                 color: $dark-blue;
-                border-bottom: solid 3px $dark-blue;
+                border-bottom: solid 5px $light-blue;
             }
         }
     }
@@ -429,6 +430,9 @@ header {
                         display: block;
                         width: 170px;
                         padding: .5rem 1rem;
+                        &.div {
+                            border-bottom: solid 1px rgba($grey,.3);
+                        }
                         &:first-child {
                             margin-top: .3rem;
                         }
