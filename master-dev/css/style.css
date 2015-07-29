@@ -181,14 +181,14 @@ ul.tabs {
   display: flex;
   margin: 0;
   padding: 0;
-  justify-content: space-between; }
+  justify-content: space-between;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.32); }
   ul.tabs li {
     background: #FFFFFF;
     width: 100%;
     margin: 0;
     text-align: center; }
     ul.tabs li a {
-      border-bottom: solid 1px rgba(237, 237, 237, 0.8);
       color: #adadad;
       display: block;
       padding: .3rem; }
@@ -204,7 +204,7 @@ ul.tabs {
       ul.tabs li a.active {
         font-weight: 600;
         color: #172633;
-        border-bottom: solid 3px #172633; }
+        border-bottom: solid 5px #3997C8; }
         ul.tabs li a.active i {
           color: #3997C8; }
 
