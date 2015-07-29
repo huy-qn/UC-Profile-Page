@@ -331,6 +331,8 @@ header {
             display: block;
             width: 170px;
             padding: .5rem 1rem; }
+            header .header-wrapper nav ul.main-navigation ul.drop-down-list li.div {
+              border-bottom: solid 1px rgba(237, 237, 237, 0.3); }
             header .header-wrapper nav ul.main-navigation ul.drop-down-list li:first-child {
               margin-top: .3rem; }
             header .header-wrapper nav ul.main-navigation ul.drop-down-list li:last-child {
