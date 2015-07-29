@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/fastclick.js"></script>
         <script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
     </head>
     <body>
@@ -52,15 +53,87 @@
         </header>
 
         <main>
-          <div class="left-bar">
-            <div id="account-settings" class="card">
-              <ul class='tabs'>
-                <li><a href='#overview'><i class="fa fa-user"></i>Overview</a></li>
-                <li><a href='#work'><i class="fa fa-briefcase"></i>Work</a></li>
-                <li><a href='#education'><i class="fa fa-graduation-cap"></i>Education</a></li>
-              </ul>
+          <div id="account-settings" class="card">
+            <ul class='tabs'>
+              <li><a href='#overview'><i class="fa fa-user"></i>Overview</a></li>
+              <li><a href='#work'><i class="fa fa-briefcase"></i>Work</a></li>
+              <li><a href='#education'><i class="fa fa-graduation-cap"></i>Education</a></li>
+            </ul>
 
-              <div id='overview' class="tab-content form">
+            <div id='overview' class="tab-content form">
+              <div class="edit-profile-picture">
+                <div class="user-profile-picture">
+                    <img src="https://scontent.fsan1-2.fna.fbcdn.net/hphotos-xtp1/v/t1.0-9/11693948_382070035317440_780357150578891507_n.jpg?oh=2ae4c6ceec0e55ce7a3bdc4c487bec56&amp;oe=564BEA6A" alt="">
+                </div>
+                <div class="edit-actions">
+                  <h3>Change Avatar</h3>
+                  <p>
+                    <strong>Select a file to upload</strong>
+                    <input type="file">
+                    <span>Make sure to upload a file with at least 160px in width and height</span>
+                    <span class="actions">
+                      <button class="small-btn">Delete</button>
+                      <button class="small-btn submit">Upload</button>                        
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="edit-main-informations">
+                <div class="item">
+                  <label for="username">Username</label>
+                  <div class="edit-input">
+                    <input type="text" size="25" placeholder="taitran11">
+                    <span class="hint">Your profile URL: https://urbancare.io/<strong>taitran11</strong></span>
+                  </div>
+                  <div class="edit-actions hide">
+                    <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                    <button class="small-btn submit">Saves</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <label for="languages">Languages</label>
+                  <div class="edit-input">
+                    <input type="text" size="25" placeholder="English, Vietnamese">
+                  </div>
+                  <div class="edit-actions hide">
+                    <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                    <button class="small-btn submit">Saves</button>
+                  </div>
+                </div>
+                <div class="edit-current-contacts">
+                  <h3>Current Contacts</h3>
+                  <div class="item">
+                    <label for="location">Location</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="215th Street, San Diego, CA">
+                    </div>
+                    <div class="edit-actions hide">
+                      <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                      <button class="small-btn submit">Saves</button>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="email">email</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="huynguyen.me@gmail.com">
+                    </div>
+                    <div class="edit-actions hide">
+                      <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                      <button class="small-btn submit">Saves</button>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="mobile">mobile</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="+1 (762) 877 5650">
+                    </div>
+                    <div class="edit-actions hide">
+                      <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                      <button class="small-btn submit">Saves</button>
+                    </div>
+                  </div>
+                </div>
                 <div class="item">
                   <label for="name">Name</label>
                   <div class="edit-input">
@@ -68,40 +141,234 @@
                     <span class="hint">It is important to use your real name</span>
                   </div>
                   <div class="edit-actions hide">
-                    <a href="" class="small-btn edit-privacy"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="btn cta">Saves</a>
+                    <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                    <button class="small-btn submit">Saves</button>
                   </div>
                 </div>
                 <div class="item">
-                  <label for="name">Username</label>
+                  <label for="birthday">Birthday</label>
                   <div class="edit-input">
-                    <input type="text" size="25" placeholder="taitran11">
-                    <span class="hint">Your profile URL: https://urbancare.io/<strong>taitran11</strong></span>
+                    <input type="text" size="25" placeholder="July 10, 1993">
                   </div>
                   <div class="edit-actions hide">
-                    <a href="" class="small-btn"><i class="fa fa-lock"></i> not public</a>
-                    <a href="" class="btn cta">Saves</a>
+                    <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                    <button class="small-btn submit">Saves</button>
                   </div>
                 </div>
-<!--                 <div class="item">
-                  <label for="name">Birthday</label>
-                  <input type="text" size="25" placeholder="July 10, 1993">
-                  <span class="hint">Chỗ này dùng cái date range picker cũng được nè a</span>
+                <div class="item">
+                  <label for="gender">Gender</label>
+                  <div class="edit-input">
+                    <input type="text" size="25" placeholder="Male">
+                  </div>
+                  <div class="edit-actions hide">
+                    <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                    <button class="small-btn submit">Saves</button>
+                  </div>
                 </div>
                 <div class="item">
-                  <label for="name">Languages</label>
-                  <input type="text" size="25" placeholder="English, Vietnamese">
-                </div> -->
+                  <label for="hometown">Hometown</label>
+                  <div class="edit-input">
+                    <input type="text" size="25" placeholder="Quy Nhon, Viet Nam">
+                  </div>
+                  <div class="edit-actions hide">
+                    <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                    <button class="small-btn submit">Saves</button>
+                  </div>
+                </div>
+                <button href="" class="btn submit update-settings">Update Settings</button>
               </div>
-              <div id='work' class="tab-content">
-                test 2
+              <div class="edit-tags">
 
+                <h3>Your Interests</h3>
+                <form action="" id="add-skill-form">
+                  <ul class="added-tags">
+                    <li><a href="">UI Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Web Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Photography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Typography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">HTML</a><i class="fa fa-times"></i></li>
+                    <li><a href="">CSS</a><i class="fa fa-times"></i></li>
+                  </ul>
+                  <div class="actions">
+                    <input type="text">
+                    <button class="small-btn submit">Add</button>                    
+                  </div>
+                </form>
               </div>
-              <div id='education' class="tab-content"> 
-               test 3
+            </div>
+            <div id='work' class="tab-content form">
+              <div class="edit-main-informations">
+                <h3>Current Work Place</h3>
+                  <div class="item">
+                    <label for="work-title">Work Title</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="taitran11">
+                    </div>
+                    <div class="edit-actions hide">
+                      <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                      <button class="small-btn submit">Saves</button>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="work-place">Place</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="taitran11">
+                    </div>
+                    <div class="edit-actions hide">
+                      <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                      <button class="small-btn submit">Saves</button>
+                    </div>
+                  </div>
+                <hr>
+                <h3>Add Worked Place</h3>
+                <div class="add-worked-place">
+                  <div class="item">
+                    <label for="work-place">Company</label>
+                    <div class="edit-input">
+                      <input type="text" size="25" placeholder="Where have you worked?">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="position">Position</label>
+                    <div class="edit-input">
+                      <input type="text" size="25">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="period">Period</label>
+                    <div class="edit-input">
+                      <input type="text" size="10" placeholder="From year">
+                      <input type="text" size="10" placeholder="To year">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label for="description">Description</label>
+                    <div class="edit-input">
+                    <textarea name="description" id="" cols="40" rows="3"></textarea>
+                    </div>
+                  </div> 
+                  <div class="add-actions">
+                    <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                    <button class="small-btn submit">Save Changes</button>
+                  </div>                 
+                </div>
+                <hr>
+                <h3>In The Past</h3>
+                <div class="worked-places">
+                  <div class="item">
+                    <div class="edit-input">
+                      <div class="work-information">
+                        <span class="work-name"><strong>Designer</strong> at <strong>Zalora Viet Nam</strong></span>
+                        <span>Ho Chi Minh, Viet Nam</span>
+                        <span>2012</span>
+                      </div>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Zalora_logo.jpg" alt="" class="work-thumb">
+                    </div>
+                    <div class="edit-actions hide">
+                      <button class="btn">Edit</button>
+                      <button class="btn destroy">Remove</button>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="edit-input">
+                      <div class="work-information">
+                        <span class="work-name"><strong>Intern</strong> at <strong>Google</strong></span>
+                        <span>Silicon Valley, CA</span>
+                        <span>2017</span>
+                      </div>
+                      <div class="fileUpload add-work-logo">
+                        <span title="Add Work Logo"> Add Logo </span>
+                        <input type="file" class="upload">
+                      </div>
+                    </div>
+                    <div class="edit-actions hide">
+                      <button class="btn">Edit</button>
+                      <button class="btn destroy">Remove</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>   
-          </div>
+              <div class="edit-tags">
+                <h3>Your Skills</h3>
+                <form action="" id="add-skill-form">
+                  <ul class="added-tags">
+                    <li><a href="">UI Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Web Designer</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Photography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">Typography</a><i class="fa fa-times"></i></li>
+                    <li><a href="">HTML</a><i class="fa fa-times"></i></li>
+                    <li><a href="">CSS</a><i class="fa fa-times"></i></li>
+                  </ul>
+                  <div class="actions">
+                    <input type="text">
+                    <button class="small-btn submit">Add</button>                    
+                  </div>
+                </form>                
+              </div>
+
+            </div>
+            <div id='education' class="tab-content form">
+            <h3>Add School</h3>
+            <div class="add-school">
+              <div class="item">
+                <label for="school">School</label>
+                <div class="edit-input">
+                  <input type="text" size="25" placeholder="What school did you attend?">
+                </div>
+              </div>
+              <div class="item">
+                <label for="period">Period</label>
+                <div class="edit-input">
+                  <input type="text" size="10" placeholder="From year">
+                  <input type="text" size="10" placeholder="To year">
+                </div>
+              </div>
+              <div class="item">
+                <label for="field">Field</label>
+                <div class="edit-input">
+                  <input type="text" size="25" placeholder="What did you study here?">
+                </div>
+              </div>
+              <div class="item">
+                <label for="description">Description</label>
+                <div class="edit-input">
+                <textarea name="description" id="" cols="40" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="item">
+                <label for="diploma">Diploma</label>
+                <div class="edit-input education-information">
+                    <div class="uploaded-media">
+                      <img src="http://cheaper-than-tuition.com/wp-content/uploads/2014/02/Fake-Diploma-Sample-03-1200x900.jpg?53533f" alt="">
+                      <img src="http://diplomaclassics.com/images/products/full/123415.jpg" alt="">
+                      <span class="upload-media btn"><i class="fa fa-cloud-upload"></i> add more</span>
+                    </div>
+                </div>
+              </div>
+              <div class="add-actions">
+                <button class="small-btn"><i class="fa fa-lock"></i> not public</button>
+                <button href="" class="small-btn submit">Save Changes</button>
+              </div>
+            </div> 
+            <hr>
+            <h3>Added School</h3>
+            <div class="item">
+              <div class="edit-input education-information">
+                <span class="education-name"><strong>Bachelor of Business Administrator</strong></span>
+                <span>University of Economics & Law, Viet Nam</span>
+                <span>2011 - 2014</span>
+                <div class="uploaded-media">
+                  <img src="http://cheaper-than-tuition.com/wp-content/uploads/2014/02/Fake-Diploma-Sample-03-1200x900.jpg?53533f" alt="">
+                  <img src="http://diplomaclassics.com/images/products/full/123415.jpg" alt="">
+                </div>
+              </div>
+              <div class="edit-actions hide">
+                <button class="btn">Edit</button>
+                <button class="btn destroy">Remove</button>
+              </div>
+            </div>
+            </div>
+          </div>   
         </main>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -117,6 +384,11 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+        <script>
+          window.addEventListener('load', function() {
+            new FastClick(document.body);
+          }, false);
         </script>
     </body>
 </html>

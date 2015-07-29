@@ -69,6 +69,9 @@ a {
   text-decoration: none;
   color: #172633; }
 
+button {
+  border: 0; }
+
 input, textarea {
   border: 0;
   border-radius: 2px; }
@@ -129,10 +132,13 @@ span.tag {
 .right {
   float: right; }
 
+.xs-btn {
+  font-size: 60%;
+  padding: 0rem .3rem; }
+
 .small-btn {
   background: #EDEDED;
   border-radius: 2px;
-  display: table;
   padding: 0.3rem 0.7rem; }
   .small-btn:hover {
     background: #e0e0e0; }
@@ -141,7 +147,7 @@ span.tag {
   background: #EDEDED;
   border-radius: 2px;
   font-weight: 500;
-  padding: .5rem 1rem; }
+  padding: .3rem .5rem; }
 
 .big-btn {
   font-size: 1.2rem;
@@ -469,7 +475,7 @@ main {
             list-style: none;
             position: absolute;
             top: 50%;
-            left: -185%; }
+            left: -180%; }
             main .main-information .user-main-details .actions .more ul.dropdown li {
               color: rgba(68, 68, 68, 0.8);
               background: #EDEDED;
@@ -542,9 +548,14 @@ main {
         display: block; }
   main #education .education-information span {
     display: block; }
+    main #education .education-information span:last-of-type {
+      margin-bottom: 1rem; }
   main #education .education-information .uploaded-media {
     display: flex;
     margin-top: 1.5rem; }
+    @media screen and (max-width: 420px) {
+      main #education .education-information .uploaded-media {
+        margin-top: 0; } }
     main #education .education-information .uploaded-media span, main #education .education-information .uploaded-media img {
       width: 128px;
       height: 70px;
@@ -586,6 +597,14 @@ main {
     @media screen and (max-width: 420px) {
       main #register-form, main #login-form {
         padding: 0 1.1rem; } }
+    main #register-form .remember-me, main #login-form .remember-me {
+      display: flex;
+      text-align: center;
+      padding-left: 33%;
+      margin-top: 1rem; }
+      main #register-form .remember-me input[type="checkbox"], main #login-form .remember-me input[type="checkbox"] {
+        height: auto !important;
+        margin-right: .5rem; }
   main #account-settings {
     width: 1020px;
     max-width: 68em;
@@ -598,11 +617,14 @@ main {
       padding-left: 12%;
       margin-top: 1rem;
       margin-bottom: 2rem; }
-      main #account-settings .add-actions a {
+      main #account-settings .add-actions button {
         margin-left: 1rem; }
     main #account-settings .add-school {
       margin-bottom: 2rem;
       width: 85%; }
+      @media screen and (max-width: 420px) {
+        main #account-settings .add-school {
+          width: 100%; } }
     main #account-settings .worked-places {
       width: 100%; }
       main #account-settings .worked-places .item {
@@ -638,10 +660,10 @@ main {
       margin-right: auto; }
       main #account-settings #work .work-information span {
         display: block; }
-    main #account-settings a.update-settings {
+    main #account-settings button.update-settings {
       display: none; }
       @media screen and (max-width: 420px) {
-        main #account-settings a.update-settings {
+        main #account-settings button.update-settings {
           display: block;
           text-align: center;
           margin: 1rem 0 2rem 0; } }
@@ -783,7 +805,7 @@ main {
         align-items: center;
         font-size: .8rem;
         justify-content: flex-end; }
-        main #account-settings .form .item .edit-actions a {
+        main #account-settings .form .item .edit-actions button {
           margin: 0 .2rem;
           margin-top: .4rem; }
         @media screen and (max-width: 420px) {
@@ -801,6 +823,7 @@ main {
       font-weight: 500; }
       @media screen and (max-width: 420px) {
         main #account-settings .form label {
+          width: 50%;
           display: block;
           font-weight: bold;
           font-size: 8px;
@@ -852,14 +875,6 @@ main {
     main .form label a {
       color: #a1a1a1;
       font-size: .7rem; }
-    main .form label.checkbox {
-      display: flex;
-      justify-content: center; }
-      main .form label.checkbox input {
-        padding: 0;
-        margin: 0;
-        height: 1.5rem;
-        margin-right: .3rem; }
   main .form input {
     display: block;
     border: solid 1px #EDEDED;
@@ -875,3 +890,57 @@ main {
     font-size: .8rem;
     letter-spacing: -.005rem;
     color: #adadad; }
+
+footer {
+  border-top: solid 1px #e0e0e0;
+  background: white;
+  padding: 1rem 0;
+  font-size: 80%; }
+  footer .footer-wrapper {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: #212121; }
+    footer .footer-wrapper::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (max-width: 420px) {
+      footer .footer-wrapper {
+        display: block;
+        padding: 0 1rem; } }
+  footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin-right: auto; }
+    @media screen and (max-width: 420px) {
+      footer ul {
+        display: block;
+        float: left;
+        display: block;
+        margin-right: 7.4229703521%;
+        width: 100%; }
+        footer ul:last-child {
+          margin-right: 0; } }
+    footer ul li {
+      display: inline-block;
+      margin-right: 1rem; }
+      @media screen and (max-width: 420px) {
+        footer ul li {
+          margin-bottom: .5rem; } }
+  footer span.copyright {
+    font-weight: 500; }
+    @media screen and (max-width: 420px) {
+      footer span.copyright {
+        display: block;
+        float: left;
+        display: block;
+        margin-right: 7.4229703521%;
+        width: 100%;
+        margin-right: 0; }
+        footer span.copyright:last-child {
+          margin-right: 0; } }
