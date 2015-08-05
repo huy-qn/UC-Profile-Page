@@ -103,9 +103,10 @@ button {
     border: 0;
 }
 
-input, textarea {
+input, textarea, select {
     border: 0;
     border-radius: $radius;
+    color: darken($grey,25%);
 }
 
 span.tag {
@@ -194,6 +195,7 @@ span.tag {
     padding: 0.3rem 0.7rem;
     color: $dark-blue;
     font-weight: bold;
+    font-size: 85%;
 
     &:hover {
         background: darken($grey,5%);
@@ -305,6 +307,16 @@ ul.tabs {
             font-weight: 500;
         }
         margin-bottom: 1.5rem;
+    }
+    .languages {
+        span {
+            display: block;
+            i {
+                font-size: 80%;
+                font-style: normal;
+                color: darken($grey,25%);
+            }
+        }
     }
 }
 
@@ -780,6 +792,32 @@ main {
         hr {
             border-top: 1px solid rgba($grey,.3);
         }
+        input {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .languages {
+            .edit-input {
+                display: flex;
+                align-items: center;
+                width: 65% !important;
+                select {
+                    font-size: 80%;
+                    margin: 1rem 1rem;
+                    margin-top: .3rem;
+                    padding: 0 .3rem;
+                    height: 2rem;
+                    border-radius: $radius;
+                    border: solid 1px $grey;
+                }
+            }
+        }
+        .language-list {
+            width: 90%;
+        }
+        .language-item {
+            display: flex;
+        }
         .add-actions {
             display: flex;
             align-items: center;
@@ -932,7 +970,7 @@ main {
                     margin: 0;
 
                     .edit-input {
-                        width: 50%;
+                        width: 55%;
                     }
                 }
             }
