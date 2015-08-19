@@ -1,0 +1,11 @@
+@mixin dark {
+  @if $theme == 'dark' {
+    @content;
+  }
+}
+
+@mixin light {
+  @if $theme == 'light' {
+    @content;
+  }
+}

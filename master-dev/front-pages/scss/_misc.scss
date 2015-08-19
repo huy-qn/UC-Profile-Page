@@ -1,0 +1,5 @@
+hr {
+  @include dark {
+    border-color: rgba($dark-grey,.05);
+  }
+}

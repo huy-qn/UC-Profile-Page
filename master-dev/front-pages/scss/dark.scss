@@ -1,0 +1,12 @@
+// Set a variable containing current brand
+$theme: 'dark';
+
+// Import all components
+@import 'mixins';
+@import 'variables';
+@import 'base';
+@import 'buttons';
+@import 'tags';
+@import 'alerts';
+@import 'forms';
+@import 'misc';

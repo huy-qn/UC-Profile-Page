@@ -1,0 +1,27 @@
+$skillTagBackground: #9f6faf;
+
+.tag {
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    padding: 0.2rem 1.4rem;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.skill-tags {
+    margin-top: 1.5rem;
+    width: 80%;
+    span {
+        background: $skillTagBackground;
+        color: $white;
+        &:hover {
+            background: darken($skillTagBackground, 25%);
+        }
+    } 
+}
