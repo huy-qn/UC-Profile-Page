@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,vietnamese);
 @import "bourbon", "neat";
 
-$grey: #EDEDED;
+$grey: #ddd;
 $dark-blue: #172633;
 $light-blue: #3997C8;
 $white: #FFFFFF;
@@ -22,7 +22,7 @@ body {
     font-family: 'Open Sans', sans-serif; 
     font-weight: 400;
     font-size: .9rem;
-    letter-spacing: .03rem;
+    letter-spacing: 0;
     line-height: 1.4rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -216,9 +216,7 @@ span.tag {
 }
 
 .full-width {
-    display: flex;
     width: 100%;
-    justify-content: center;
     padding: .7rem 0;
 }
 
@@ -287,6 +285,7 @@ ul.tabs {
     }
 }
 .tab-content {
+    @include outer-container;
     @include media($mobile) {
         padding: 1rem;
     }
@@ -499,6 +498,9 @@ main {
         box-shadow: $box-shadow;
         padding: 1rem;
         margin-bottom: 2rem;
+        @include media($mobile) {
+            padding: 1rem 0;
+        }
     }
 
     .left-bar {
@@ -521,7 +523,7 @@ main {
 
     // PROFILE PAGE
 .user-profile-picture {
-    width: 15rem;
+    width: 13rem;
     @include media($mobile) {
         @include span-columns(4);
         margin: 0;
@@ -783,13 +785,18 @@ main {
                 margin-right: .5rem;
             }
         }
+
+        input {
+            padding: 0.3rem 0.7rem;
+            height: 2.4rem;
+        }
     }
 
     #account-settings {
-        input {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+        // input {
+        //     padding-top: 0;
+        //     padding-bottom: 0;
+        // }
         .languages {
             .edit-input {
                 display: flex;
@@ -886,8 +893,12 @@ main {
             width: 100%;
         }
 
-        @include outer-container;
+        
         .form {
+
+            .full-width:last-of-type{
+                margin-top: 2rem;
+            }
 
             .edit-main-informations {
                 @include span-columns(8);
@@ -901,6 +912,7 @@ main {
             }
             .edit-tags {
                 @include span-columns(4);
+                margin-right: 0;
                 @include media($mobile) {
                     @include span-columns(4);
                 }
@@ -966,7 +978,7 @@ main {
                     display: block;
                 }
                 .user-profile-picture {
-                    width: 12rem;
+                    width: 15rem;
                     @include media($mobile) {
                         width: 100%;
                     }
@@ -1024,7 +1036,9 @@ main {
                     }
 
                     span.hint {
-                        margin-top: -.5rem;
+                        @include media($mobile) {
+                            font-size: 70%;
+                        }
                     }
                 }
 
@@ -1060,9 +1074,10 @@ main {
                     width: 50%;
                     display: block;
                     font-weight: bold;
-                    font-size: 8px;
+                    font-size: 10px;
                     text-align: left;
                     margin: 0;
+                    padding-left: 0;
                 }
             }
 
@@ -1071,10 +1086,12 @@ main {
                 font-weight: 500;
                 border: solid 1px darken($grey,15%);
                 @include media($mobile) {
-                    padding-top: 0;
-                    padding-bottom: 0;
+                    padding: 0;
                     margin-top: 0;
                     margin-bottom: .7rem;
+                    border: transparent;
+                    background: $white;
+                    border-bottom: solid 1px $grey;
                 }
                 &:focus {
                     background: $white;
@@ -1201,3 +1218,107 @@ footer {
         }
     }
 }
+
+.form-update {
+    margin-bottom: 1rem;
+
+    @include media($mobile) {
+        border-radius: 0;
+        padding: 0.5rem !important;
+    }
+
+    input[type="text"], textarea {
+        background: #eee !important;
+        width: 60%;
+        margin-bottom: 0.5rem !important;
+        @include media($mobile) {
+            width: 100%;
+            padding: 0 0.3rem !important;
+        }
+    }
+    
+    label {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between;
+        text-transform: uppercase;
+        border-bottom: solid 0.5px #eee;
+        padding-bottom: -5px;
+        font-weight: bold !important;
+        span.text {
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+        }
+        &.sub-section {
+            font-size: 55% !important;
+            font-weight: normal !important;
+            border-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .line-item {
+        margin: 0.5rem 0;
+    }
+
+    .added-item {
+        display: flex;
+        align-items: center;
+        a.remove {
+            margin-left: auto;
+        }
+    }
+
+    select {
+        font-size: 80%;
+        width: 40%;
+        margin-left: auto;
+        border: $radius;
+        border: solid 1px $grey;
+        padding: 0.3rem;
+        margin-top: -0.4rem;
+        @include media($mobile) {
+            height: 2rem;
+            position: relative;
+            top: -0.175rem;
+        }
+    }
+
+    .gender, .nationality {
+        select {
+            @include media($mobile) {
+                width: 100%;
+                position: relative;
+                top: 0.125rem;
+            }
+        }
+    }
+
+    span.language-text {
+        width: 50%;
+    }
+
+    .xsmall-link {
+        color: $light-blue;
+        padding: 0;
+        margin-top: 0.5rem;
+        background: transparent;
+    }
+}
+
+// .checkbox {
+//     display: flex;
+//     align-items: center;
+//     padding-left: 5px;
+//     height: 2rem;
+//     font-weight: normal;
+//     text-transform: lowercase;
+//     input[type="checkbox"] {
+//         position: relative;
+//         top: 5px;
+//         right: 5px;
+//     }
+// }
+
+// @import "forms";

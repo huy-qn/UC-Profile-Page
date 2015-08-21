@@ -424,7 +424,7 @@ main {
         main .right-bar:last-child {
           margin-right: 0; } }
   main .user-profile-picture {
-    width: 15rem; }
+    width: 13rem; }
     @media screen and (max-width: 420px) {
       main .user-profile-picture {
         float: left;
