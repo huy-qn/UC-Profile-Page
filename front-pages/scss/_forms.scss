@@ -1,0 +1,125 @@
+//FORM
+.form-heading {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.character {
+    &.success-astro img{
+        width: 200px;
+    }
+}
+
+.form {
+    label {
+        display: block;
+        margin: .5rem 0;
+
+        a {
+            float: right;
+            font-size: 80%;
+        }
+        &.control, .checkbox {
+            margin: 0;
+        }
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+        display: block;
+        margin-top: .3rem;
+        margin-bottom: 1rem;
+        padding: .5rem .7rem;
+        width: 100%;
+        border-radius: $radius;
+        &.danger {
+            border-color: $dangerColor;
+        }
+        &.small-form {
+            font-size: 70%;
+        }
+        @include dark {
+            background: lighten($dark-blue,7%);
+            color: $dark-grey;
+            border: solid 1px lighten($dark-blue,7%);
+            &:focus {
+                border-color: rgba($darkSuccessColor,0.8);
+            }
+        }
+        @include light {
+            background: $white;
+            color: $dark-blue;
+            border: solid 1px $grey;
+            &:focus {
+                border-color: rgba($primaryColor,0.8);
+            }
+        }
+    }
+    span.hint {
+        font-size: .8rem;
+        letter-spacing: -.005rem;
+        color: darken($grey,25%);
+    }
+
+    .btn {
+        margin-top: 1rem;
+        font-weight: bold;
+    }
+
+    .inline-submit-form {
+        display: flex;
+        input,
+        .btn {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+    .inline-forms {
+        display: flex;
+        input {
+            width: 48%;
+            margin-right: 0.5rem;
+        }
+    }
+    .select {
+        @include dark {
+            color: $dark-blue;
+        }
+    }
+}
+
+#register-form, 
+#login-form,
+#forgot-password-form {
+    width: 50%;
+    margin: 0 auto;
+    .alert {
+        margin-bottom: 1rem;
+    }
+    .card {
+        padding: 0 4rem;
+        padding-bottom: 2rem;
+    }
+    @include media($mobile) {
+        width: 100%;
+        .alert {
+            width: 100%;
+        }
+        .card {
+            padding: 0 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .remember-me {
+        display: flex;
+        align-items: center;
+        padding-left: 29%;
+        input[type="checkbox"] {
+            margin-right: .5rem;
+            width: 1rem;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.alert {
+    display: block;
+    margin: 0 auto;
+    border-radius: $radius;
+    padding: 0.5rem 0.7rem;
+    &.alert-error {
+        strong {
+            color: $dangerColor;
+        }
+        border: solid 1px rgba($dangerColor,0.5);
+        background: rgba($dangerColor,0.3);
+    }
+    &.alert-success {
+        @include dark {
+            strong {
+                color: $white;
+            }
+            border: solid 1px rgba($darkSuccessColor,0.5);
+            background: rgba($darkSuccessColor,0.3);
+        }
+        @include light {
+            strong {
+                color: $successColor;
+            }
+            border: solid 1px rgba($successColor,0.5);
+            background: rgba($successColor,0.3);
+        }
+    }
+}

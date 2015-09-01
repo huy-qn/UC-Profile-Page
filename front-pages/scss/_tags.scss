@@ -1,0 +1,63 @@
+$skillTagBackground: #9f6faf;
+$interestTagBackground: darken($green,10%);
+$addedTagBackground: $dark-grey;
+
+.tag {
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    padding: 0.2rem 0.8rem;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.added-tags {
+    span {
+        background: $addedTagBackground;
+        &:hover {
+            background: darken($addedTagBackground, 25%);
+            & > a {
+                color: $white;
+            }
+        }
+    }
+    a {
+        color: darken($addedTagBackground, 25%);
+    }
+    i {
+        margin-left: 0.3rem;
+        &:hover {
+            color: darken($addedTagBackground, 50%);
+        }
+    }
+}
+
+.user-skill-tags {
+    margin-top: 1rem;
+    span {
+        background: $skillTagBackground;
+        color: $white;
+        &:hover {
+            background: darken($skillTagBackground, 25%);
+        }
+    } 
+}
+
+.user-interest-tags {
+    span {
+        background: $interestTagBackground;
+        color: $white;
+        &:hover {
+            background: darken($interestTagBackground, 10%);
+        }
+    } 
+}

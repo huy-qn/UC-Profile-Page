@@ -1,0 +1,35 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include dark {
+        color: $white;
+    }
+}
+
+// TEXT ALIGNMENT
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// TEXT SIZES
+.small-text {
+    font-size: 80%;
+}
+
+//TEXT STYLES 
+.bold-text {
+    font-weight: bolder;
+}
+
+// MISC
+
+.hint {
+    opacity: 0.7;
+}

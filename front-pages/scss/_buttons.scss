@@ -1,0 +1,146 @@
+.btn {
+  // common styles
+  font-size: 100%;
+  border: 1px solid;
+  border-radius: $radius;
+  background: $white;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  margin: 0.2rem;
+  box-shadow: $box-shadow;
+  // (The "themed stuff")
+  // @if $theme == 'dark' {
+  //   border-color: yellow;
+  // }
+  // @if $theme == 'light' {
+  //   border-color: $grey;
+  // }
+}
+
+a.btn {
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.btn-lg {
+  font-size: 125%;
+}
+
+.btn-sm {
+  font-size: 75%;
+}
+
+.btn-xs {
+  font-size: 60%;
+  padding: 0.2rem 0.5rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-default {
+  background: $grey;
+  border-color: darken($grey, 10%);
+  @include dark {
+    background: $dark-grey;
+    color: $dark-blue;
+  }
+  &:hover {
+    background: darken($grey,10%);
+    border-color: darken($grey, 10%);
+    @include dark {
+      background: darken($dark-grey,10%);
+      border-color: darken($dark-grey, 10%);
+    }
+  }
+}
+
+.btn-primary {
+  background: $primaryColor; 
+  border-color: darken($primaryColor, 10%);
+  color: $white;
+  &:hover {
+    background: darken($primaryColor,10%);
+    border-color: darken($primaryColor, 10%);
+  }
+}
+
+.btn-success {
+  @include light {
+    background: $successColor; 
+    border-color: darken($successColor, 10%);
+    color: $white;
+    &:hover {
+      background: darken($successColor,10%);
+      border-color: darken($successColor, 10%);
+    }
+  }
+  @include dark {
+    background: $darkSuccessColor; 
+    border-color: darken($darkSuccessColor, 0%);
+    color: $white;
+    &:hover {
+      background: darken($darkSuccessColor,10%);
+      border-color: darken($darkSuccessColor, 10%);
+    }
+  }
+}
+
+.btn-info {
+  background: lighten($primaryColor, 15%); 
+  border-color: darken(lighten($primaryColor, 15%), 10%);
+  color: $white;
+  &:hover {
+    background: darken(lighten($primaryColor, 15%),15%);
+    border-color: darken(lighten($primaryColor, 15%), 15%);
+  }
+}
+
+.btn-warning {
+  background: $warningColor; 
+  border-color: darken($warningColor, 10%);
+  color: $white;
+  &:hover {
+    background: darken($warningColor,15%);
+    border-color: darken($warningColor, 15%);
+  }
+}
+
+.btn-danger {
+  background: $dangerColor;
+  border-color: darken($dangerColor, 10%);
+  color: $white;
+  &:hover {
+    background: darken($dangerColor,15%);
+    border-color: darken($dangerColor, 15%);
+  }
+}
+
+.btn-link {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: $primaryColor;
+  border-color: transparent;
+  margin: 0.5rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// BUTTON GROUP
+.button-group,
+.button-group-right {
+  margin-top: 0.5rem;
+}
+.button-group {
+  display: block;
+}
+.button-group-right {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,30 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,vietnamese);
+@import "bourbon", "neat";
+
+* {
+  transition: all 0.15s ease-in-out;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+  @include outer-container;
+}
+
+.sidebar {
+  @include span-columns(2);
+
+}
+
+.main {
+  @include span-columns(10);
+}
