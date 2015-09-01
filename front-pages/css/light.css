@@ -454,7 +454,8 @@ a.btn:hover {
 
 .btn-block {
   display: block;
-  width: 100%; }
+  width: 100%;
+  margin: 0; }
 
 .btn-default {
   background: #EDEDED;
