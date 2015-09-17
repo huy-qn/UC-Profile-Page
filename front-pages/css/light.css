@@ -506,6 +506,8 @@ select#new-category {
     width: 23.2317613015%; }
     #file-list .card aside.right-side-bar:last-child {
       margin-right: 0; }
+    #file-list .card aside.right-side-bar .filter-cloud-tags {
+      margin-top: 1rem; }
   #file-list .card .left-content {
     float: left;
     display: block;
@@ -727,6 +729,15 @@ a.btn:hover {
   color: #fff; }
   .user-interest-tags span:hover {
     background: #007330; }
+
+.filter-cloud-tags a {
+  color: #172633;
+  font-weight: bold; }
+.filter-cloud-tags span {
+  background: #C7D2EB;
+  color: #172633; }
+  .filter-cloud-tags span:hover {
+    background: #a1b4de; }
 
 .alert {
   display: block;

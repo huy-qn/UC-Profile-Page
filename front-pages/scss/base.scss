@@ -642,6 +642,9 @@ select#new-category {
     @include outer-container;
     aside.right-side-bar {
         @include span-columns(3);
+        .filter-cloud-tags {
+            margin-top: 1rem;
+        }
     }
     .left-content {
         @include span-columns(9);

@@ -61,3 +61,17 @@ $addedTagBackground: $dark-grey;
         }
     } 
 }
+
+.filter-cloud-tags {
+    a {
+        color: $dark-blue;
+        font-weight: bold;
+    }
+    span {
+        background: $dark-grey;
+        color: $dark-blue;
+        &:hover {
+            background: darken($dark-grey,10%);
+        }
+    }
+}
