@@ -10,6 +10,10 @@ h6 {
 }
 
 // TEXT ALIGNMENT
+.text-left {
+    text-align: left;
+}
+
 .text-center {
     text-align: center;
 }
@@ -24,12 +28,23 @@ h6 {
 }
 
 //TEXT STYLES 
+.normal-text {
+    font-weight: normal;
+}
 .bold-text {
     font-weight: bolder;
+}
+
+.lower {
+    text-transform: lowercase;
 }
 
 // MISC
 
 .hint {
     opacity: 0.7;
+}
+
+.hight-light {
+    font-style: normal;
 }

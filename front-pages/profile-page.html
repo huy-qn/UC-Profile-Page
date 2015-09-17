@@ -35,7 +35,7 @@
                          <span>Community</span></a></li>
                         <li class="user-profile-links">
                             <img src="https://d13yacurqjgara.cloudfront.net/users/3460/avatars/normal/f6debbb5044f838dcf78bc3299172657.jpg?1421783568" alt="" class="menu-profile-picture">
-                            <span class="user-name">Huy Nguyễn</span>
+                            <span class="user-name" title="Nhiều Khi Tự Hỏi Không Biết Trên Thế Giới Có Ai Tên Dài Như Tui?">Nhiều Khi Tự Hỏi Không Biết Trên Thế Giới Có Ai Tên Dài Như Tui?</span>
                             <i class="fa fa-caret-down"></i>
                             <ul class="drop-down-list">
                                 <li><a href="">Inbox</a></li>
@@ -54,7 +54,7 @@
                         <img src="img/default-profile-picture.png" alt="">
                     </div>
                     <div class="user-details">
-                        <h2 class="user-real-name">Huy Nguyễn</h2>
+                        <h4 class="user-real-name" title="Nhiều Khi Tự Hỏi Không Biết Trên Thế Giới Có Ai Tên Dài Như Tui?">Nhiều Khi Tự Hỏi Không Biết Trên Thế Giới Có Ai Tên Dài Như Tui?</h4>
                         <span class="small-text user-current-work">
                             <i class="fa fa-briefcase"></i> <a href="">Designer</a> at <a href="">UC</a>
                         </span>
@@ -82,15 +82,15 @@
                         </div>                           
                     </div> 
                 </div>
-                <div class="card">
-                    <div id="tabs" class="user-information">
-                        <input class="tab-label" type="radio" name="tabs" id="toggle-tab1" checked="checked" />
-                        <label class="tab-label" for="toggle-tab1"><i class="fa fa-user"></i> Overview</label>
-                        <input class="tab-label" type="radio" name="tabs" id="toggle-tab2" />
-                        <label class="tab-label" class="tab-label" for="toggle-tab2"><i class="fa fa-briefcase"></i> Work</label>
-                        <input class="tab-label" type="radio" name="tabs" id="toggle-tab3" />
-                        <label class="tab-label" for="toggle-tab3"><i class="fa fa-graduation-cap"></i> Education</label>
-                        <div id="tab1" class="tab">
+                <div id="tabs-container" class="card user-information">
+                    <ul class="tabs-menu">
+                        <li class="current"><a href="#overview"><i class="fa fa-user"></i> Overview</a></li>
+                        <li><a href="#work"><i class="fa fa-briefcase"></i> Work</a></li>
+                        <li><a href="#education"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                        <li><a href="#recommendation"><i class="fa fa-comment"></i> Recommendations</a></li>
+                    </ul>
+                    <div class="tab">
+                        <div id="overview" class="tab-content">
                             <div class="inline-items">
                                 <div class="user-detail-item">
                                     <label class="block small-text" for="birth_day"><i class="fa fa-birthday-cake"></i> Birthday</label>
@@ -108,7 +108,7 @@
                                 </div>
                                 <div class="user-detail-item">
                                     <label class="block small-text" for="user_phone_number"><i class="fa fa-phone-square fa-fw"></i> Phone Number</label>
-                                    <span class="bold-text">+1 (760) 877 5650</span>
+                                    <span class="bold-text">+1 (760) 977 2650</span>
                                 </div>
                                 <div class="user-detail-item">
                                     <label class="block small-text" for="residency"><i class="fa fa-globe"></i>
@@ -173,19 +173,28 @@
                                     </div>
                                 </div>
                                 <div class="user-detail-item">
-                                    <label for="user_interests" class="block small-text"><strong>18</strong> Interests</label>
-                                    <div class="user-interest-tags">
-                                        <span class="tag"><a href="">Web Designer</a></span>
-                                        <span class="tag"><a href="">UI Designer</a></span>
-                                        <span class="tag"><a href="">Typography</a></span>
-                                        <span class="tag"><a href="">HTML</a></span>
-                                        <span class="tag"><a href="">CSS</a></span>
-                                        <span class="tag more"><a href="">6+</a></span>
-                                    </div> 
+                                    <label class="block small-text" for="Referees">
+                                         <i class="fa fa-users fa-fw"></i> Referees
+                                    </label>
+                                    <span class="block bold-text"><i class="fa fa-angle-right fa-fw"></i>Tran K. Hoang Minh</span>
+                                    <span class="block bold-text"><i class="fa fa-angle-right fa-fw"></i>Vincent UC</span>
                                 </div>                              
                             </div>
+                            <div class="user-detail-item">
+                                <label for="user_interests" class="block small-text"><strong>18</strong> Interests</label>
+                                <div class="user-interest-tags">
+                                    <span class="tag"><a href="">Web Designer</a></span>
+                                    <span class="tag"><a href="">UI Designer</a></span>
+                                    <span class="tag"><a href="">Typography</a></span>
+                                    <span class="tag"><a href="">HTML</a></span>
+                                    <span class="tag"><a href="">CSS</a></span>
+                                    <span class="tag more"><a href="">6+</a></span>
+                                </div> 
+                            </div>
                         </div>
-                        <div id="tab2" class="tab">
+                        <div id="work" class="tab-content">
+                            <div class="user-detail-item">
+                                <label for="worked-place" class="block small-text">Worked Places</label>
                             <div class="workplace-details">
                                 <span class="work-position"><strong>Graphic Designer</strong> at <strong>Zalora</strong></span>
                                 <span class="work-location">Ho Chi Minh, Viet Nam</span>
@@ -196,29 +205,73 @@
                                 <span class="work-location">Ho Chi Minh, Viet Nam</span>
                                 <span class="work-period">2012</span>
                             </div>
-                        </div>    
-                        <div id="tab3" class="tab">
-                            <div class="school-added-item">
-                                <div class="education-details">
-                                    <strong>Bachelor of Business Administrator</strong>
-                                        <span class="school-location">University of Economics &amp; Law, Viet Nam</span>
-                                        <span class="education-period">2012</span>
-                                    <div class="uploaded-media">
-                                        <img src="http://cheaper-than-tuition.com/wp-content/uploads/2014/02/Fake-Diploma-Sample-03-1200x900.jpg?53533f" alt="">
-                                        <img src="http://diplomaclassics.com/images/products/full/123415.jpg" alt="">
+                            </div>
+                        </div>
+                        <div id="education" class="tab-content">
+                            <div class="user-detail-item">
+                                <label for="school" class="block small-text">Schools</label>
+                                <div class="school-added-item">
+                                    <div class="education-details">
+                                        <strong>Bachelor of Business Administrator</strong>
+                                            <span class="school-location">University of Economics &amp; Law, Viet Nam</span>
+                                            <span class="education-period">2012</span>
+                                        <div class="uploaded-media">
+                                            <img src="http://cheaper-than-tuition.com/wp-content/uploads/2014/02/Fake-Diploma-Sample-03-1200x900.jpg?53533f" alt="">
+                                            <img src="http://diplomaclassics.com/images/products/full/123415.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="recommendation" class="tab-content">
+                            <div class="user-detail-item">
+                            <div class="recommendation-form form">
+                                <label class="bold-text" for="recommendation-input">What's good about Huy?</label>
+                                <textarea class="margin-null" name="recommendation-input" id="" cols="30" rows="4"></textarea>
+                                <button class="margin-null near-top btn btn-default btn-success right">Submit</button>
+                            </div>
+                                <label for="recommendations" class="block small-text"><strong>2</strong> Recommendations for Huy</label>
+                                <div class="recommendation-item">
+                                    <img class="profile-picture small-pp" src="https://d13yacurqjgara.cloudfront.net/users/3460/avatars/normal/f6debbb5044f838dcf78bc3299172657.jpg?1421783568" alt="">
+                                    <div class="recommendation-text">
+                                        <h4 class="recomendation-item-header margin-null">Huy is a great designer!</h4>
+                                        <div class="recommendation-author">
+                                            <a class="lower small-text" href="">@RyanPutnam</a>
+                                            <i class="split-dot">.</i>
+                                            <span class="small-text user-current-work">
+                                                <i class="fa fa-briefcase"></i> 
+                                                <a href="">Designer</a> at <a href="">Dropbox</a>
+                                            </span>
+                                        </div>
+                                        <p>He has a wide range of required skills to design a digital product from doing ux, ui, illustrations and even front-end development. He ships and get stuffs done. You can't go wrong with Huy if you are on the way finding the right designer for your digital product! He is unbelievable!</p>
+                                    </div>
+                                </div>
+                                <div class="recommendation-item">
+                                    <img class="profile-picture small-pp" src="https://d13yacurqjgara.cloudfront.net/users/3460/avatars/normal/f6debbb5044f838dcf78bc3299172657.jpg?1421783568" alt="">
+                                    <div class="recommendation-text">
+                                        <h4 class="recomendation-item-header margin-null">Huy is a great designer!</h4>
+                                        <div class="recommendation-author">
+                                            <a class="lower small-text" href="">@RyanPutnam</a>
+                                            <i class="split-dot">.</i>
+                                            <span class="small-text user-current-work">
+                                                <i class="fa fa-briefcase"></i> 
+                                                <a href="">Designer</a> at <a href="">Dropbox</a>
+                                            </span>
+                                        </div>
+                                        <p>He has a wide range of required skills to design a digital product from doing ux, ui, illustrations and even front-end development. He ships and get stuffs done. You can't go wrong with Huy if you are on the way finding the right designer for your digital product! He is unbelievable!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>      
+                </div>  
             </div>
             <div class="right-bar">
                 Test
             </div>
         </main>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-git2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>

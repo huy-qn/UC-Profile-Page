@@ -13,6 +13,7 @@ body {
     font-family: 'Open Sans', sans-serif; 
     font-weight: 400;
     font-size: 1rem;
+    line-height: 150%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @include dark {
@@ -74,7 +75,7 @@ header {
             }
             display: flex;
             margin: auto 0;
-            margin-right: 20%;
+            margin-right: auto;
             height: 30px;
             min-width: 320px;
             input {
@@ -141,6 +142,12 @@ header {
                     }
                 }
                 li.user-profile-links {
+                    span.user-name {
+                        max-width: 140px; 
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
                     @include media($mobile) {
                         span.user-name {
                             display: none;
@@ -290,11 +297,15 @@ main {
 }
 
 .user-details {
-    margin-left: auto;
+    margin-right: auto;
 }
 .user-real-name {
     display: block;
     margin: 0;
+    max-width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .user-current-work a {
     color: $dark-grey;
@@ -320,31 +331,36 @@ main {
 }
 
 .user-information {
-    label[for="toggle-tab1"],
-    label[for="toggle-tab2"],
-    label[for="toggle-tab3"] {
-        min-width: 30%;
+    .tabs-menu {
+        border-bottom: solid 2px darken($dark-grey,25%);
+    }
+    .tabs-menu li {
+        min-width: 20%;
         color: $dark-grey;
         text-align: center;
         i {
-            padding: 0 0.5rem;
+            padding: 0 0.3rem;
         }
         &:hover {
-            color: darken($dark-grey,25%);
+            background: $dark-grey;
+            a {
+                color: $dark-blue;
+            }
+        }
+        a {
+            color: $grey;
         }
     }
 
-    #toggle-tab1:checked ~ label[for="toggle-tab1"],
-    #toggle-tab2:checked ~ label[for="toggle-tab2"],
-    #toggle-tab3:checked ~ label[for="toggle-tab3"] {
+    .tabs-menu li.current {
         background: darken($dark-grey,25%);
-        color: $white;
+        a {
+            color: $white;
+        }
     }
-
-    #tab1,
-    #tab2,
-    #tab3 {
-        border-top: solid 1px darken($dark-grey,25%);
+    .tab-content {
+        padding: 1rem 2rem;
+        padding-top: 0;
     }
 }
 
@@ -356,6 +372,14 @@ main {
     label {
         color: darken($dark-grey,25%);
         padding: 0.5rem 0;
+    }
+}
+
+#work, 
+#education,
+#recommendation {
+    .user-detail-item {
+        width: 100%;
     }
 }
 
@@ -400,6 +424,10 @@ main {
     .privacy-stt label {
         display: inline-block;
         font-weight: normal;
+    }
+
+    .button-group {
+        width: 80px;
     }
 }
 
@@ -446,7 +474,8 @@ main {
     }
 }
 
-.added-email-item {
+.added-email-item,
+.added-referee-item {
     display: flex;
     align-items: center;
     margin: 0.5rem 0;
@@ -542,4 +571,167 @@ main {
           }
       }
   }
+}
+
+// RECOMMENDATION & REFEREE
+
+.recommendation-item {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: solid 0.5px rgba($dark-grey,0.1);
+}
+.recommendation-text {
+    h4 {
+        color: $grey;
+    }
+    width: 80%;
+    margin: 0;
+    padding-left: 1rem;
+    color: rgba($dark-grey,0.6);
+}
+.recommendation-author a {
+    color: darken($dark-grey,25%);
+}
+.recommendation-form {
+    padding-bottom: 4rem;
+    border-bottom: solid 0.5px rgba($dark-grey,0.1);
+    margin-bottom: 1rem;
+}
+
+#user-referee-edit {
+    color: $grey;
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            line-height: 180%;
+        }
+    }
+}
+
+// UPLOADER 
+.document-details {
+    span {
+        display: block;
+    }
+    .document-tag {
+        display: inline-block;
+    }
+    .similar-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+// #upload-form .card .panel-content {
+//     position: relative;
+// }
+
+.upload-via-url {
+    position: absolute;
+    bottom: 1.5rem;
+}
+
+// FILE LIST
+#file-list .card {
+    @include outer-container;
+    aside.right-side-bar {
+        @include span-columns(3);
+    }
+    .left-content {
+        @include span-columns(9);
+    }
+    .file-list-container {
+        position: relative;
+        &:first-of-type {
+            margin-top: 2rem;
+        }
+    }
+    .file-list-heading {
+        background: $dark-blue;
+        border-bottom: solid 0.5px rgba($dark-grey,0.5);
+        padding-bottom: 0.5rem;
+        box-shadow: $box-shadow;
+        position: fixed;
+        margin-top: -2rem;
+        height: 2rem;
+        width: 60.4%;
+        z-index: 99;
+        span {
+            margin-right: 1rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .document-publish i {
+            color: $successColor;
+        }
+
+        .document-remove i {
+            color: $dangerColor;
+        }
+        .document-rename i {
+            color: $warningColor;
+        }
+        .document-transfer i {
+            color: $primaryColor;
+        }
+    }
+    .file-list-item {
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
+        border-bottom: solid 0.5px rgba($dark-grey,0.5);
+        position: relative;
+        &:hover {
+            background: rgba($dark-grey,0.05);
+            cursor: pointer;
+            .share-button {
+                display: block;
+            }
+        }
+        &.selected {
+            background: rgba($light-blue,0.1);
+            .share-button {
+                display: block;
+            }
+        }
+        .share-button {
+            display: none;
+            position: absolute;
+            right: 1rem;
+        }
+    }
+    .file-title {
+        font-size: 85%;
+        line-height: 160%;
+        width: 70%;
+        font-weight: normal;
+        margin-bottom: 0.3rem;
+        color: #fefefe;
+        i {
+            display: none;
+            color: $light-blue;
+        }
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        &:hover > i {
+            display: inline-block;
+        }
+    }
+    .file-meta .inline-block {
+        margin-right: 2rem;
+        max-width: 40%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .pagination {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+    }
 }

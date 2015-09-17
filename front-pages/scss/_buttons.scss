@@ -122,10 +122,14 @@ a.btn {
 }
 
 .btn-link {
+  padding: 0;
+  text-decoration: none;
   background: transparent;
   border: 0;
   border-radius: 0;
-  color: $primaryColor;
+  @include dark {
+    color: $dark-grey;
+  }
   border-color: transparent;
   margin: 0.5rem;
   &:hover {

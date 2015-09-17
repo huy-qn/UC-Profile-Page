@@ -1,44 +1,42 @@
-#tabs input[type="radio"].tab-label {
-	display: none;
+.tabs-menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
-#tabs label.tab-label {
-	display: inline-block;
-	margin-right: 2px;
-	border-radius: $radius;
-	padding: 14px 20px;
-	font-size: 95%;
-	cursor:pointer;
-	transition:background .1s;
-	-webkit-transition:background .1s;
+.tabs-menu li {
+    display: inline-block;
+    margin-right: 2px;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    padding: 14px 20px;
+    cursor:pointer;
+    transition:background .1s;
+    -webkit-transition:background .1s;
+    font-weight: bold;
+}
+
+.tabs-menu li.current {
+    position: relative;
+    z-index: 5;
+}
+
+.tabs-menu li a {
+    text-decoration: none; 
 }
 
 .tab {
-	min-height: 200px;
-	background: transparent;
-	display: none;
-	padding: 12px;
-	color: $white;
+    margin-bottom: 20px;
+    width: auto;
 }
 
-#toggle-tab1:checked ~ label[for="toggle-tab1"],
-#toggle-tab2:checked ~ label[for="toggle-tab2"],
-#toggle-tab3:checked ~ label[for="toggle-tab3"],
-#toggle-tab4:checked ~ label[for="toggle-tab4"] {
-	background: transparent;
-	margin-bottom: 0;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	color: #606060;
-	cursor: default;
-	font-weight: bolder;
+.tab-content {
+    display: none;
 }
 
-#toggle-tab1:checked ~ #tab1,
-#toggle-tab2:checked ~ #tab2,
-#toggle-tab3:checked ~ #tab3,
-#toggle-tab4:checked ~ #tab4 {
-	display: block;
+#overview {
+    display: block;
 }
 
 .tab-right-sidebar {

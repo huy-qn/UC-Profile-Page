@@ -49,14 +49,13 @@
         </header>
         <main>
             <div class="card">
-                <div id="tabs" class="user-information">
-                    <input class="tab-label" type="radio" name="tabs" id="toggle-tab1" checked="checked" />
-                    <label class="tab-label" for="toggle-tab1"><i class="fa fa-user"></i> Overview</label>
-                    <input class="tab-label" type="radio" name="tabs" id="toggle-tab2" />
-                    <label class="tab-label" class="tab-label" for="toggle-tab2"><i class="fa fa-briefcase"></i> Work</label>
-                    <input class="tab-label" type="radio" name="tabs" id="toggle-tab3" />
-                    <label class="tab-label" for="toggle-tab3"><i class="fa fa-graduation-cap"></i> Education</label>
-                    <div id="tab1" class="tab tab-right-sidebar">
+                <div id="tabs-container" class="user-information">
+                    <ul class="tabs-menu">
+                        <li class="current"><a href="#overview"><i class="fa fa-user"></i> Overview</a></li>
+                        <li><a href="#work"><i class="fa fa-briefcase"></i> Work</a></li>
+                        <li><a href="#education"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                    </ul>
+                    <div id="overview" class="tab-content tab-right-sidebar">
                         <div class="left-bar">
                             <div id="edit-profile-picture">
                                 <div class="user-profile-picture">
@@ -354,9 +353,22 @@
                                     </div>
                                     <a href="" class="btn-link block"><i class="fa fa-plus"></i> Add another email</a>
                                 </div>
+                            <h3>Update Your Referees</h3>
+                            <div id="user-referee-edit" class="edit-form-item form">
+                                <label for="user-added-referee">Added Referees</label>
+                                <div class="added-referee-item">
+                                    <span><i class="fa fa-user fa-fw"></i> Somebody I used to know</span>
+                                    <button class="btn btn-xs btn-default" href=""><i class="fa fa-times"></i></button>
+                                </div>
+                                <div class="added-referee-item">
+                                    <span><i class="fa fa-user fa-fw"></i> Somebody I used to know</span>
+                                    <button class="btn btn-xs btn-default" href=""><i class="fa fa-times"></i></button>
+                                </div>
+                                <a href="" class="btn-link block"><i class="fa fa-plus"></i> Add another referee</a>
+                            </div>
                         </div>
                     </div>
-                    <div id="tab2" class="tab tab-right-sidebar">
+                    <div id="work" class="tab-content tab-right-sidebar">
                         <div class="left-bar">
                             <div class="edit-form-item form">
                                 <label for="user_current_workplace">
@@ -422,7 +434,7 @@
                                 </form>
                         </div>
                     </div>    
-                    <div id="tab3" class="tab">
+                    <div id="education" class="tab-content">
                         <div class="edit-form-item form">
                             <label for="user_schools">
                                 Added Schools
@@ -453,7 +465,7 @@
             </div>      
         </main>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-git2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
