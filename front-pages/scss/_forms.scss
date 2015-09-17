@@ -23,6 +23,9 @@
             margin: 0;
         }
     }
+    select, option {
+      border: 0;
+    }
     input[type="text"],
     input[type="password"],
     input[type="date"],
@@ -57,6 +60,12 @@
             }
         }
     }
+    select {
+        background: lighten($dark-blue,7%);
+        color: $dark-grey;
+        height: 2rem;
+        border-radius: $radius;        
+    }
     span.hint {
         font-size: .8rem;
         letter-spacing: -.005rem;
@@ -74,6 +83,9 @@
         .btn {
             margin-bottom: 0;
             margin-top: 0;
+        }
+        .btn {
+            width: 35%;
         }
     }
 

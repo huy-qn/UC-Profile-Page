@@ -484,6 +484,9 @@ main {
 .document-details .similar-item {
   margin-bottom: 1.5rem; }
 
+select#new-category {
+  margin-top: 1rem; }
+
 .upload-via-url {
   position: absolute;
   bottom: 1.5rem; }
@@ -522,7 +525,6 @@ main {
     position: fixed;
     margin-top: -2rem;
     height: 2rem;
-    width: 60.4%;
     z-index: 99; }
     #file-list .card .file-list-heading span {
       margin-right: 1rem; }
@@ -555,12 +557,12 @@ main {
       position: absolute;
       right: 1rem; }
   #file-list .card .file-title {
-    font-size: 85%;
+    font-size: 90%;
     line-height: 160%;
-    width: 70%;
-    font-weight: normal;
+    width: 75%;
+    font-weight: bold;
     margin-bottom: 0.3rem;
-    color: #fefefe; }
+    color: #C7D2EB; }
     #file-list .card .file-title i {
       display: none;
       color: #009AFF; }
@@ -578,6 +580,15 @@ main {
     display: block;
     text-align: center;
     margin-top: 1rem; }
+
+#file-request .card {
+  width: 60%;
+  margin: 0 auto; }
+  #file-request .card .file-list {
+    margin: 0 3rem; }
+  #file-request .card i.fa-paper-plane {
+    font-size: 200%;
+    margin-bottom: 1rem; }
 
 .btn {
   font-size: 100%;
@@ -748,6 +759,8 @@ a.btn:hover {
     font-size: 80%; }
   .form label.control, .form label .checkbox {
     margin: 0; }
+.form select, .form option {
+  border: 0; }
 .form input[type="text"],
 .form input[type="password"],
 .form input[type="date"],
@@ -780,6 +793,11 @@ a.btn:hover {
   .form input[type="email"]:focus,
   .form textarea:focus {
     border-color: rgba(0, 154, 255, 0.8); }
+.form select {
+  background: #22384c;
+  color: #C7D2EB;
+  height: 2rem;
+  border-radius: 2px; }
 .form span.hint {
   font-size: .8rem;
   letter-spacing: -.005rem;
@@ -793,6 +811,8 @@ a.btn:hover {
   .form .inline-submit-form .btn {
     margin-bottom: 0;
     margin-top: 0; }
+  .form .inline-submit-form .btn {
+    width: 35%; }
 .form .inline-forms {
   display: flex; }
   .form .inline-forms input {
@@ -939,6 +959,9 @@ a.btn:hover {
 
 .margin-bit-top {
   margin-top: 5%; }
+
+.margin-bit {
+  margin: 0.7rem 0; }
 
 .block {
   display: block; }

@@ -567,6 +567,9 @@ main {
 .document-details .similar-item {
   margin-bottom: 1.5rem; }
 
+select#new-category {
+  margin-top: 1rem; }
+
 .upload-via-url {
   position: absolute;
   bottom: 1.5rem; }
@@ -605,7 +608,6 @@ main {
     position: fixed;
     margin-top: -2rem;
     height: 2rem;
-    width: 60.4%;
     z-index: 99; }
     #file-list .card .file-list-heading span {
       margin-right: 1rem; }
@@ -638,12 +640,12 @@ main {
       position: absolute;
       right: 1rem; }
   #file-list .card .file-title {
-    font-size: 85%;
+    font-size: 90%;
     line-height: 160%;
-    width: 70%;
-    font-weight: normal;
+    width: 75%;
+    font-weight: bold;
     margin-bottom: 0.3rem;
-    color: #fefefe; }
+    color: #C7D2EB; }
     #file-list .card .file-title i {
       display: none;
       color: #009AFF; }
@@ -661,6 +663,15 @@ main {
     display: block;
     text-align: center;
     margin-top: 1rem; }
+
+#file-request .card {
+  width: 60%;
+  margin: 0 auto; }
+  #file-request .card .file-list {
+    margin: 0 3rem; }
+  #file-request .card i.fa-paper-plane {
+    font-size: 200%;
+    margin-bottom: 1rem; }
 
 h1,
 h2,
@@ -939,6 +950,8 @@ a.btn:hover {
     font-size: 80%; }
   .form label.control, .form label .checkbox {
     margin: 0; }
+.form select, .form option {
+  border: 0; }
 .form input[type="text"],
 .form input[type="password"],
 .form input[type="date"],
@@ -971,6 +984,11 @@ a.btn:hover {
   .form input[type="email"]:focus,
   .form textarea:focus {
     border-color: rgba(0, 207, 152, 0.8); }
+.form select {
+  background: #22384c;
+  color: #C7D2EB;
+  height: 2rem;
+  border-radius: 2px; }
 .form span.hint {
   font-size: .8rem;
   letter-spacing: -.005rem;
@@ -987,6 +1005,8 @@ a.btn:hover {
   .form .inline-submit-form .btn {
     margin-bottom: 0;
     margin-top: 0; }
+  .form .inline-submit-form .btn {
+    width: 35%; }
 .form .inline-forms {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1224,6 +1244,9 @@ hr {
 .margin-bit-top {
   margin-top: 5%; }
 
+.margin-bit {
+  margin: 0.7rem 0; }
+
 .block {
   display: block; }
 
@@ -1245,6 +1268,29 @@ a.text-decoration-none {
   text-decoration: none; }
   a.text-decoration-none:hover {
     text-decoration: none; }
+
+.file-list.compact-list {
+  border: solid 1px rgba(199, 210, 235, 0.5);
+  border-radius: 2px; }
+  .file-list.compact-list .file-list-item {
+    border-bottom: solid 1px rgba(199, 210, 235, 0.5);
+    padding: 0.3rem 0.5rem;
+    text-align: left;
+    font-size: 85%;
+    font-weight: normal;
+    overflow-x: hidden;
+    text-overflow: ellipsis; }
+    .file-list.compact-list .file-list-item:last-child {
+      border-bottom: 0; }
+    .file-list.compact-list .file-list-item a {
+      display: block;
+      color: #EDEDED;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .file-list.compact-list .file-list-item:hover {
+      background: rgba(199, 210, 235, 0.05);
+      cursor: pointer; }
 
 html {
   box-sizing: border-box; }

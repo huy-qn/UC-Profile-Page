@@ -624,6 +624,10 @@ main {
     }
 }
 
+select#new-category {
+    margin-top: 1rem;
+}
+
 // #upload-form .card .panel-content {
 //     position: relative;
 // }
@@ -656,7 +660,6 @@ main {
         position: fixed;
         margin-top: -2rem;
         height: 2rem;
-        width: 60.4%;
         z-index: 99;
         span {
             margin-right: 1rem;
@@ -703,12 +706,12 @@ main {
         }
     }
     .file-title {
-        font-size: 85%;
+        font-size: 90%;
         line-height: 160%;
-        width: 70%;
-        font-weight: normal;
+        width: 75%;
+        font-weight: bold;
         margin-bottom: 0.3rem;
-        color: #fefefe;
+        color: $dark-grey;
         i {
             display: none;
             color: $light-blue;
@@ -733,5 +736,19 @@ main {
         display: block;
         text-align: center;
         margin-top: 1rem;
+    }
+}
+
+//FILE REQUESTS
+#file-request .card {
+    width: 60%;
+    margin: 0 auto;
+
+    .file-list {
+        margin: 0 3rem;
+    }
+    i.fa-paper-plane {
+        font-size: 200%;
+        margin-bottom: 1rem;
     }
 }
