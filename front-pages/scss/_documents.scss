@@ -27,3 +27,19 @@
         }
     }
 }
+
+.document-frame {
+    background: lighten($dark-blue,5%);
+    padding: 2rem;
+    text-align: center;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.document-heading {
+    width: 80%;
+    margin-bottom: 1rem;
+    p {
+        width: 75%;
+    }
+}

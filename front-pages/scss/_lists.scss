@@ -1,0 +1,46 @@
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+        background: rgba($dark-grey,0.05);
+        & > .button-group {
+            display: block;
+        }
+    }
+    .button-group {
+        display: none;
+        margin: 0;
+        margin-left: auto;
+        .btn {
+            padding: 0rem 0.4rem;
+        }
+    }
+}
+.list-item-text {
+    margin-left: 0.5rem;
+    line-height: 130%;
+}
+
+.comments {
+    margin-top: 2rem;
+}
+.comment-user {
+    display: flex;
+    .meta span {
+        display: block;
+        margin-left: 0.5rem;
+    }
+}
+.comment-delete {
+    display: none;
+}
+.comment-content:hover > .comment-delete {
+    display: inline-block;
+}
+
+.rating i {
+    color: #FFE29F;
+}

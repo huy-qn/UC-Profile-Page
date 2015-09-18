@@ -1,12 +1,12 @@
 $skillTagBackground: #9f6faf;
-$interestTagBackground: darken($green,10%);
+$interestTagBackground: #5BE391;
 $addedTagBackground: $dark-grey;
 
 .tag {
     border-radius: 20px;
     display: inline-block;
     font-size: 0.7rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 0.6rem;
     padding: 0.2rem 0.8rem;
 
@@ -54,10 +54,10 @@ $addedTagBackground: $dark-grey;
 
 .user-interest-tags {
     span {
-        background: $interestTagBackground;
+        background: darken($interestTagBackground,10%);
         color: $white;
         &:hover {
-            background: darken($interestTagBackground, 10%);
+            background: darken($interestTagBackground,20%);
         }
     } 
 }

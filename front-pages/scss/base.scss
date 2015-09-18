@@ -638,7 +638,8 @@ select#new-category {
 }
 
 // FILE LIST
-#file-list .card {
+#file-list .card,
+#document-view .card {
     @include outer-container;
     aside.right-side-bar {
         @include span-columns(3);
@@ -715,7 +716,7 @@ select#new-category {
         font-weight: bold;
         margin-bottom: 0.3rem;
         color: $dark-grey;
-        i {
+        a {
             display: none;
             color: $light-blue;
         }
@@ -725,9 +726,12 @@ select#new-category {
             text-decoration: none;
         }
 
-        &:hover > i {
+        &:hover > a {
             display: inline-block;
         }
+    }
+    .file-meta {
+        font-size: 70%;
     }
     .file-meta .inline-block {
         margin-right: 2rem;
@@ -753,5 +757,31 @@ select#new-category {
     i.fa-paper-plane {
         font-size: 200%;
         margin-bottom: 1rem;
+    }
+}
+
+#requests-list {
+    .list-item {
+        padding: 0.7rem;
+    }
+    .list-item-text {
+        width: 70%;
+        overflow: hidden;
+        strong {
+            color: $dark-grey;
+        }
+    }
+    i.fa-paperclip {
+        color: $green;
+    }
+    i.fa-retweet {
+        color: $light-blue;
+    }
+}
+
+#document-view {
+    h4.file-title {
+        display: block;
+        width: 75%;
     }
 }
