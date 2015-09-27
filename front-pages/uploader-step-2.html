@@ -12,9 +12,12 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/dark.css">
+        <link rel="stylesheet" href="css/selectize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <!--         <link rel="stylesheet" href="css/light.css"> -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/selectize.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -73,14 +76,15 @@
                         <textarea name="document-description" id="" rows="3"></textarea>
                         <div class="similar-item">
                         <label for="document-tags">Tags</label>
-                            <div class="inline-submit-form">
-                                <input class="small-form" type="text">
-                                <button class="btn btn-sm btn-default bold-text">Add</button>                
-                            </div>
-                            <div class="added-tag">
-                                <span class="document-tag"><a href="" class="btn btn-link btn-sm"><i class="fa fa-times-circle fa-fw"></i> Test</a></span>
-                                <span class="document-tag"><a href="" class="btn btn-link btn-sm"><i class="fa fa-times-circle fa-fw"></i> Test</a></span>
-                            </div>
+                            <input type="text" id="document-tags-input" value="Valuable, Datamining">
+                            <script>
+                                $('#document-tags-input').selectize({
+                                    plugins: ['remove_button'],
+                                    persist: false,
+                                    createOnBlur: true,
+                                    create: true
+                                });
+                            </script>
                         </div>
                       </form>   
                     <div class="button-group-right">
@@ -95,20 +99,28 @@
                         <span class="document-year-production"><i class="fa fa-calendar-o fa-fw"></i> Year of Production: <strong>1998</strong><a href="" class="btn btn-link btn-xs"><i class="fa fa-pencil"></i></a></span>
                         <div class="similar-item">
                             <span class="document-author margin-bit-top"><strong><i class="fa fa-users fa-fw"></i> Author(s)</strong></span>
-                            <ul class="margin-null no-list-style">
-                                <li><span>Robin Van Persie <a href="" class="btn btn-link btn-xs"><i class="fa fa-times"></i></a></span></li>
-                                <li><span>Wayne Roonie <a href="" class="btn btn-link btn-xs"><i class="fa fa-times"></i></a></span></li>
-                            </ul>
-                            <a href="" class="btn-link block small-text"><i class="fa fa-plus"></i> Add another author</a>
+                            <input type="text" id="document-author-input" value="Lionel Messi, Ronaldo">
+                            <script>
+                                $('#document-author-input').selectize({
+                                    plugins: ['remove_button'],
+                                    persist: false,
+                                    createOnBlur: true,
+                                    create: true
+                                });
+                            </script>
                         </div>
                         <div class="similar-item">
-                            <span class="document-author margin-bit-top"><strong><i class="fa fa-globe fa-fw"></i> Language(s)</strong></span>
-                            <ul class="margin-null no-list-style">
-                                <li><span>English <a href="" class="btn btn-link btn-xs"><i class="fa fa-times"></i></a></span></li>
-                                <li><span>Vietnamese <a href="" class="btn btn-link btn-xs"><i class="fa fa-times"></i></a></span></li>
-                            </ul>
-                            <a href="" class="btn-link block small-text"><i class="fa fa-plus"></i> Add another language</a>
-                        </div>
+                            <span class="document-author"><strong><i class="fa fa-globe fa-fw"></i> Language(s)</strong></span>
+                            <input type="text" id="document-languages-input" value="English, Vietnamese">
+                            <script>
+                                $('#document-languages-input').selectize({
+                                    plugins: ['remove_button'],
+                                    persist: false,
+                                    createOnBlur: true,
+                                    create: true
+                                });
+                            </script>
+                        </div>  
                     </div>
                   </div>                
               </div>
@@ -117,7 +129,6 @@
             </div>
         </main>
 
-        <script src="https://code.jquery.com/jquery-git2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>

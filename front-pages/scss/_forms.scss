@@ -191,3 +191,28 @@
     padding: 0.5rem;
 }
 
+//SELECTIZE CUSTOMIZE
+.selectize-input, 
+.selectize-control.single .selectize-input.input-active {
+    background: lighten($dark-blue,7%) !important;
+    border: solid 0px transparent !important;
+}
+.selectize-control.multi .selectize-input > div {
+    background: $dark-grey !important;
+    border-radius: $radius;
+}
+
+.selectize-input.dropdown-active::before {
+    background: lighten($dark-blue,7%) !important;
+}
+.selectize-dropdown {
+    border: solid 0px lighten($dark-blue,7%) !important;
+    background: lighten($dark-blue,7%) !important;
+    color: $dark-grey !important;
+}
+
+.selectize-dropdown .active {
+    background: rgba($dark-grey,0.1) !important;
+    color: $white !important;
+}
+

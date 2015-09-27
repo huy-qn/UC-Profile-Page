@@ -3,7 +3,7 @@ $interestTagBackground: #5BE391;
 $addedTagBackground: $dark-grey;
 
 .tag {
-    border-radius: 20px;
+    border-radius: $radius;
     display: inline-block;
     font-size: 0.7rem;
     font-weight: 600;
@@ -70,6 +70,24 @@ $addedTagBackground: $dark-grey;
     span {
         background: $dark-grey;
         color: $dark-blue;
+        &:hover {
+            background: darken($dark-grey,10%);
+        }
+    }
+}
+
+.document-tags {
+    a {
+        color: $dark-blue;
+        font-weight: normal;
+    }
+    span {
+        opacity: 0.8;
+        padding: 0 0.3rem !important;
+        border-radius: $radius;
+        background: $dark-grey;
+        color: $dark-blue;
+        font-size: 90%;
         &:hover {
             background: darken($dark-grey,10%);
         }

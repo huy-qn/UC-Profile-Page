@@ -40,6 +40,15 @@
     width: 80%;
     margin-bottom: 1rem;
     p {
-        width: 75%;
+        width: 100%;
+    }
+}
+
+.document-tags {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: solid 0.5px rgba($dark-grey,0.5);
+    label {
+        margin-bottom: 0.5rem;
     }
 }

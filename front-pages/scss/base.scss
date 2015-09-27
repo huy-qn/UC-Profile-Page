@@ -686,8 +686,8 @@ select#new-category {
         }
     }
     .file-list-item {
-        padding-left: 0.5rem;
-        padding-top: 0.5rem;
+        padding: 1rem;
+        padding-bottom: 0;
         border-bottom: solid 0.5px rgba($dark-grey,0.5);
         position: relative;
         &:hover {
@@ -713,9 +713,9 @@ select#new-category {
         font-size: 90%;
         line-height: 160%;
         width: 75%;
-        font-weight: bold;
+        font-weight: normal;
         margin-bottom: 0.3rem;
-        color: $dark-grey;
+        color: #E6E984;
         a {
             display: none;
             color: $light-blue;
@@ -731,7 +731,7 @@ select#new-category {
         }
     }
     .file-meta {
-        font-size: 70%;
+        font-size: 80%;
     }
     .file-meta .inline-block {
         margin-right: 2rem;
@@ -781,7 +781,17 @@ select#new-category {
 
 #document-view {
     h4.file-title {
-        display: block;
+        display: flex;
         width: 75%;
+        align-items: center;
+
+        i,
+        span {
+            margin-right: 0.5rem;
+        }
+        .document-logo img {
+            max-height: .9rem;
+            vertical-align: middle;
+        }
     }
 }

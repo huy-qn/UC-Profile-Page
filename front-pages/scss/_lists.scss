@@ -27,13 +27,6 @@
 .comments {
     margin-top: 2rem;
 }
-.comment-user {
-    display: flex;
-    .meta span {
-        display: block;
-        margin-left: 0.5rem;
-    }
-}
 .comment-delete {
     display: none;
 }
@@ -43,4 +36,14 @@
 
 .rating i {
     color: #FFE29F;
+    display: inline-block;
+}
+
+.user-mini-profile {
+    display: flex;
+    justify-content: flex-start;
+    .user-meta {
+        margin-right: auto;
+        margin-left: 0.5rem;
+    }
 }
