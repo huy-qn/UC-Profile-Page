@@ -739,6 +739,12 @@ select#new-category {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+    .document-tags {
+        border: 0 !important;
+        padding-top: 0 !important;
+    }
+
     .pagination {
         display: block;
         text-align: center;

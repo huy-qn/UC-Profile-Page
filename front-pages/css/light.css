@@ -608,6 +608,10 @@ select#new-category {
     max-width: 40%;
     overflow: hidden;
     text-overflow: ellipsis; }
+  #file-list .card .document-tags,
+  #document-view .card .document-tags {
+    border: 0 !important;
+    padding-top: 0 !important; }
   #file-list .card .pagination,
   #document-view .card .pagination {
     display: block;
