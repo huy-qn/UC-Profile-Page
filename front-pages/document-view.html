@@ -12,9 +12,12 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/dark.css">
+        <link rel="stylesheet" href="css/selectize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <!--         <link rel="stylesheet" href="css/light.css"> -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/selectize.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -54,7 +57,6 @@
                     <div class="document-heading">
                         <h4 class="file-title margin-null"><i class="fa fa-file-pdf-o "></i> <span>Documents about UC Design </span><div class="document-logo"><img src="http://d.pr/i/1647j+" alt=""></div></h4>
                         <span class="rating small-text">Rating: <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star" ></i> <i class="fa fa-star-half"></i></span>    
-                        <a href="" class="btn btn-success bold-text btn-xs padding-bit"><i class="fa fa-clone"></i> Added in Cue</a>          
                         <p class="document-description margin-null small-text hint">
                             For the app icon, we wanted something not too cliché, but still a common image in people's mind about peacefulness. We chose to draw an abstracted sunrise/sunset over some water.
                         </p>
@@ -64,7 +66,12 @@
                         <form action="" class="form">
                             <label for="">Comment</label>
                                 <textarea name="comment-input" id="" cols="30" rows="2"></textarea>
-                                <button class="btn btn-success near-top">Comment</button>
+                                <div class="inline-items">
+                                    <div class="add-rating">
+                                        <span class="rating small-text">How much do you like it? <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star" ></i> <i class="fa fa-star-half"></i></span>   
+                                    </div>
+                                    <button class="btn btn-success near-top">Submit</button>                          
+                                </div>
                         </form>
                         <div class="comments">
                             <div class="comment-item ">
@@ -85,8 +92,8 @@
                                 </div>
                               </div>
                               <div class="comment-content small-text">
-                                <p>
-                                    <span class="rating small-text">Rated: <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star" ></i> <i class="fa fa-star-half"></i></span> <i class="split-dot">.</i>
+                                <strong><span class="rating small-text">Rated: <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star" ></i> <i class="fa fa-star-half"></i></span> <i class="split-dot">.</i>Amazing Research!</strong>
+                                <p class="margin-null">
                                     Hi there, my name is Huy. This is my comment. Thanks for reading this. To reply to my comment. Please click the link "Reply" below. It should opens an input for you to type your reply. But since this is just a prototype. It is not working very well! </p>
                                 <i class="fa fa-clock-o"></i> 8 min ago <span class="comment-delete"><i class="split-dot">.</i><a href=""> Delete</a></span>
                               </div>
@@ -94,10 +101,35 @@
                          </div>
                 </div>
                 <aside class="right-side-bar">
-                    <div class="file-meta similar-item near-top">
+                    <div class="file-meta similar-item">
                         <div class="document-upload-date"><i class="fa fa-upload"></i> Sharing date <strong>Sep 12, 2015</strong></div>
                         <div class="document-upload-date"><i class="fa fa-language"></i> Languages <strong>English</strong>, <strong>Vietnamese</strong></div>
-                        <div class="document-tags">
+                        <div class="document-cue-cards document-side-metas">
+                            <label class="block" for="document-cue-cards"><i class="fa fa-clone"></i> Add to your cards</label>
+                            <form action="" class="form">
+                                <button id="added-in-cue" class="btn btn-success btn-block small-text hide near-top"><i class="fa fa-clone"></i> Added in your Cue</button>
+                                <div id="select-cue">
+                                    <select name="select-cue-cards" id="select-cue-cards">
+                                        <option value="1" selected>Select Cue Card</option>
+                                        <option value="2">32 Characters Max Cue Card Test</option>
+                                        <option value="3">Test Cue Card</option>
+                                        <option value="4">Another One</option>
+                                    </select>
+                                    <div class="button-group-right near-top">
+                                        <a href="" class="btn-link small-text"><i class="fa fa-plus"> Add New Card</i></a>
+                                        <a href="" id="add-to-cue" class="btn-link small-text"><i class="fa fa-check"> Done</i></a>                    
+                                    </div>
+                                </div>
+                                <script>
+                                    $('#select-cue-cards').selectize();
+                                    $('#add-to-cue').click(function() {
+                                        $('#added-in-cue').removeClass('hide');
+                                        $('#select-cue').addClass('hide');
+                                    })
+                                </script>
+                            </form>
+                        </div>
+                        <div class="document-tags document-side-metas near-top">
                             <label class="block" for="document-tags"><i class="fa fa-tags"></i> Tags </label>
                                 <span class="tag"><a href="">Algorithms and Theory</a></span>
                                 <span class="tag"><a href="">Data Mining</a></span>
@@ -105,6 +137,7 @@
                                 <span class="tag"><a href="">Science</a></span>
                                 <span class="tag"><a href="">Education Innovation</a></span>
                                 <span class="tag more"><a href="">Hardware</a></span>
+                        </div>
                     </div>
                 </aside>
             </div>

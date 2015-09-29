@@ -330,7 +330,8 @@ main {
     }
 }
 
-.user-information {
+.user-information,
+#upload-form {
     .tabs-menu {
         border-bottom: solid 2px darken($dark-grey,25%);
     }
@@ -799,5 +800,17 @@ select#new-category {
             max-height: .9rem;
             vertical-align: middle;
         }
+    }
+
+    .document-side-metas {
+        padding-top: 0.5rem;
+        label {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    #added-in-cue {
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
     }
 }

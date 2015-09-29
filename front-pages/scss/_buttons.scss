@@ -30,6 +30,7 @@ a.btn {
 
 .btn-sm {
   font-size: 75%;
+  padding: 0.1rem 0.4rem !important;
 }
 
 .btn-xs {
@@ -134,6 +135,10 @@ a.btn {
   margin: 0.5rem;
   &:hover {
     text-decoration: underline;
+  }
+
+  &.success {
+    color: $darkSuccessColor;
   }
 }
 

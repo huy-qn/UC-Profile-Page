@@ -49,20 +49,34 @@
         </header>
         <main>
             <div id="upload-form">
-            <div class="card">
-              <div class="panel-heading panel-with-close">
-                <h3 class="block normal-text text-left margin-null">Upload To 'Folder'</h3>
-                <i class="fa fa-times"></i>
-              </div>
-              <div class="panel-content">
-                  <p class="margin-null">Choose file to upload to folder <strong>folder</strong>. You can only select <strong>1</strong> file at a time. </br> You can also try to <a href="uploader-url.html"><strong>insert file from URL</strong></a></p>
-                  <div class="button-group-right">
-                      <a href="uploader-step-2.html" class="btn btn-success">Choose Files</a>
-                      <button class="btn btn-default">Cancel</button>
-                  </div>                  
-              </div>
-
-            </div>
+                <h3>Upload Document</h3>
+                <div class="card">
+                    <div id="tabs-container">
+                        <ul class="tabs-menu">
+                            <li class="current"><a href="#upload-from-pc"><i class="fa fa-upload"></i> Upload a document</a></li>
+                            <li><a href="#upload-from-url"><i class="fa fa-link"></i> Paste document URL</a></li>
+                        </ul>
+                        <div class="tab">
+                            <div id="upload-from-pc" class="tab-content">
+                               <p class="margin-null">Choose file to upload to folder <strong>folder</strong>. You can only select <strong>1</strong> file at a time.</p>
+                              <div class="button-group-right">
+                                  <a href="uploader-step-2.html" class="btn btn-success">Choose Files</a>
+                                  <button class="btn btn-default">Cancel</button>
+                              </div>                        
+                            </div>
+                            <div id="upload-from-url" class="tab-content">
+                                <p class="margin-null">Insert file from a URL</p>
+                                <form action="" class="form">
+                                    <input type="text" placeholder="http://">
+                                </form>
+                                <div class="button-group-right">
+                                    <a href="uploader-step-2.html" class="btn btn-success">Submit</a>
+                                    <button class="btn btn-default">Cancel</button>
+                                </div>                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 

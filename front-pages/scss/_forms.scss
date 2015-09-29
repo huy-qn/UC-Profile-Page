@@ -141,14 +141,18 @@
 #upload-form {
     width: 80%;
     .card {
-        padding: 0;
-        background: rgba($dark-grey,0.2);
+        padding: 1rem;
     }
     .left-bar-form {
         @include span-columns(8);
     }
     .right-bar-form {
         @include span-columns(4);
+    }
+
+    .tab-content {
+        padding: 0;
+        padding-top: 1rem;
     }
 }
 
@@ -192,6 +196,10 @@
 }
 
 //SELECTIZE CUSTOMIZE
+.selectize-dropdown, .selectize-input, .selectize-input input {
+    color: $dark-grey !important;
+}
+
 .selectize-input, 
 .selectize-control.single .selectize-input.input-active {
     background: lighten($dark-blue,7%) !important;

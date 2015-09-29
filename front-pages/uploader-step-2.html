@@ -96,7 +96,8 @@
                     <div class="document-details small-text form">
                         <span class="document-date"><i class="fa fa-clock-o fa-fw"></i> Upload Date: <strong>Sep 8, 2015</strong><a href="" class="btn btn-link btn-xs"><i class="fa fa-pencil"></i></a>
                         </span>
-                        <span class="document-year-production"><i class="fa fa-calendar-o fa-fw"></i> Year of Production: <strong>1998</strong><a href="" class="btn btn-link btn-xs"><i class="fa fa-pencil"></i></a></span>
+                        <span class="document-year-production"><i class="fa fa-calendar-o fa-fw"></i> Year of Production:</span>
+                        <input type="text" placeholder="1998">
                         <div class="similar-item">
                             <span class="document-author margin-bit-top"><strong><i class="fa fa-users fa-fw"></i> Author(s)</strong></span>
                             <input type="text" id="document-author-input" value="Lionel Messi, Ronaldo">
@@ -110,15 +111,13 @@
                             </script>
                         </div>
                         <div class="similar-item">
-                            <span class="document-author"><strong><i class="fa fa-globe fa-fw"></i> Language(s)</strong></span>
-                            <input type="text" id="document-languages-input" value="English, Vietnamese">
+                            <span class="document-languages"><strong><i class="fa fa-globe fa-fw"></i> Language(s)</strong></span>
+                            <select for="document-languages" id="document-languages-input">
+                                <option value="English" selected>English</option>
+                                <option value="Vietnamese" selected>Vietnamese</option>
+                            </select>
                             <script>
-                                $('#document-languages-input').selectize({
-                                    plugins: ['remove_button'],
-                                    persist: false,
-                                    createOnBlur: true,
-                                    create: true
-                                });
+                                $('#document-languages-input').selectize();
                             </script>
                         </div>  
                     </div>
