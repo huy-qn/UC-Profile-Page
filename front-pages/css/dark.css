@@ -570,7 +570,7 @@ main {
       line-height: 180%; }
 
 .document-details span {
-  display: block; }
+  display: inline-block; }
 .document-details .document-tag {
   display: inline-block; }
 .document-details .similar-item {
