@@ -5,10 +5,6 @@
 @import "bourbon", "neat";
 $mobile: new-breakpoint(max-width 420px 4);
 
-* {
-  transition: all 0.1s ease-in-out;
-}
-
 body {
     font-family: 'Open Sans', sans-serif; 
     font-weight: 400;
@@ -657,15 +653,17 @@ select#new-category {
             margin-top: 2rem;
         }
     }
-    .file-list-heading {
+    .file-actions {
         background: $dark-blue;
-        border-bottom: solid 0.5px rgba($dark-grey,0.5);
         padding-bottom: 0.5rem;
-        box-shadow: $box-shadow;
-        position: fixed;
-        margin-top: -2rem;
         height: 2rem;
         z-index: 99;
+        padding: 0 auto;
+        &.position-fixed {
+            margin-top: 0;
+            top: 3.8rem;
+            width: 59%;
+        }
         span {
             margin-right: 1rem;
             &:hover {
