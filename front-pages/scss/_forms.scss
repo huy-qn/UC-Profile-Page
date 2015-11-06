@@ -49,6 +49,7 @@
             border: solid 1px lighten($dark-blue,7%);
             &:focus {
                 border-color: rgba($darkSuccessColor,0.8);
+                outline: 0px;
             }
         }
         @include light {
@@ -169,10 +170,11 @@
 }
 
 .panel-heading {
-    padding: 1rem;
-    background: $dark-blue;
+    padding: 1rem 2rem;
+    background: darken($dark-blue,2%);
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
+    font-size: 75%;
 }
 
 .panel-content {

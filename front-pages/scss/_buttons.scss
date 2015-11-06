@@ -149,8 +149,15 @@ a.btn {
 }
 .button-group {
   display: block;
+  form {
+    display: inline-block;
+  }
 }
 .button-group-right {
   display: flex;
   justify-content: flex-end;
+}
+
+button a {
+  text-decoration: none;
 }

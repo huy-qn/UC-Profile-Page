@@ -18,6 +18,10 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="js/selectize.min.js"></script>
+        <script src="js/vex.combined.min.js"></script>
+        <script>vex.defaultOptions.className = 'vex-theme-os';</script>
+        <link rel="stylesheet" href="css/vex.css" />
+        <link rel="stylesheet" href="css/vex-theme-os.css" />
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -56,18 +60,83 @@
                 <div class="card">
                 <div class="left-content">
                     <div class="document-heading">
-                        <h4 class="file-title margin-null"><i class="fa fa-file-pdf-o "></i> <span>Documents about UC Design </span><div class="document-logo"><img src="http://d.pr/i/1647j+" alt=""></div></h4>
-                        <span class="rating small-text">Rating: <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star" ></i> <i class="fa fa-star-half"></i></span>    
+                        <h4 class="file-title margin-null"><i class="fa fa-file-pdf-o "></i> <span>{{resource.getTitle}}</span><div class="document-logo"><img src="https://duckduckgo.com/i/0227507d.png" alt=""></div></h4>
+                        <span class="rating small-text">Rating: {{resource.getAverageRate}} <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star" ></i> <i class="fa fa-star-half"></i></span>    
                         <p class="document-description margin-null small-text hint">
-                            For the app icon, we wanted something not too cliché, but still a common image in people's mind about peacefulness. We chose to draw an abstracted sunrise/sunset over some water.
+                            {{resource.getDescription}}
                         </p>
-                        <div class="document-year file-meta"><i class="fa fa-calendar"></i> Year of Production <strong>1994</strong> <i class="split-dot">.</i> Published</div>
-                        <div class="document-authors file-meta"><i class="fa fa-users"></i> Authors <strong>Robin Van Persie</strong>, <strong>Wayne Rooney</strong></div>
+                        <div class="document-year file-meta"><i class="fa fa-calendar"></i> Year of Production <strong>{{resource.getYearOfProduction}}</strong> <i class="split-dot">.</i> {% if resource.isPublished %}Published{% endif %}</div>
+                        <div class="document-authors file-meta"><i class="fa fa-users"></i> Authors 
+                            {% for author in resource.getAuthors %}
+                                <strong>{{author.getName}} </strong>
+                            {% endfor %}
+                        </div>
                             <div class="file-actions small-text">
                                 <span class="bold-text document-hide hint inline-block"><i class="fa fa-eye-slash fa-fw"></i> Hide</span>
                                 <span class="bold-text document-remove hint inline-block"><i class="fa fa-trash fa-fw"></i> Remove</span>
-                                <span class="bold-text document-rename hint inline-block"><i class="fa fa-pencil fa-fw"></i> Rename</span>
-                                <span class="bold-text document-transfer hint inline-block"><i class="fa fa-retweet fa-fw"></i> Transfer Ownership</span>
+                                <span class="bold-text document-rename hint inline-block"><i class="fa fa-pencil fa-fw"></i> Edit</span>
+                                <span id="transfer-file" class="bold-text document-transfer hint inline-block"><i class="fa fa-retweet fa-fw"></i> Transfer Ownership</span>
+                                <span id="copy-file" class="bold-text document-transfer hint inline-block"><i class="fa fa-clone fa-fw"></i> Send a Copy</span>
+                                <span id="share-file" class="bold-text document-transfer hint inline-block"><i class="fa fa-share fa-fw"></i> Share</span>
+                                <script>
+                                    $("#transfer-file").click(function(){
+                                        vex.dialog.open({
+                                          message: 'Transfer Ownership',
+                                          input: "<input name=\"username\" type=\"text\" placeholder=\"Enter email addresses\" required />",
+                                          buttons: [
+                                            $.extend({}, vex.dialog.buttons.YES, {
+                                              text: 'Submit'
+                                            }), $.extend({}, vex.dialog.buttons.NO, {
+                                              text: 'Cancel'
+                                            })
+                                          ],
+                                          callback: function(data) {
+                                            if (data === false) {
+                                              return console.log('Cancelled');
+                                            }
+                                            return console.log('Username', data.username, 'Password', data.password);
+                                          }
+                                        });
+                                    })
+                                    $("#copy-file").click(function(){
+                                        vex.dialog.open({
+                                          message: 'Send a Copy',
+                                          input: "<input name=\"username\" type=\"text\" placeholder=\"Enter email addresses\" required />",
+                                          buttons: [
+                                            $.extend({}, vex.dialog.buttons.YES, {
+                                              text: 'Send'
+                                            }), $.extend({}, vex.dialog.buttons.NO, {
+                                              text: 'Cancel'
+                                            })
+                                          ],
+                                          callback: function(data) {
+                                            if (data === false) {
+                                              return console.log('Cancelled');
+                                            }
+                                            return console.log('Username', data.username, 'Password', data.password);
+                                          }
+                                        });
+                                    })
+                                    $("#share-file").click(function(){
+                                        vex.dialog.open({
+                                          message: 'Share with others',
+                                          input: "<input name=\"username\" type=\"text\" placeholder=\"Enter email addresses\" required />",
+                                          buttons: [
+                                            $.extend({}, vex.dialog.buttons.YES, {
+                                              text: 'Share'
+                                            }), $.extend({}, vex.dialog.buttons.NO, {
+                                              text: 'Cancel'
+                                            })
+                                          ],
+                                          callback: function(data) {
+                                            if (data === false) {
+                                              return console.log('Cancelled');
+                                            }
+                                            return console.log('Username', data.username, 'Password', data.password);
+                                          }
+                                        });
+                                    })
+                                </script>
                             </div>
                     </div>
                         <form action="" class="form">
@@ -109,8 +178,8 @@
                 </div>
                 <aside class="right-side-bar">
                     <div class="file-meta similar-item">
-                        <div class="document-upload-date"><i class="fa fa-upload"></i> Sharing date <strong>Sep 12, 2015</strong></div>
-                        <div class="document-upload-date"><i class="fa fa-language"></i> Languages <strong>English</strong>, <strong>Vietnamese</strong></div>
+                        <div class="document-upload-date"><i class="fa fa-upload"></i> Sharing date <strong>{{resource.getCreatedDate}}</strong></div>
+                        <div class="document-upload-date"><i class="fa fa-language"></i> Languages <strong>{{resource.getLanguage}}</strong>, <strong>Vietnamese</strong></div>
                         <div class="document-cue-cards document-side-metas">
                             <label class="block" for="document-cue-cards"><i class="fa fa-clone"></i> Add to your cards</label>
                             <form action="" class="form">
