@@ -36,7 +36,8 @@
 }
 
 #overview, 
-#upload-from-pc {
+#upload-from-pc,
+#space-members {
     display: block;
 }
 
@@ -52,5 +53,39 @@
     .right-bar {
         @include span-columns(4);
         padding-left: 1rem;
+    }
+}
+
+//TEST 
+
+.tab-nav {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    border-bottom: solid 1px rgba($dark-grey,0.1);
+}
+
+.tab-nav__tab {
+    display: inline-block;
+    padding-bottom: 0.2rem;
+    color: rgba($dark-grey, 0.5);
+    // Adjacent siblings get a margin-left
+    + .tab-nav__tab {
+        margin-left: 0.5rem;
+        &:hover {
+            color: rgba($dark-grey, 0.7);
+            border-bottom: solid 1px rgba($dark-grey,0.7);
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &.tab-nav__tab--is-active {
+        font-weight: bolder;
+        color: rgba($dark-grey,1);
+        border-bottom: solid 1px rgba($dark-grey,1);
     }
 }

@@ -6,6 +6,18 @@ hr {
 
 .profile-picture {
     border-radius: $radius;
+    &.xlarge-pp {
+        width: 96px;
+        height: 96px;
+    }
+    &.large-pp {
+        width: 80px;
+        height: 80px;
+    }
+    &.regular-pp {
+        width: 64px;
+        height: 64px;
+    }
     &.small-pp {
         width: 48px;
         height: 48px;
@@ -53,6 +65,10 @@ hr {
 .margin-null {
     margin: 0;
 }
+.margin-top-null {
+    margin-top: 0;
+}
+
 .padding-bit {
     padding: 0.1rem;
 }
@@ -93,4 +109,10 @@ a.text-decoration-none {
 
 .position-fixed {
     position: fixed;
+}
+
+.cursor-pointer {
+    &:hover {
+        cursor: pointer;
+    }
 }

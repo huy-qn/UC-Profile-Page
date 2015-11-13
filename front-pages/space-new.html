@@ -57,23 +57,27 @@
         <main>
             <div id="discussion-new">
                 <div class="card">
-                    <h3>Create a new discussion</h3>
+                    <h3>Create a new space</h3>
                     <form action="" class="form">
-                        <label class="small-text" for="discussion-topic">Discussion Topic</label>
-                        <input type="text" placeholder="Enter topic here">
+                        <label class="small-text" for="space-name">Space Name</label>
+                        <input type="text" placeholder="Enter name here">
                         <span class="hint near-top">Names must be 30 characters or less.</span>
                     </form>
                     <form action="" class="form near-top">
-                        <label class="small-text"  for="discussion-invite">Invite others to join</label>
+                        <label class="small-text" for="space-description">Space Description</label>
+                        <textarea name="" id="" rows="2"></textarea>
+                    </form>
+                    <form action="" class="form near-top">
+                        <label class="small-text"  for="discussion-invite">Add Members</label>
                         <input type="text" placeholder="Add by name">
                     </form>
                     <form action="" class="form near-top">
-                        <label class="small-text"  for="discussion-invite">Discussion Tags</label>
+                        <label class="small-text"  for="discussion-invite">Space Tags</label>
                         <input type="text" placeholder="Tags">
                     </form>
                             <div class="button-group right">
                                 <button class="btn btn-default btn-default">Cancel</button>
-                                <a href="discussion-room.html"><button class="btn btn-default btn-success">Create new discussion</button></a>
+                                <a href="space-admin.html"><button class="btn btn-default btn-success">Create new space</button></a>
                             </div>
                 </div>
             </div>
