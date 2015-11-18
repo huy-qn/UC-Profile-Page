@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="css/vex.css" />
         <link rel="stylesheet" href="css/vex-theme-os.css" />
     </head>
-    <body>
+    <body id="page">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -60,7 +60,7 @@
                     <aside class="left-side-bar">
                         <div id="invited-users">
                             <h4 class="margin-null">Invited Users</h4>
-                            <ul id="im-list">  
+                            <ul id="im-list">
                                 <li class="invited-user">
                                     <a class="user-name small-text cursor-pointer">
                                         <img src="https://pbs.twimg.com/profile_images/555814087167205376/7sPnaA_u_400x400.png" alt="" class="profile-picture tiny-pp">
@@ -68,7 +68,7 @@
                                                 huynq
                                         </span>
                                     </a>
-                                </li>   
+                                </li>
                                 <li class="invited-user">
                                     <a class="user-name small-text cursor-pointer">
                                         <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="" class="profile-picture tiny-pp">
@@ -76,7 +76,7 @@
                                                 phucurban
                                         </span>
                                     </a>
-                                </li>   
+                                </li>
                                 <li class="invited-user small-text cursor-pointer">
                                     <a class="user-name">
                                         <img src="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg" alt="" class="profile-picture tiny-pp">
@@ -84,7 +84,7 @@
                                                 pupi
                                         </span>
                                     </a>
-                                </li>   
+                                </li>
                             </ul>
                         </div>
                         <div id="shared-files">
@@ -97,69 +97,69 @@
                                     <li class="tab-nav__tab"><a href="">Your Files</a></li>
                                 </ul>
                             </nav>
-                            <ul id="shared-files-list">     
+                            <ul id="shared-files-list">
                                 <li class="file-item cursor-pointer">
                                     <i class="file-type-icon fa fa-file-text-o"></i>
                                     <div class="shared-file-details">
                                         <span class="file-uploader block small-text hint">
-                                            <strong>huyng</strong>                   
-                                            <span class="hint small-text"> Sep 21 at 19:12 PM</span> 
+                                            <strong>huyng</strong>
+                                            <span class="hint small-text"> Sep 21 at 19:12 PM</span>
                                         </span>
                                         <a class="shared-file cursor-pointer">
                                             <h5 class="file-name bold-text margin-null tight-height padding-bit">
                                                     20151030 Discussion requirement for designer.docx
                                             </h5>
-                                        </a>                                        
+                                        </a>
                                     </div>
-                                </li>    
+                                </li>
                                 <li class="file-item cursor-pointer">
                                     <i class="file-type-icon fa fa-file-zip-o"></i>
                                     <div class="shared-file-details">
                                         <span class="file-uploader block small-text hint">
-                                            <strong>pupi</strong>                   
-                                            <span class="hint small-text"> Sep 21 at 19:12 PM</span> 
+                                            <strong>pupi</strong>
+                                            <span class="hint small-text"> Sep 21 at 19:12 PM</span>
                                         </span>
                                         <a class="shared-file cursor-pointer">
                                             <h5 class="file-name bold-text margin-null tight-height padding-bit">
                                                     Archive.zipz
                                             </h5>
-                                        </a>                                        
+                                        </a>
                                     </div>
-                                </li>  
+                                </li>
                                 <li class="file-item cursor-pointer">
                                     <i class="file-type-icon fa fa-file-pdf-o"></i>
                                     <div class="shared-file-details">
                                         <span class="file-uploader block small-text hint">
-                                            <strong>phuctran</strong>                   
-                                            <span class="hint small-text"> Sep 21 at 19:12 PM</span> 
+                                            <strong>phuctran</strong>
+                                            <span class="hint small-text"> Sep 21 at 19:12 PM</span>
                                         </span>
                                         <a class="shared-file cursor-pointer">
                                             <h5 class="file-name bold-text margin-null tight-height padding-bit">
                                                     An accessible Modal Window with JavaScript & CSS.pdf
                                             </h5>
-                                        </a>                                        
+                                        </a>
                                     </div>
-                                </li>  
+                                </li>
                                 <li class="file-item cursor-pointer">
                                     <i class="file-type-icon fa fa-file-text-o"></i>
                                     <div class="shared-file-details">
                                         <span class="file-uploader block small-text hint">
-                                            <strong>huyng</strong>                   
-                                            <span class="hint small-text"> Sep 21 at 19:12 PM</span> 
+                                            <strong>huyng</strong>
+                                            <span class="hint small-text"> Sep 21 at 19:12 PM</span>
                                         </span>
                                         <a class="shared-file cursor-pointer">
                                             <h5 class="file-name bold-text margin-null tight-height padding-bit">
                                                     20151030 Discussion requirement for designer.docx
                                             </h5>
-                                        </a>                                        
+                                        </a>
                                     </div>
-                                </li>  
+                                </li>
                             </ul>
                         </div>
                     </aside>
                     <div class="right-content">
                         <div class="discussion-heading">
-                            <h3 class="margin-null">Let's talk about works or... just having fun! <span class="hint small-text"><i class="fa fa-caret-down"></i><!--  Discus List --></span></h3>
+                            <h3 class="margin-null">Let's talk about works or... just having fun! <span class="hint small-text cursor-pointer" id="modal_open"><i class="fa fa-caret-down"></i><!--  Discus List --></span></h3>
                             <span class="small-text hint"><i class="fa fa-wrench"></i> Settings</span>
 <!--                             <span class="small-text"><a href=""><i class="fa fa-user-plus"></i> Add Users</a></span>
                             <i class="split-dot"> . </i>
@@ -175,7 +175,7 @@
                                     <span class="username bold-text">Huy Nguyen</span>
                                     <span class="margin-null hint">opened discussion</span>
                                     <i class="split-dot"> . </i>
-                                    <span class="time-post hint"> Sep 21 </span>    
+                                    <span class="time-post hint"> Sep 21 </span>
                                 </div>
                             </div>
                             <div class="discussion-log-item">
@@ -184,14 +184,14 @@
                                     <span class="username bold-text">Huy Nguyen</span>
                                     <span class="margin-null hint">changed discussion's topic</span>
                                     <i class="split-dot"> . </i>
-                                    <span class="time-post hint"> Sep 21 </span>    
+                                    <span class="time-post hint"> Sep 21 </span>
                                 </div>
                             </div>
                             <div class="discussion-post-item">
                                 <img class="profile-picture small-pp" src="https://pbs.twimg.com/profile_images/555814087167205376/7sPnaA_u_400x400.png" alt="">
                                 <div class="discussion-content small-text">
                                     <span class="username bold-text">Huy Nguyen</span>
-                                    <span class="time-post hint"> 8 min ago </span>    
+                                    <span class="time-post hint"> 8 min ago </span>
                                     <p class="margin-null">
                                     I'm not sure the AWS numbers you are quoting match up with the four servers you are building. Using the AWS Web Application "common customer sample" it quotes 6 servers, 4 storage volumes, IPs, bandwidth and load balancing.
 
@@ -207,7 +207,7 @@
                                 <img class="profile-picture small-pp" src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
                                 <div class="discussion-content small-text">
                                     <span class="username bold-text">Brad Frost</span>
-                                    <span class="time-post hint"> 2 days ago </span>    
+                                    <span class="time-post hint"> 2 days ago </span>
                                     <p class="margin-null">
                                     I'm not sure the AWS numbers you are quoting match up with the four servers you are building. Using the AWS Web Application "common customer sample" it quotes 6 servers, 4 storage volumes, IPs, bandwidth and load balancing.
 
@@ -225,14 +225,14 @@
                                     <span class="username bold-text">Brad Frost</span>
                                     <span class="margin-null hint">left this discussion</span>
                                     <i class="split-dot"> . </i>
-                                    <span class="time-post hint"> 1 day ago </span>    
+                                    <span class="time-post hint"> 1 day ago </span>
                                 </div>
                             </div>
                             <div class="discussion-post-item discussion-hightlighted">
                                 <img class="profile-picture small-pp" src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
                                 <div class="discussion-content small-text ">
                                     <span class="username bold-text">Roger Coleman</span>
-                                    <span class="time-post hint"> 1 week ago </span>    
+                                    <span class="time-post hint"> 1 week ago </span>
                                     <p class="margin-null">
                                     Jeff,
 
@@ -255,7 +255,7 @@
                                     <span class="username bold-text">Hildegarda Kania</span>
                                     <span class="margin-null hint">joined discussion</span>
                                     <i class="split-dot"> . </i>
-                                    <span class="time-post hint"> Sep 21 </span>    
+                                    <span class="time-post hint"> Sep 21 </span>
 
                                 </div>
                             </div>
@@ -263,7 +263,7 @@
                                 <img class="profile-picture small-pp" src="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg" alt="">
                                 <div class="discussion-content small-text">
                                     <span class="username bold-text">Hildegarda Kania</span>
-                                    <span class="time-post hint"> Sep 21 </span>    
+                                    <span class="time-post hint"> Sep 21 </span>
                                     <p class="margin-null">
                                     <p class="margin-null">Here's what we built in 2013</p>
 
@@ -314,11 +314,119 @@
                 <button class="btn btn-block btn-success bold-text">Submit</button>
             </div>
         </main>
+        <div class="modal-overlay" id="modal_window" aria-hidden="true" role="dialog" aria-labelledby="modal_title">
 
+          <div class="modal-content" id="modal_holder" role="document">
+            <h3 id="modal-title" class="margin-null">Discussions List</h3>
+
+
+            <button class="btn-close" id="modal_close" type="button" aria-label="close">
+              &times;
+            </button>
+
+          </div>
+          <!-- end .modal-content -->
+
+        </div>
+        <!-- end .modal-overlay -->
         <script src="https://code.jquery.com/jquery-git2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            // helper function to place modal window as the first child
+            // of the #page node
+            var m = document.getElementById('modal_window'),
+                p = document.getElementById('page');
+
+            function swap () {
+              p.parentNode.insertBefore(m, p);
+            }
+
+            swap();
+
+
+            // modal window
+            (function() {
+
+              'use strict';
+
+              // list out the vars
+              var mOverlay = getId('modal_window'),
+                  mOpen = getId('modal_open'),
+                  mClose = getId('modal_close'),
+                  modal = getId('modal_holder'),
+                  allNodes = document.querySelectorAll("*"),
+                  modalOpen = false,
+                  lastFocus,
+                  i;
+
+
+              // Let's cut down on what we need to type to get an ID
+              function getId ( id ) {
+                return document.getElementById(id);
+              }
+
+
+              // Let's open the modal
+              function modalShow () {
+                lastFocus = document.activeElement;
+                mOverlay.setAttribute('aria-hidden', 'false');
+                modalOpen = true;
+                modal.setAttribute('tabindex', '0');
+                modal.focus();
+              }
+
+
+              // binds to both the button click and the escape key to close the modal window
+              // but only if modalOpen is set to true
+              function modalClose ( event ) {
+                if (modalOpen && ( !event.keyCode || event.keyCode === 27 ) ) {
+                  mOverlay.setAttribute('aria-hidden', 'true');
+                  modal.setAttribute('tabindex', '-1');
+                  modalOpen = false;
+                  lastFocus.focus();
+                }
+              }
+
+
+              // Restrict focus to the modal window when it's open.
+              // Tabbing will just loop through the whole modal.
+              // Shift + Tab will allow backup to the top of the modal,
+              // and then stop.
+              function focusRestrict ( event ) {
+                if ( modalOpen && !modal.contains( event.target ) ) {
+                  event.stopPropagation();
+                  modal.focus();
+                }
+              }
+
+
+              // Close modal window by clicking on the overlay
+              mOverlay.addEventListener('click', function( e ) {
+                if (e.target == modal.parentNode) {
+                   modalClose( e );
+                 }
+              }, false);
+
+
+              // open modal by btn click/hit
+              mOpen.addEventListener('click', modalShow);
+
+              // close modal by btn click/hit
+              mClose.addEventListener('click', modalClose);
+
+              // close modal by keydown, but only if modal is open
+              document.addEventListener('keydown', modalClose);
+
+              // restrict tab focus on elements only inside modal window
+              for (i = 0; i < allNodes.length; i++) {
+                allNodes.item(i).addEventListener('focus', focusRestrict);
+              }
+
+            })();
+
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
