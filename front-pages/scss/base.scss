@@ -839,6 +839,10 @@ select#new-category {
             margin-right: auto;
             color: white;
         }
+
+        &--closed {
+            background: $dangerColor;
+        }
     }
 
     .discussion-posts {
@@ -1087,4 +1091,40 @@ select#new-category {
   width: 80%;
   max-height: 70px;
   text-overflow: ellipsis;
+}
+
+ul#discussions-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.discussions-list-item {
+    background: rgba($dark-grey,0.05);
+    border-radius: $radius;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    h4 {
+        color: $dark-grey;
+    }
+    &:hover {
+        cursor: pointer;
+        background: rgba($dark-grey,0.1);
+    }
+
+    #{&}--stats {
+        margin-top: 0.5rem;
+        font-size: 70%;
+        color: rgba($dark-grey,0.7);
+    }
+}
+
+.discussion-status {
+
+    &#{&}--closed {
+        background: $dangerColor;
+        color: $grey;
+        letter-spacing: 0.3px;
+        font-size: 50%;
+        border-radius: $radius;
+        padding: 0.2rem 0.5rem;
+    }
 }

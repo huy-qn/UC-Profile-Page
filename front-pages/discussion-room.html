@@ -18,10 +18,6 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="js/selectize.min.js"></script>
-        <script src="js/vex.combined.min.js"></script>
-        <script>vex.defaultOptions.className = 'vex-theme-os';</script>
-        <link rel="stylesheet" href="css/vex.css" />
-        <link rel="stylesheet" href="css/vex-theme-os.css" />
     </head>
     <body id="page">
         <!--[if lt IE 8]>
@@ -159,7 +155,7 @@
                     </aside>
                     <div class="right-content">
                         <div class="discussion-heading">
-                            <h3 class="margin-null">Let's talk about works or... just having fun! <span class="hint small-text cursor-pointer" id="modal_open"><i class="fa fa-caret-down"></i><!--  Discus List --></span></h3>
+                            <h3 class="margin-null">Let's talk about works or... just having fun! <span class="hint small-text cursor-pointer" id="modal_open"><a href="#modal-discussions-list" class="text-decoration-none"><i class="fa fa-caret-down"></i></a><!--  Discus List --></span></h3>
                             <span class="small-text hint"><i class="fa fa-wrench"></i> Settings</span>
 <!--                             <span class="small-text"><a href=""><i class="fa fa-user-plus"></i> Add Users</a></span>
                             <i class="split-dot"> . </i>
@@ -313,120 +309,105 @@
                 <span class="attach-file small-text bold-text"><i class="fa fa-paperclip"></i><!--  Attach documents --></span>
                 <button class="btn btn-block btn-success bold-text">Submit</button>
             </div>
+            <section class="modal--show" id="modal-discussions-list" tabindex="-1"
+                    role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+                <div class="modal-inner card">
+                    <div id="modal-label">
+                        <h3 class="margin-null">Discussions List</h3>
+                        <div class="form">
+                            <input type="text" placeholder="Search for discussions">
+                        </div>
+                    </div>
+                    <div class="modal-content">
+                        <ul id="discussions-list" class="margin-null">
+                            <a href="discussion-room-closed.html" class="text-decoration-none">
+                            <li class="discussions-list-item">
+                                <h4 class="margin-null padding-bit">UC Design <span class="discussion-status discussion-status--closed right">CLOSED</span></h4>
+                                <div class="discussion-tags">
+                                    <span class="tag">design</span>
+                                    <span class="tag">system</span>
+                                    <span class="tag">coding</span>
+                                    <span class="tag">crazy</span>
+                                </div>
+                                <div class="discussions-list-item--stats">
+                                    <span><i class="fa fa-comments"></i> 251 comments</span>
+                                    <i class="split-dot">.</i>
+                                    <span><i class="fa fa-users"></i> 22 participants</span>
+                                    <i class="split-dot">.</i>
+                                    <span>updated 1 days ago</span>
+                                </div>
+
+                            </li>
+                            </a>
+                            <li class="discussions-list-item">
+                                <h4 class="margin-null padding-bit">Should we stop listening to Adele's songs? <span class="discussion-status discussion-status--closed right">CLOSED</span></h4>
+                                <div class="discussion-tags">
+                                    <span class="tag">team-adele</span>
+                                    <span class="tag">hello</span>
+                                    <span class="tag">when-we-were-young</span>
+                                    <span class="tag">not-publishing-on-spotify</span>
+                                </div>
+                                <div class="discussions-list-item--stats">
+                                    <span><i class="fa fa-comments"></i> 251 comments</span>
+                                    <i class="split-dot">.</i>
+                                    <span><i class="fa fa-users"></i> 22 participants</span>
+                                    <i class="split-dot">.</i>
+                                    <span>updated 2 days ago</span>
+                                </div>
+
+                            </li>
+                            <li class="discussions-list-item">
+                                <h4 class="margin-null padding-bit">Tối nay ăn gì?</h4>
+                                <div class="discussion-tags">
+                                    <span class="tag">dinner</span>
+                                    <span class="tag">hungry</span>
+                                    <span class="tag">pho</span>
+                                    <span class="tag">pizza</span>
+                                </div>
+                                <div class="discussions-list-item--stats">
+                                    <span><i class="fa fa-comments"></i> 251 comments</span>
+                                    <i class="split-dot">.</i>
+                                    <span><i class="fa fa-users"></i> 22 participants</span>
+                                    <i class="split-dot">.</i>
+                                    <span>updated 2 days ago</span>
+                                </div>
+
+                            </li>
+                            <li class="discussions-list-item">
+                                <h4 class="margin-null padding-bit">Does this list sound boring?</h4>
+                                <!-- <div class="discussion-tags">
+                                    <span class="tag">designing-a-modal</span>
+                                    <span class="tag">designing-a-list-of-cards</span>
+                                </div> -->
+                                <div class="discussions-list-item--stats">
+                                    <span><i class="fa fa-comments"></i> 251 comments</span>
+                                    <i class="split-dot">.</i>
+                                    <span><i class="fa fa-users"></i> 22 participants</span>
+                                    <i class="split-dot">.</i>
+                                    <span>updated 20 mins ago</span>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <footer>
+                        <div class="button-group-right">
+                            <a href="discussion-new.html"><button class="btn btn-default bold-text">+ Create a new discussion</button></a>
+                        </div>
+                    </footer>
+                </div>
+
+                <a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+                    data-dismiss="modal">?</a>
+            </section>
         </main>
-        <div class="modal-overlay" id="modal_window" aria-hidden="true" role="dialog" aria-labelledby="modal_title">
-
-          <div class="modal-content" id="modal_holder" role="document">
-            <h3 id="modal-title" class="margin-null">Discussions List</h3>
-
-
-            <button class="btn-close" id="modal_close" type="button" aria-label="close">
-              &times;
-            </button>
-
-          </div>
-          <!-- end .modal-content -->
-
-        </div>
         <!-- end .modal-overlay -->
         <script src="https://code.jquery.com/jquery-git2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script>
-            // helper function to place modal window as the first child
-            // of the #page node
-            var m = document.getElementById('modal_window'),
-                p = document.getElementById('page');
-
-            function swap () {
-              p.parentNode.insertBefore(m, p);
-            }
-
-            swap();
-
-
-            // modal window
-            (function() {
-
-              'use strict';
-
-              // list out the vars
-              var mOverlay = getId('modal_window'),
-                  mOpen = getId('modal_open'),
-                  mClose = getId('modal_close'),
-                  modal = getId('modal_holder'),
-                  allNodes = document.querySelectorAll("*"),
-                  modalOpen = false,
-                  lastFocus,
-                  i;
-
-
-              // Let's cut down on what we need to type to get an ID
-              function getId ( id ) {
-                return document.getElementById(id);
-              }
-
-
-              // Let's open the modal
-              function modalShow () {
-                lastFocus = document.activeElement;
-                mOverlay.setAttribute('aria-hidden', 'false');
-                modalOpen = true;
-                modal.setAttribute('tabindex', '0');
-                modal.focus();
-              }
-
-
-              // binds to both the button click and the escape key to close the modal window
-              // but only if modalOpen is set to true
-              function modalClose ( event ) {
-                if (modalOpen && ( !event.keyCode || event.keyCode === 27 ) ) {
-                  mOverlay.setAttribute('aria-hidden', 'true');
-                  modal.setAttribute('tabindex', '-1');
-                  modalOpen = false;
-                  lastFocus.focus();
-                }
-              }
-
-
-              // Restrict focus to the modal window when it's open.
-              // Tabbing will just loop through the whole modal.
-              // Shift + Tab will allow backup to the top of the modal,
-              // and then stop.
-              function focusRestrict ( event ) {
-                if ( modalOpen && !modal.contains( event.target ) ) {
-                  event.stopPropagation();
-                  modal.focus();
-                }
-              }
-
-
-              // Close modal window by clicking on the overlay
-              mOverlay.addEventListener('click', function( e ) {
-                if (e.target == modal.parentNode) {
-                   modalClose( e );
-                 }
-              }, false);
-
-
-              // open modal by btn click/hit
-              mOpen.addEventListener('click', modalShow);
-
-              // close modal by btn click/hit
-              mClose.addEventListener('click', modalClose);
-
-              // close modal by keydown, but only if modal is open
-              document.addEventListener('keydown', modalClose);
-
-              // restrict tab focus on elements only inside modal window
-              for (i = 0; i < allNodes.length; i++) {
-                allNodes.item(i).addEventListener('focus', focusRestrict);
-              }
-
-            })();
-
-        </script>
+        <script src="js/modal.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
