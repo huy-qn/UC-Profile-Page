@@ -52,6 +52,11 @@
                 border-color: rgba($darkSuccessColor,0.8);
                 outline: 0px;
             }
+            &.danger {
+                border-color: rgba($dangerColor,0.8);
+                background-color: rgba($dangerColor,0.1);
+                outline: 0px;
+            }
         }
         @include light {
             background: $white;

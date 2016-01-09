@@ -46,6 +46,18 @@ hr {
     div {
         margin-right: auto;
     }
+
+    &.space-between {
+        justify-content: space-between;
+    }
+}
+
+.w100 {
+    width: 100%;
+}
+.w25 {
+    width: 23%;
+    margin-right: 2%;
 }
 
 .hide {

@@ -54,10 +54,10 @@ $addedTagBackground: $dark-grey;
 
 .user-interest-tags {
     span {
-        background: darken($interestTagBackground,10%);
+        background: $darkSuccessColor;
         color: $white;
         &:hover {
-            background: darken($interestTagBackground,20%);
+            background: darken($darkSuccessColor,20%);
         }
     }
 }

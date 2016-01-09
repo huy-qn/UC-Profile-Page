@@ -2,12 +2,13 @@ $white: #fff;
 $black: #222222;
 $grey: #EDEDED;
 $dark-grey: #C7D2EB;
+$darken-grey: darken($dark-grey,25%);
 $dark-blue: #172633;
 $light-blue: #009AFF;
 $green: #5BE391;
 
 $primaryColor: #009AFF;
-$warningColor: #EF7B41;
+$warningColor: #E7C074;
 $successColor: #6BBD2E;
 $dangerColor: #FF3D4C;
 

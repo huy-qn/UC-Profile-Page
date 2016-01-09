@@ -9,12 +9,12 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 150%;
+    line-height: 180%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @include dark {
       background: lighten($dark-blue,7%);
-      color: $white;
+      color: rgba($white,0.8);
     }
     @include light {
       background: $grey;
@@ -716,7 +716,6 @@ select#new-category {
         margin-bottom: 0.3rem;
         color: #E6E984;
         a {
-            display: none;
             color: $light-blue;
         }
 
@@ -815,6 +814,7 @@ select#new-category {
 
 // DISCUSSION ROOM
 #discussion-room .card {
+    min-height: 85vh;
     @include outer-container;
     aside.left-side-bar {
         @include span-columns(3);
@@ -846,7 +846,13 @@ select#new-category {
     }
 
     .discussion-posts {
-        // margin-top: 5rem;
+
+    }
+}
+
+#first-created-discussion {
+    .empty-state {
+        padding: 10vh 0;
     }
 }
 
@@ -918,41 +924,31 @@ select#new-category {
     // display: none;
 }
 
-.discussion-footer {
-    border-top: solid 1px lighten($dark-blue, 5%);
+.discussion-footer .form{
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding: 1rem;
-    padding-right: 10%;
-    height: 70px;
+    justify-content: flex-start;
+    border-top: solid 1px lighten($dark-blue, 5%);
     background: $dark-blue;
     position: fixed;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    width: 1020px;
+    padding: 1rem;
     .message-input {
-        width: 50%;
+        width: 85%;
         input[type="text"] {
             margin: 0;
         }
+        margin: 0;
     }
-    .attach-file {
-        background: lighten($dark-blue, 5%);
-        padding: 0.4rem 0.7rem;
-        border-radius: $radius;
-        margin-left: 1rem;
-        i {
-            font-size: 16px;
+    .message-input-actions {
+        display: flex;
+        align-items: center;        
+        padding-left: 0.5rem;
+        .btn {
+            margin-top: 0;
+            margin-left: 0.5rem;
         }
-        &:hover {
-            cursor: pointer;
-            background: $darkSuccessColor;
-        }
-    }
-    button {
-        width: 10%;
-        margin-left: 1rem;
     }
 }
 
